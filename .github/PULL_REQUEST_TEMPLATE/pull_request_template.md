@@ -20,7 +20,6 @@ Closes #<issue_number>
 - [ ] My code follows the style guidelines of this project.
 - [ ] My changes generate no new warnings.
 - [ ] I have added documentation to explain my changes.
-- [ ] Any dependent changes have been merged and published in downstream modules.
 
 ### 📷 Screenshots/GIFs (if any)
 Include screenshots or GIFs to demonstrate your changes
