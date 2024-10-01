@@ -1,0 +1,72 @@
+.container{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    background-color:rgb(44, 7, 39);
+    padding: 10px;
+}
+.card{
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem; 
+    padding-left: 1.25rem;
+    padding-right: 1.25rem; 
+    border-radius: 0.375rem; 
+    border-width: 1px; 
+    width: 20rem; 
+    height: fit-content; 
+    background-color: #ffffff; 
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); 
+}
+h1{
+    font-size: 1.875rem;
+    line-height: 2.25rem; 
+    font-weight: 700; 
+    text-align: center;
+    
+}
+.info{
+    text-align: center; 
+    font-weight: 500;
+}
+.warning{
+    font-size: 14px;
+    line-height: 1rem; 
+    color: #EF4444; 
+    font-weight: 500;
+}
+.email{
+    padding: 5px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;  
+    width: 100%; 
+    font-size: 15px;
+}
+.password{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem; 
+    width: 100%; 
+    padding: 5px;
+}
+.btn{
+    padding: 8px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem; 
+    border-radius: 0.375rem; 
+    border-width: 1px; 
+    width: 100%; 
+    text-align: center; 
+    color: #ffffff; 
+    background-color: #000000; 
+    cursor: pointer;
+    font-size: 16px;
+}
+.btn:hover{
+    opacity: 0.9;
+}
+label{
+        font-weight: 500;
+}
+.query{
+    text-align: center;
+}

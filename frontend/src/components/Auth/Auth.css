@@ -1,0 +1,15 @@
+.main-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content:center;
+    gap: 10px;
+    background-color:rgb(44, 7, 39);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+@media(max-width:768px){
+    .main-container{
+        flex-direction: column;
+    }
+}
