@@ -9,7 +9,7 @@ function Header() {
         <div className={styles.navLinks}>
           <div className={styles.navSection}>
             <a href="#" className={styles.finNews}>FIN NEWS</a>
-            <a href="#">My Feed</a>
+            <a href="/myfeed">My Feed</a>
             <a href="#">News</a>
             <a href="#">Schemes</a>
             <a href="#">Newsletter</a>
