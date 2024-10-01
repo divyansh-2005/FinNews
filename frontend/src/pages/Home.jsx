@@ -10,13 +10,13 @@ import Footer from '../components/Footer/Footer'
 function Home() {
   return (
     <>
-        <Header />
+        {/* <Header /> */}
         <Herosection />
         <Finiance />
         <GovSchemes/>
         <StartUp />
         <DailyNews/>
-        <Footer />
+        {/* <Footer /> */}
     </>
   )
 }
