@@ -15,6 +15,13 @@ Closes #<issue_number>
 ### 📷 Screenshots/GIFs (if any)
 Include screenshots or GIFs to demonstrate your changes
 
+### ✅ Checklist
+- [ ] I am a participant of GSSoC-ext.
+- [ ] I have followed the contribution guidelines of this project.
+- [ ] I have viewed deployment of my code.
+- [ ] My changes generate no new warnings.
+- [ ] I have added documentation to explain my changes.
+
 ### 🤝 GSSoC Participation
 - [ ] This PR is submitted under the GSSoC program.
 - [ ] I have taken prior approval for this feature/fix.
