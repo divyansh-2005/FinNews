@@ -13,7 +13,7 @@ function Herosection() {
       </h1>
  
       <p className="hero-description">“Where Intelligence Meets Finance”</p>
-      <button className="hero-button">WWW.PROLEGA.IN</button>
+      <button className="hero-button">WWW.FinNews.IN</button>
       {/* <img className="heroimg" src={heroimg} alt="" /> */}
       <div className="scroll-down">
         <p>Scroll down for more</p>
