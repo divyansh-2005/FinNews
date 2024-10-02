@@ -1,9 +1,9 @@
+/* Hero Section Container */
 .hero-section {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap; /* Allow wrapping for responsive design */
   width: 100%;
   height: 90vh;
   background: linear-gradient(
@@ -11,17 +11,48 @@
       rgba(44, 7, 39, 0.8) 0%,
       rgba(17, 8, 35, 0.8) 100%
     ),
-    url("../../../public/homepage.jpg");
+    url("../../../public/homepage.jpg"); /* Ensure the image path is correct */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 0 20px;
+  padding: 20px;
   box-sizing: border-box;
   position: relative;
-  font-size: clamp(2rem, 5vw, 5rem);
-  text-align: center;
-  opacity: 1;
-  overflow: hidden;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.text-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  color: white;
+  order: 2; /* Ensure text is above the image in desktop */
+  align-items: flex-start; /* Align items to the start (left) on desktop */
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 1; /* Image comes first in desktop */
+}
+
+.hero-image {
+  max-width: 90%; /* Reduce image size for better fit */
+  height: auto;
+  border-radius: 10px;
 }
 
 /* Heading Styles */
@@ -29,10 +60,8 @@
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: inherit;
-  display: inline-block;
+  font-size: 4rem;
   color: white;
-  text-align: center;
   margin-bottom: 1rem;
 }
 
@@ -43,9 +72,7 @@
 .highlighted-text {
   color: #ffcc00;
   font-weight: 900;
-  font-size: 4.8rem;
   display: inline-block;
-  white-space: nowrap; /* Prevent text from wrapping */
   margin: 0 5px;
 }
 
@@ -55,26 +82,25 @@
   font-style: normal;
   font-weight: 500;
   font-size: 1.3rem;
-  text-align: center;
   color: #ffffff;
   max-width: 600px;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
 }
 
 /* Button */
 .hero-button {
-  width: 280px;
-  height: 56px;
-  padding: 10px;
+  width: 240px;
+  height: 40px;
   background: linear-gradient(90deg, #ef01dc 0%, #77048e 100%);
   border-radius: 50px;
   border: none;
   font-family: "Arial", sans-serif;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  margin-top: -10px;
   color: white;
   cursor: pointer;
-  margin-top: 3rem;
+  margin-top: 1rem;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -85,12 +111,12 @@
 
 /* Scroll Down Section */
 .scroll-down {
-  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  bottom: 20px;
+  position: absolute;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -100,6 +126,7 @@
 .scroll-down p {
   font-size: 1rem;
 }
+
 .arrow {
   width: 0;
   height: 0;
@@ -129,48 +156,99 @@
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-  .highlighted-heading {
-    font-size: 3.2rem;
+  .hero-section {
+    height: auto; /* Allow height to adjust based on content */
+    padding-bottom: 80px; /* Add padding to prevent overlap with scroll-down */
   }
 
-  .highlighted-text {
-    font-size: 3.4rem;
+  .hero-content {
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
   }
 
-  .hero-description {
-    font-size: 1.4rem;
+  .text-section {
+    order: 2; /* Text comes after the image */
+    align-items: center; /* Center align items */
+    text-align: center;
+  }
+
+  .image-section {
+    order: 1; /* Image comes first */
+    margin-bottom: 20px; /* Add space below the image */
   }
 
   .hero-button {
-    width: 240px;
-    font-size: 1rem;
+    width: 80%; /* Make button responsive */
+    max-width: 300px;
+    margin-top: 1rem;
+    align-self: center; /* Center the button */
   }
 
-  .scroll-down p {
-    font-size: 0.9rem;
+  .highlighted-heading {
+    font-size: 3rem; /* Adjust font size for smaller screens */
+  }
+
+  .highlighted-text {
+    font-size: 3.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .hero-description {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .scroll-down {
+    bottom: 10px; /* Reduce bottom position for better spacing */
   }
 }
 
 @media (max-width: 480px) {
-  .highlighted-heading {
-    font-size: 2rem;
+  .hero-section {
+    height: auto; /* Allow height to adjust based on content */
+    padding-bottom: 80px; /* Add padding to prevent overlap with scroll-down */
   }
 
-  .highlighted-text {
-    font-size: 2.6rem;
+  .hero-content {
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
   }
 
-  .hero-description {
-    font-size: 1.2rem;
+  .text-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center align items */
+    order: 2; /* Text comes after the image */
+    text-align: center;
+  }
+
+  .image-section {
+    order: 1; /* Image comes first */
+    max-width: 90%;
+    margin-bottom: 20px; /* Add space below the image */
   }
 
   .hero-button {
-    width: 200px;
-    height: 46px;
-    font-size: 0.9rem;
+    width: 80%; /* Make button responsive */
+    max-width: 200px;
+    margin-top: 1rem;
+    align-self: center; /* Center the button */
   }
 
-  .scroll-down p {
-    font-size: 0.8rem;
+  .highlighted-heading {
+    font-size: 2.4rem; /* Adjust font size for smaller screens */
+  }
+
+  .highlighted-text {
+    font-size: 2.6rem; /* Adjust font size for smaller screens */
+  }
+
+  .hero-description {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .scroll-down {
+    bottom: 10px; /* Reduce bottom position for better spacing */
   }
 }
