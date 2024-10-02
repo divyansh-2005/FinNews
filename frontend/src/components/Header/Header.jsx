@@ -1,6 +1,7 @@
 import React from "react";
 import styles from './Header.module.css'; // Import the CSS Module
 import searchIcon from '../../assets/search-icon.png';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -8,11 +9,11 @@ function Header() {
       <div className={styles.header2}>
         <div className={styles.navLinks}>
           <div className={styles.navSection}>
-            <a href="#" className={styles.finNews}>FIN NEWS</a>
-            <a href="/myfeed">My Feed</a>
-            <a href="#">News</a>
-            <a href="#">Schemes</a>
-            <a href="#">Newsletter</a>
+            <Link to="/" className={styles.finNews}>FIN NEWS</Link>
+            <Link to="/myfeed">My Feed</Link>
+            <Link to="#">News</Link>
+            <Link to="#">Schemes</Link>
+            <Link to="#">Newsletter</Link>
           </div>
         </div>
         <div className={styles.actions}>
