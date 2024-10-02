@@ -18,3 +18,8 @@ If applicable, add screenshots to help explain your problem.
 
 **Additional context**
 Add any other context or screenshots about the feature request here.
+
+**check list**
+- [ ] I am contributing under GSSoC-ext
+- [ ] I am contributing under hacktoberfest
+- [ ] I follow contribution guidlines
