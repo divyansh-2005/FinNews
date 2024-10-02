@@ -2,7 +2,7 @@
 name: Feature request
 about: Suggest an idea for this project
 title: "[FEATURE]"
-labels: enhancement, gssoc-ext
+labels: enhancement, gssoc-ext, hacktoberfest
 assignees: ''
 
 ---
@@ -16,7 +16,7 @@ A clear and concise description of what you want to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**Additional context**
+**screenshots/video of feature**
 Add any other context or screenshots about the feature request here.
 
 **check list**
