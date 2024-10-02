@@ -1,24 +1,55 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./Herosection.css";
 
 function Herosection() {
   return (
-    <div className="hero-section">
-      <h1 className="highlighted-heading">
+    <motion.div
+      className="hero-section"
+      initial={{ opacity: 0.3 }} // Background starts invisible
+      animate={{ opacity: 1 }} // Background fades in
+      transition={{ duration: 2 }} // Duration of background animation
+    >
+      <motion.h1
+        className="highlighted-heading"
+        initial={{ y: 100, opacity: 0 }} // Text starts off-screen (bottom)
+        animate={{ y: 0, opacity: 1 }} // Text moves to original position
+        transition={{ type: "spring", stiffness: 50, delay: 0.5 }} // Spring effect for smooth animation
+      >
         <span className="white-text">INDIA’S FIRST</span>
         <br />
         <span className="white-text">SMART </span>
         <span className="highlighted-text">News FIN-APP</span>
-      </h1>
+      </motion.h1>
 
-      <p className="hero-description">“Where Intelligence Meets Finance”</p>
-      <button className="hero-button">www.FinNews.in</button>
+      <motion.p
+        className="hero-description"
+        initial={{ y: 100, opacity: 0 }} // Text starts off-screen
+        animate={{ y: 0, opacity: 1 }} // Text slides up and fades in
+        transition={{ type: "spring", stiffness: 50, delay: 0.7 }} // Slight delay for the description
+      >
+        Where Intelligence Meets Finance
+      </motion.p>
 
-      <div className="scroll-down">
+      <motion.button
+        className="hero-button"
+        initial={{ y: 70, opacity: 0 }} // Button starts off-screen
+        animate={{ y: 0, opacity: 1 }} // Button slides up and fades in
+        transition={{ type: "spring", stiffness: 50, delay: 0.8 }} // Delay the button animation
+      >
+        www.FinNews.in
+      </motion.button>
+
+      <motion.div
+        className="scroll-down"
+        initial={{ opacity: 0 }} // Scroll hint starts invisible
+        animate={{ opacity: 1 }} // Scroll hint fades in
+        transition={{ duration: 1.5, delay: 1.2 }} // Delay and slow fade-in for the scroll hint
+      >
         <p>Scroll down for more</p>
         <div className="arrow"></div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 

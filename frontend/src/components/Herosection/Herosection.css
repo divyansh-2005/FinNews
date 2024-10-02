@@ -1,22 +1,27 @@
-/* Hero Section Container */
 .hero-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap; /* Prevent wrapping */
+  flex-wrap: nowrap;
   width: 100%;
   height: 90vh;
-  background: linear-gradient(90deg, #2c0727 0%, #110823 100%);
+  background: linear-gradient(
+      90deg,
+      rgba(44, 7, 39, 0.8) 0%,
+      rgba(17, 8, 35, 0.8) 100%
+    ),
+    url("../../../public/homepage.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 0 20px;
   box-sizing: border-box;
   position: relative;
-  font-size: clamp(
-    2rem,
-    5vw,
-    5rem
-  ); /* Adjusts the font size based on screen width */
+  font-size: clamp(2rem, 5vw, 5rem);
   text-align: center;
+  opacity: 1;
+  overflow: hidden;
 }
 
 /* Heading Styles */
@@ -148,7 +153,7 @@
 
 @media (max-width: 480px) {
   .highlighted-heading {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 
   .highlighted-text {
