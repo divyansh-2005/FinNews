@@ -10,7 +10,7 @@
 .startup-container {
   display: flex;
   flex-direction: column;
-  background: #77048E;
+  background: #77048E; /* Main background color */
   border-radius: 20px;
   width: 380px;
   min-width: 380px; /* Ensure each container has the same width */
@@ -22,7 +22,7 @@
 .top-box {
   display: flex;
   align-items: center;
-  background: #D9D9D9;
+  background: #D9D9D9; /* Top box background */
   border-radius: 20px 20px 0 0;
   padding: 20px;
   position: relative;
@@ -31,7 +31,7 @@
 .img {
   width: 80px;
   height: 80px;
-  background: #77048E;
+  background: #77048E; /* Placeholder for organization image */
   border-radius: 10px;
   margin-right: 20px;
 }
@@ -45,74 +45,64 @@
 .organization-img {
   width: 20px;
   height: 20px;
-  background: url('../../assets/organization.svg') no-repeat center;
+  background-size: contain; /* Ensure the image fits */
   margin-right: 8px;
 }
 
 .organization {
   font-family: 'Didact Gothic', sans-serif;
-  font-size: 12px;
-  color: #373737;
+  font-size: 20px;
+  
+  color: #373737; /* Text color for organization name */
 }
 
 .startup-heading {
   font-family: 'DM Sans', sans-serif;
   font-weight: 700;
   font-size: 24px;
-  color: #000000;
-  margin-left: auto;
+  color: #000000; /* Color for startup heading */
+  margin-left:auto; /* Align to the right */
+  margin-top: 5px; /* Add margin to prevent overlap */
 }
 
-.summary-box {
-  background: #FFFFFF;
-  border-radius: 5px;
-  padding: 6px 12px;
-  position: absolute;
-  bottom: -16px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.summary {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  color: #000000;
-  text-align: center;
-}
 
 .description-container {
-  background: #FFFFFF;
+  background: #FFFFFF; /* Background for description */
   border-radius: 0 0 20px 20px;
   padding: 20px;
-  
+  margin-top: 10px; /* Add margin to separate from top box */
 }
 
 .about {
   font-family: 'DM Sans', sans-serif;
   font-weight: 700;
   font-size: 18px;
-  color: #000000;
+  color: #000000; /* Color for 'About' section */
 }
 
 .paragraph {
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
   font-size: 14px;
-  color: #9795B5;
+  color: #9795B5; /* Color for paragraph text */
   margin-top: 10px;
 }
 
 .link {
-  background: #77048E;
-  color: #FFFFFF;
+  background: #77048E; /* Link button background */
+  color: #FFFFFF; /* Link text color */
   font-family: 'DM Sans', sans-serif;
   font-weight: 700;
   font-size: 12px;
-  text-decoration: none;
+  text-decoration: none; /* Remove underline from link */
   border-radius: 12px;
   padding: 8px 16px;
   text-align: center;
   margin-top: 20px;
   display: inline-block;
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.link:hover {
+  background: #5a0370; /* Darker shade on hover */
 }
