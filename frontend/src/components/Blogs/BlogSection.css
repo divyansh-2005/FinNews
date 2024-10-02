@@ -1,0 +1,146 @@
+#BlogSection {
+  width: 100%;
+  /* margin-top: 10vh; */
+  background: url("./Images/blog-tempate-bg.png");
+  color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+.our-home-heading{
+  padding-left: 4%;
+}
+#blog-landingpage {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  height: 90vh;
+}
+
+#blog-landingpage h2 {
+  width: 40%;
+  padding-left: 1em;
+  font-size: 4em;
+  font-weight: lighter;
+  font-family: "Readex Pro", sans-serif;
+  
+}
+.fa-angles-down {
+  bottom: 5%;
+  display: inline-block;
+  position: absolute;
+  font-size: 2em;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  animation: arrowDownAnimation 1s linear infinite;
+}
+
+@keyframes arrowDownAnimation {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #blog-landingpage {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  #blog-landingpage h2 {
+    width: 90%;
+    font-size: 2.5em;
+    margin-top: 2em;
+    padding-left: 0%;
+  }
+  .fa-angles-down {
+    bottom: 7%;
+  }
+  #blog-landingpage img {
+    margin-top: 2em;
+    width: 90%;
+  }
+  .oneblog {
+    width: 20em;
+  }
+}
+#blog-allblogs {
+  width: 100%;
+  padding: 2em 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.oneblog {
+  margin: 1em;
+  width: 25em;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 500ms ease-in-out;
+  justify-content: center;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.247);
+}
+
+.oneblog:hover {
+  background-color: rgba(0, 0, 0, 0.347);
+  transform: scale(1.05);
+  box-shadow: rgb(192 76 102) 2px 0px 25px, rgb(69 77 181) -2px 0px 25px;
+}
+.oneblog img {
+  width: 94%;
+  border-radius: calc(18px - 0.75em);
+  height: 10em;
+  margin-top: 0.75em;
+}
+.oneblog * {
+  margin: 0% 3%;
+}
+.oneblog h2 {
+  font-family: "Readex Pro", sans-serif;
+  font-weight: lighter;
+}
+.oneblog p {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9em;
+}
+.oneblog > p {
+  margin-bottom: 1em;
+}
+.oneblog > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.227);
+  padding: 10px 0px;
+  width: 100%;
+  margin: 0%;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+.oneblog > div a:hover {
+  background-color: #c95be5;
+}
+.oneblog > div a {
+  background-color: #a759bb;
+  padding: 10px;
+  color: black;
+  border-radius: 8px;
+  font-family: "Readex Pro", sans-serif;
+  font-weight: bold;
+}
