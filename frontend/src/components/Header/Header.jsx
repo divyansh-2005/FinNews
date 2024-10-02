@@ -9,11 +9,14 @@ function Header() {
       <div className={styles.header2}>
         <div className={styles.navLinks}>
           <div className={styles.navSection}>
-            <Link to="/" className={styles.finNews}>FIN NEWS</Link>
-            <Link to="/myfeed">My Feed</Link>
-            <Link to="#">News</Link>
-            <Link to="#">Schemes</Link>
-            <Link to="#">Newsletter</Link>
+
+            <a href="#" className={styles.finNews}>FIN NEWS</a>
+            <a href="/blogs">Blogs</a>
+            <a href="/myfeed">My Feed</a>
+            <a href="#">News</a>
+            <a href="#">Schemes</a>
+            <a href="#">Newsletter</a>
+
           </div>
         </div>
         <div className={styles.actions}>
