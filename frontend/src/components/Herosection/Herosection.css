@@ -1,4 +1,5 @@
 /* Hero Section Container */
+/* Hero Section Container */
 .hero-section {
   display: flex;
   justify-content: center;
@@ -8,14 +9,14 @@
   height: 90vh;
   background: linear-gradient(
       90deg,
-      rgba(44, 7, 39, 0.8) 0%,
-      rgba(17, 8, 35, 0.8) 100%
+      #2c0727 0%,
+      /* Hex color from main */ #110823 100% /* Hex color from main */
     ),
     url("../../../public/homepage.jpg"); /* Ensure the image path is correct */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 20px;
+  padding: 20px; /* Using the padding from issue5 */
   box-sizing: border-box;
   position: relative;
 }
