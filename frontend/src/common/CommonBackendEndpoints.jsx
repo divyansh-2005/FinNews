@@ -1,6 +1,4 @@
-const dotenv = require("dotenv");
-dotenv.config(); 
-const backendDomain = process.env.BACKEND_DOMAIN;
+const backendDomain = "https://fin-news-backend.vercel.app";
 
 const commonendpoint = {
     latestFinancialNews : {
