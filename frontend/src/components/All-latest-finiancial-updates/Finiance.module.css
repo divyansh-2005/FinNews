@@ -5,6 +5,7 @@
     overflow-x: auto;
     overflow-y: hidden;
     padding: 1rem;
+    align-items: flex-start; 
 }
 
 .container * {
@@ -16,7 +17,7 @@
 .container {
     width: 306.6px;
     height: 364px;
-    background: #EAEAEA;
+    background: #F5F5F5;
     box-shadow: 0px 2px 14px rgba(42, 42, 42, 0.24);
     border-radius: 3px;
     overflow: hidden;
@@ -27,33 +28,53 @@
 
 .image {
     width: 100%;
-    height: 133.7px;
-    background: #D9D9D9;
+    height: 100px;
+    background-color: #E0E0E0;
     border-radius: 3px 3px 0 0;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.image img:hover {
+    opacity: 1;
 }
 
 .content {
     flex-grow: 1;
+    padding: 10px;
 }
 
 .heading {
     font-family: 'IBM Plex Serif', serif;
-    font-weight: 600;
-    font-size: 12.6px;
-    line-height: 1.5;
-    color: #2A2A2A;
-    margin-bottom: 10.5px;
-    padding: 14px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #333;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.heading:hover {
+    color: #007BFF;
 }
 
 .description {
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 400;
-    font-size: 10.5px;
-    line-height: 1.5;
-    color: #2A2A2A;
-    margin-bottom: 14px;
-    padding: 14px;
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;
 }
 
 .footer {
@@ -61,15 +82,14 @@
     justify-content: space-between;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 9.1px;
-    color: #2A2A2A;
-    opacity: 0.7;
-    padding: 14px;
+    font-size: 12px;
+    color: #777;
+    opacity: 0.9;
 }
 
 .line {
     width: 100%;
     height: 1px;
-    opacity: 0.1;
-    background-color: #2A2A2A;
+    background-color: #DDD;
+    margin-bottom: 10px;
 }
