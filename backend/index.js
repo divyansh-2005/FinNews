@@ -2,9 +2,12 @@ const express = require("express");
 const app = express();
 const userRouter = require("./routes/userRoutes");
 const dotenv = require("dotenv");
+const axios = require("axios");
 const cors = require("cors")
 const PORT = process.env.PORT || 5000;
 const mongoose = require("mongoose")
+
+const router = require('./routes/routes');
 
 dotenv.config();
 // console.log("SECRET_KEY:",process.env.SECRET_KEY);
@@ -21,7 +24,7 @@ app.get("/",(req,res)=>{
     res.send("FinNews Backend")
 })
 
-
+app.use("/api", router);
 
 mongoose.connect(process.env.MONGO_URL)
 .then(()=>{

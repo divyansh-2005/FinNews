@@ -1,68 +1,54 @@
+
 .govt-news {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    overflow-x: auto; 
-    overflow-y: hidden; 
-    padding: 1rem; 
+    overflow-x: auto;  /* Enable horizontal scrolling */
+    overflow-y: hidden;  /* Hide vertical overflow */
+    padding: 1rem; /* Optional: add padding if needed */
 }
 
 .govt-container {
-    width: 300px; 
-    height: auto; 
+    width: 388px;
+    height: 371px;
     background: #FFFFFF;
     border: 1px solid #D4D2E3;
     border-radius: 24px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    flex-shrink: 0; 
-    padding: 1rem; 
-    transition: box-shadow 0.3s ease; 
+    flex-shrink: 0; /* Prevent shrinking */
 }
 
-.govt-container:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
-}
 .govt-image {
-    width: 100%; 
-    height: 150px; /* Set a height that fits most images */
+    width: 72px;
+    height: 66.06px;
     background: #D4D2E3;
     border-radius: 20px;
-    margin-bottom: 1rem; 
-    position: relative; 
-    overflow: hidden; /* Prevents overflow issues */
+    margin: 1rem;
 }
-
-.govt-image img {
-    width: 100%; 
-    height: 100%; 
-    object-fit: contain; /* Ensures the entire image is visible */
-    border-radius: 20px;
-}
-
 
 .govt-content {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    padding: 0; 
+    padding: 1rem;
 }
 
 .govt-heading {
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
-    font-size: 22px; 
-    line-height: 30px; 
+    font-size: 28px;
+    line-height: 38px;
     color: #5D5A88;
-    margin-bottom: 0.5rem; 
+    margin-bottom: 1rem;
 }
 
 .govt-description {
     font-family: 'DM Sans', sans-serif;
     font-weight: 400;
-    font-size: 16px; 
-    line-height: 24px; 
+    font-size: 18px;
+    line-height: 30px;
     color: #9795B5;
     margin-bottom: 1rem;
 }
@@ -71,7 +57,7 @@
     width: 100%;
     height: 1px;
     background-color: #8D8BA7;
-    margin: 1rem 0; 
+    margin-bottom: 1rem;
 }
 
 .govt-learn-more {
@@ -84,7 +70,7 @@
 .learn-more-text {
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
-    font-size: 16px; 
+    font-size: 18px;
     color: #8D8BA7;
     margin-right: 6px;
 }
