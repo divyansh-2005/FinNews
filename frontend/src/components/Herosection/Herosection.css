@@ -5,12 +5,11 @@
   flex-wrap: wrap;
   width: 100%;
   height: 90vh;
-  background: linear-gradient(90deg, #2c0727 0%, #110823 100%),
-    url("../../../public/homepage.jpg");
+  background: linear-gradient(90deg, #2c0727 0%, #110823 100%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 20px;
+  padding: 3vh 49px;
   box-sizing: border-box;
   position: relative;
 }
@@ -32,8 +31,8 @@
   justify-content: center;
   text-align: left;
   color: white;
-  order: 2; /* Ensure text is above the image in desktop */
-  align-items: flex-start; /* Align items to the start (left) on desktop */
+  order: 2;
+  align-items: flex-start;
 }
 
 .image-section {
@@ -41,11 +40,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  order: 1; /* Image comes first in desktop */
+  order: 1;
 }
 
 .hero-image {
-  max-width: 90%; /* Reduce image size for better fit */
+  max-width: 90%;
   height: auto;
   border-radius: 10px;
 }
@@ -152,98 +151,98 @@
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .hero-section {
-    height: auto; /* Allow height to adjust based on content */
-    padding-bottom: 80px; /* Add padding to prevent overlap with scroll-down */
+    height: auto;
+    padding-bottom: 80px;
   }
 
   .hero-content {
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Center text */
+    align-items: center;
+    text-align: center;
   }
 
   .text-section {
-    order: 2; /* Text comes after the image */
-    align-items: center; /* Center align items */
+    order: 2;
+    align-items: center;
     text-align: center;
   }
 
   .image-section {
-    order: 1; /* Image comes first */
-    margin-bottom: 20px; /* Add space below the image */
+    order: 1;
+    margin-bottom: 20px;
   }
 
   .hero-button {
-    width: 80%; /* Make button responsive */
+    width: 80%;
     max-width: 300px;
     margin-top: 1rem;
-    align-self: center; /* Center the button */
+    align-self: center;
   }
 
   .highlighted-heading {
-    font-size: 3rem; /* Adjust font size for smaller screens */
+    font-size: 3rem;
   }
 
   .highlighted-text {
-    font-size: 3.2rem; /* Adjust font size for smaller screens */
+    font-size: 3.2rem;
   }
 
   .hero-description {
-    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    font-size: 1.2rem;
   }
 
   .scroll-down {
-    bottom: 10px; /* Reduce bottom position for better spacing */
+    bottom: 10px;
   }
 }
 
 @media (max-width: 480px) {
   .hero-section {
-    height: auto; /* Allow height to adjust based on content */
-    padding-bottom: 80px; /* Add padding to prevent overlap with scroll-down */
+    height: auto;
+    padding-bottom: 80px;
   }
 
   .hero-content {
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Center text */
+    align-items: center;
+    text-align: center;
   }
 
   .text-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Center align items */
-    order: 2; /* Text comes after the image */
+    align-items: center;
+    order: 2;
     text-align: center;
   }
 
   .image-section {
-    order: 1; /* Image comes first */
+    order: 1;
     max-width: 90%;
-    margin-bottom: 20px; /* Add space below the image */
+    margin-bottom: 20px;
   }
 
   .hero-button {
-    width: 80%; /* Make button responsive */
+    width: 80%;
     max-width: 200px;
     margin-top: 1rem;
-    align-self: center; /* Center the button */
+    align-self: center;
   }
 
   .highlighted-heading {
-    font-size: 2.4rem; /* Adjust font size for smaller screens */
+    font-size: 2.4rem;
   }
 
   .highlighted-text {
-    font-size: 2.6rem; /* Adjust font size for smaller screens */
+    font-size: 2.6rem;
   }
 
   .hero-description {
-    font-size: 1rem; /* Adjust font size for smaller screens */
+    font-size: 1rem;
   }
 
   .scroll-down {
-    bottom: 10px; /* Reduce bottom position for better spacing */
+    bottom: 10px;
   }
 }
