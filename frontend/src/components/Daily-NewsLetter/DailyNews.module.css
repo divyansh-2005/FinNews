@@ -13,66 +13,72 @@
 }
 
 .container {
-  display: flex;
-  flex-direction: row;   
-  width: 97%;
-  height: 232px; /* Height of the container */
-  background: #FFFFFF;
-  border: 2px solid #8D8D8D;
-  border-radius: 15px;
-  margin: 20px;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.textContent {
-  width: 75%; /* Adjust width to fit the layout */
-  display: flex;
-  flex-direction: column;
-}
-
-.companyTime {
-  display: flex;
-  font-family: 'Arial', sans-serif;
-  font-weight: 200;
-  font-size: 13px;
-  color: #000000;
-}
-
-.companyName {
-  padding-left: 10px;
-}
-
-.time {
-  padding-left: 30px;
-}
-
-.headingNews {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 22px;
-  color: #000000;
-  margin: 10px 0;
-  padding-left: 10px;
-}
-
-.description {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 27px;
-  color: #9795B5;
-  padding-left: 10px;
-}
-
-.image {
-  width: 234px; /* Set the width for the image */
-  height: 170px; /* Set the height for the image */
-  background: #E8E2E2; /* Background color as a placeholder */
-  border-radius: 15px;
-  margin-top: 17px;
-  margin-left: 35px;
-  background-size: cover; /* Ensure the background image covers the entire area */
-  background-position: center; /* Center the background image */
+    display: flex;
+    flex-direction: row;   
+    width:97%;
+    height: 232px;
+    background: #FFFFFF;
+    border: 2px solid #8D8D8D;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    
+  }
+  
+  .text-content {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .company-time {
+    display: flex;
+    font-family: 'Arial', sans-serif;
+    font-weight: 200;
+    font-size: 13px;
+    color: #000000;
+  }
+  
+  .company-name {
+    padding-left: 10px;
+  }
+  
+  .time {
+    padding-left: 30px;
+  }
+  
+  .heading-news {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    color: #000000;
+    margin: 10px 0;
+    padding-left: 10px;
+  }
+  
+  .description {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #9795B5;
+    padding-left: 10px;
+  }
+  
+  .image {
+    width: 234px;
+    height: 170px;
+    background: #E8E2E2;
+    border-radius: 15px;
+    margin-top: 17px;
+    margin-left: 35px;
+  }
+  
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the container, cropping if necessary */
+    border-radius: inherit; /* Apply the border radius to the image */
 }
