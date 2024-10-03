@@ -1,4 +1,6 @@
-const backendDomain = 'http://localhost:5000';
+const dotenv = require("dotenv");
+dotenv.config(); 
+const backendDomain = process.env.BACKEND_DOMAIN || 'http://localhost:5000';
 
 const commonendpoint = {
     latestFinancialNews : {
