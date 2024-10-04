@@ -5,35 +5,32 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <div className={styles.header}>
-      <div className={styles.header2}>
-        <div className={styles.navLinks}>
-          <div className={styles.navSection}>
-
-            <a href="#" className={styles.finNews}>FIN NEWS</a>
-            <a href="/blogs">Blogs</a>
-            <a href="/myfeed">My Feed</a>
-            <a href="#">News</a>
-            <a href="#">Schemes</a>
-            <a href="#">Newsletter</a>
-
-          </div>
-        </div>
-        <div className={styles.actions}>
-          <div className={styles.searchContainer}>
-            <div className={styles.searchIconWrapper}>
-              <input
-                type="text"
-                placeholder="Search"
-                className={styles.searchInput}
-              />
-              <img src={searchIcon} alt="Search Icon" className={styles.searchIcon} />
-            </div>
-          </div>
-          <button className={styles.loginSignUp}>Login / Sign up</button>
-        </div>
+    <header className={styles.header}>
+      <div className={styles.logo}>
+      <span className="poppins-bold">FinNews</span>
       </div>
-    </div>
+
+      <div className={styles.searchDiv}>
+        <input type="text" placeholder="Search news..." className={styles.searchInput} />
+        <button className={styles.searchButton}>
+          <img src={"/search.png"} alt="Search" />
+        </button>
+      </div>
+
+      <nav>
+        <ul className={styles.navList}>
+          <li><Link to="/blogs">Blogs</Link></li>
+          <li><Link to="/myfeed">My Feeds</Link></li>
+          <li><Link to="/news">News</Link></li>
+          <li><Link to="/schemes">Schemes</Link></li>
+          <li><Link to="/newsletter">Newsletter</Link></li>
+        </ul>
+      </nav>
+
+      <div className={styles.authButton}>
+        <button>Login/Signup</button>
+      </div>
+    </header>
   );
 }
 
