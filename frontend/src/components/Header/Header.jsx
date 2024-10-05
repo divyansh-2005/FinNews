@@ -20,7 +20,7 @@ function Header() {
         {/* Logo */}
         <div className={styles.logo}>
           <Link to="/" className={styles.finNews} onClick={handleLinkClick}>
-            FIN NEWS
+          <span className="poppins">FIN<span style={{color:"#FE00E6"}}>NEWS</span></span>
           </Link>
         </div>
 
@@ -32,7 +32,7 @@ function Header() {
             className={styles.searchInput}
           />
           <img
-            src={searchIcon}
+            src={"/search.png"}
             alt="Search Icon"
             className={styles.searchIcon}
           />

@@ -7,11 +7,12 @@
   z-index: 100;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
   padding: 15px 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
 }
 
 .container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
@@ -29,7 +30,7 @@
 }
 
 .finNews:hover {
-  color: #FE00E6; /* Change to a different color on hover if desired */
+  color: #ffc7f9; /* Change to a different color on hover if desired */
 }
 
 /* Search Bar */
@@ -37,41 +38,48 @@
   display: flex;
   align-items: center;
   background-color: rgba(239, 239, 239, 1);
-  border-radius: 8px;
-  padding: 8px;
+  border-radius: 25px;
+  padding: 10px;
   flex-grow: 1;
   max-width: 200px;
+ 
 }
 
 .searchInput {
+  border-radius:50px;
   border: none;
   background-color: transparent;
   outline: none;
   padding-left: 10px;
   width: 100%;
+  font-size: larger;
 }
 
 .searchIcon {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 
 /* Navigation */
 .nav {
   display: flex;
   gap: 25px;
+  align-items: center;
 }
 
 .nav a {
   color: white; /* Original link color */
   font-size: 18px;
   text-decoration: none;
-  padding: 10px 0;
+  padding: 10px 5px;
+ 
+  border-radius: 25px;
   transition: color 0.3s ease; /* Smooth color change */
 }
 
 .nav a:hover {
-  color: #FE00E6; /* Match hover color with hero section */
+  background-color: #54024b; /* Match hover color with hero section */
 }
 
 /* Mobile Menu */
@@ -134,18 +142,29 @@
     position: fixed;
     top: 60px;
     right: 0;
-    background: rgba(37, 37, 37, 0.95);
+    background: rgba(99, 0, 89, 0.9);
     flex-direction: column;
     width: 200px;
     gap: 20px;
     padding: 20px;
+    border: #673560 4px solid;
+    align-items: center;
+    border-radius: 15px;
     display: none; /* Hidden by default on mobile */
   }
 
   .nav.active {
     display: flex; /* Show when menuOpen is true */
   }
-
+  .nav a{
+    padding: 10px 20px;
+    width:100% ;
+    border-radius: 5px;
+  }
+  .nav a:hover {
+   background-color: rgba(141, 2, 127, 0.9);
+   transition: 0.5s;
+  }
   .menuToggle {
     display: block; /* Show menu toggle button on mobile */
   }
@@ -182,4 +201,10 @@
 .dropdownSignUp:hover {
   background: linear-gradient(90deg, #d4007b 0%, #6d0072 100%); /* Darker shade on hover */
   color: #fff; /* White color on hover */
+}
+
+.poppins {
+  font-family: "Poppins", system-ui;
+  font-weight: 700;
+  
 }
