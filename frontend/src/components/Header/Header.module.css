@@ -1,116 +1,185 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+/* Container styles */
+.header {
+  background: linear-gradient(90deg, #2C0727 0%, #110823 100%); /* Match hero section gradient */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  padding: 15px 0;
 }
 
-header {
-  background-color: rgb(78, 12, 72);
+.container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 5rem;
-  padding: 0;
-  padding:0 20px 0px 20px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.logo {
+/* Logo */
+.finNews {
+  color: white; /* Highlight color to match hero */
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+}
+
+.finNews:hover {
+  color: #FE00E6; /* Change to a different color on hover if desired */
+}
+
+/* Search Bar */
+.search {
   display: flex;
   align-items: center;
- 
-}
-
-.logo span {
-  color: white;
-  font-weight: 700;
-  font-size: 30px;
-}
-
-.searchDiv {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  padding-left:  5px;
-  padding-right: 5px;
-  border-radius: 30px;
-  padding: 10px;
+  background-color: rgba(239, 239, 239, 1);
+  border-radius: 8px;
+  padding: 8px;
+  flex-grow: 1;
+  max-width: 200px;
 }
 
 .searchInput {
   border-radius:50px;
   border: none;
-  width: 200px;
-  background: transparent;
-  outline: none;
-  font-size: large;
-}
-
-.searchButton {
   background-color: transparent;
-  border: none;
-  margin-left: 10px;
-  cursor: pointer;
+  outline: none;
+  padding-left: 10px;
+  width: 100%;
 }
-.searchButton img{
-  width: 25px;
-    height:25px;
-  
-}
+
 .searchIcon {
-  width: 25px;
-    height:25px;
-  color: black;
+  width: 16px;
+  height: 16px;
 }
 
-nav ul {
+/* Navigation */
+.nav {
   display: flex;
-  list-style-type: none;
+  gap: 25px;
 }
 
-nav li {
-  margin-left: 20px;
-  
-}
-
-nav li a {
-  color: white;
+.nav a {
+  color: white; /* Original link color */
+  font-size: 18px;
   text-decoration: none;
-  font-weight: bold;
-  font-size: larger;
-  border-radius: 20px;
-  padding: 5px 10px 5px 10px ;
-}
-nav li a:hover{
-  background-color: rgb(122, 7, 112);
-  transition: 0.2s;
+  padding: 10px 0;
+  transition: color 0.3s ease; /* Smooth color change */
 }
 
-.authButton button {
-  padding: 8px 15px;
+.nav a:hover {
+  color: #FE00E6; /* Match hover color with hero section */
+}
+
+/* Mobile Menu */
+.menuToggle {
+  display: none;
+  font-size: 24px;
   color: white;
-  background-color: rgb(78, 12, 72);
-  border: 2px solid;
-  border-radius: 5px;
+  background: transparent;
+  border: none;
   cursor: pointer;
-  font-weight: bold;
-  font-size: larger;
-}
-.authButton button:hover {
-  transition: 0.2s;
-  padding: 8px 15px;
-  color: rgb(78, 12, 72);
-  background-color: white;
-  border: 2px solid;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: larger;
 }
 
-.poppins-bold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
+.active {
+  display: block;
+}
+
+/* Login/Sign Up Button */
+.loginSignUp {
+  background: linear-gradient(90deg, #EF01DC 0%, #77048E 100%); /* Match hero button gradient */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 500px; /* Match hero button shape */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.loginSignUp:hover {
+  background: linear-gradient(90deg, #d4007b 0%, #6d0072 100%); /* Darker shade on hover */
+  color: #fff; /* White color on hover */
+}
+
+/* Dropdown Menu Styles */
+.dropdownMenu {
+  position: fixed;
+  top: 60px; /* Adjust based on header height */
+  right: 20px;
+  background: rgba(37, 37, 37, 0.95);
+  border-radius: 12px;
+  padding: 15px;
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Show dropdown menu */
+.dropdownMenu.active {
+  display: flex; /* Show when the dropdown is active */
+}
+
+/* Table element hover effect */
+.table-element:hover {
+  background-color: #d7a6e0; /* Pinkish violet color on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background: rgba(37, 37, 37, 0.95);
+    flex-direction: column;
+    width: 200px;
+    gap: 20px;
+    padding: 20px;
+    display: none; /* Hidden by default on mobile */
+  }
+
+  .nav.active {
+    display: flex; /* Show when menuOpen is true */
+  }
+
+  .menuToggle {
+    display: block; /* Show menu toggle button on mobile */
+  }
+
+  .loginSignUp {
+    display: none; /* Hide the login/signup button on mobile */
+  }
+}
+
+/* Dropdown Link Styles */
+.dropdownLink {
+  color: white; /* Original color */
+  text-decoration: none;
+  padding: 10px 0;
+  transition: color 0.3s ease; /* Smooth color change */
+}
+
+.dropdownLink:hover {
+  color: #FE00E6; /* Change this to match hover color */
+}
+
+/* Mobile Sign In / Sign Up Button */
+.dropdownSignUp {
+  background: linear-gradient(90deg, #EF01DC 0%, #77048E 100%); /* Match hero button gradient */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 500px; /* Match hero button shape */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.dropdownSignUp:hover {
+  background: linear-gradient(90deg, #d4007b 0%, #6d0072 100%); /* Darker shade on hover */
+  color: #fff; /* White color on hover */
 }
