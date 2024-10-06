@@ -16,7 +16,6 @@ function Home() {
         <GovSchemes/>
         <StartUp />
         <DailyNews/>
-        <Footer />
     </>
   )
 }
