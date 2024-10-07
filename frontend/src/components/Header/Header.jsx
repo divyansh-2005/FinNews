@@ -50,9 +50,23 @@ function Header() {
           <Link to="" onClick={handleLinkClick}>News</Link>
           <Link to="" onClick={handleLinkClick}>Schemes</Link>
           <Link to="" onClick={handleLinkClick}>Newsletter</Link>
-
-          <button className={styles.dropdownSignUp}>Sign In / Sign Up</button>
         </nav>
+
+        {/* Buttons container */}
+        <div className={styles.buttonContainer}>
+          {/* Sign Up Button */}
+          <button className={styles.dropdownSignUp}>Sign In / Sign Up</button>
+
+          {/* GitHub Star Button */}
+          <a
+            href="https://github.com/divyansh-2005/FinNews"
+            className={styles.githubStar}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ⭐ Star us on GitHub
+          </a>
+        </div>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.active : ''}`}>
           <Link to="/blogs" onClick={handleLinkClick}>Blogs</Link>
