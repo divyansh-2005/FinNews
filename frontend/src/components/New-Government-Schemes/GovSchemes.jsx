@@ -1,7 +1,7 @@
 import React from "react";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css"; // Correct Swiper CSS import
+import "swiper/css";
 import "./GovSchemes.css";
 import { useMediaQuery } from "react-responsive";
 import scheme from "../../assets/nationalBefinifitScheme.png";
