@@ -47,7 +47,7 @@ function Header() {
         <nav className={`${styles.desktopNavbar}`}>
           <Link to="/blogs" onClick={handleLinkClick}>Blogs</Link>
           <Link to="/myfeed" onClick={handleLinkClick}>My Feed</Link>
-          <Link to="" onClick={handleLinkClick}>News</Link>
+          <Link to="/news" onClick={handleLinkClick}>News</Link> {/* Updated Link */}
           <Link to="" onClick={handleLinkClick}>Schemes</Link>
           <Link to="" onClick={handleLinkClick}>Newsletter</Link>
         </nav>
@@ -71,7 +71,7 @@ function Header() {
         <nav className={`${styles.nav} ${menuOpen ? styles.active : ''}`}>
           <Link to="/blogs" onClick={handleLinkClick}>Blogs</Link>
           <Link to="/myfeed" onClick={handleLinkClick}>My Feed</Link>
-          <Link to="" onClick={handleLinkClick}>News</Link>
+          <Link to="/news" onClick={handleLinkClick}>News</Link> {/* Updated Link */}
           <Link to="" onClick={handleLinkClick}>Schemes</Link>
           <Link to="" onClick={handleLinkClick}>Newsletter</Link>
 
