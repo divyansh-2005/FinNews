@@ -1,210 +1,193 @@
-/* Container styles */
-.header {
-  background: linear-gradient(90deg, #2C0727 0%, #110823 100%); /* Match hero section gradient */
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
-  padding: 15px 0;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-}
+ .header {
+   background: linear-gradient(90deg, #2C0727 0%, #110823 100%);
+   width: 100%;
+   position: fixed;
+   top: 0;
+   z-index: 200;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+   padding: 15px 0;
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+ }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+ .container {
+   display: flex;
+   justify-content: space-between;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 20px;
+ }
 
-/* Logo */
-.finNews {
-  color: white; /* Highlight color to match hero */
-  font-size: 28px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  text-decoration: none;
-}
+ .finNews {
+   color: white;
+   font-size: 28px;
+   font-weight: 700;
+   text-transform: uppercase;
+   letter-spacing: 1.5px;
+   text-decoration: none;
+ }
 
-.finNews:hover {
-  color: #ffc7f9; /* Change to a different color on hover if desired */
-}
+ .finNews:hover {
+   color: #ffc7f9;
+ }
 
-/* Search Bar */
-.search {
-  display: flex;
-  align-items: center;
-  background-color: rgba(239, 239, 239, 1);
-  border-radius: 25px;
-  padding: 10px;
-  flex-grow: 1;
-  max-width: 200px;
- 
-}
+ .search {
+   display: flex;
+   align-items: center;
+   background-color: rgba(239, 239, 239, 1);
+   border-radius: 25px;
+   padding: 10px;
+   flex-grow: 1;
+   max-width: 200px;
+ }
 
-.searchInput {
-  border-radius:50px;
-  border: none;
-  background-color: transparent;
-  outline: none;
-  padding-left: 10px;
-  width: 100%;
-  font-size: larger;
-}
+ .searchInput {
+   border-radius: 50px;
+   border: none;
+   background-color: transparent;
+   outline: none;
+   padding-left: 10px;
+   width: 100%;
+   font-size: larger;
+ }
 
-.searchIcon {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
+ .searchIcon {
+   width: 20px;
+   height: 20px;
+   cursor: pointer;
+ }
 
-/* Navigation */
-.nav {
-  display: flex;
-  gap: 25px;
-  align-items: center;
-}
+ /* Navigation */
+ .nav {
+   display: flex;
+   gap: 25px;
+   align-items: center;
+   position: fixed;
+   top: 0;
+   right: -550px;
+   height: 100vh;
+   width: 300px;
+   background: rgba(99, 0, 89, 0.9);
+   padding: 20px;
+   flex-direction: column;
+   justify-content: center;
+   transition: right 0.4s ease-in-out;
+   z-index: 300;
+ }
 
-.nav a {
-  color: white; /* Original link color */
-  font-size: 18px;
-  text-decoration: none;
-  padding: 10px 5px;
- 
-  border-radius: 25px;
-  transition: color 0.3s ease; /* Smooth color change */
-}
 
-.nav a:hover {
-  background-color: #54024b; /* Match hover color with hero section */
-}
 
-/* Mobile Menu */
-.menuToggle {
-  display: none;
-  font-size: 24px;
-  color: white;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
 
-.active {
-  display: block;
-}
+ .nav a {
+   color: white;
+   font-size: 18px;
+   text-decoration: none;
+   padding: 10px 5px;
+   border-radius: 25px;
+   transition: color 0.3s ease;
+ }
 
-/* Login/Sign Up Button */
-.loginSignUp {
-  background: linear-gradient(90deg, #EF01DC 0%, #77048E 100%); /* Match hero button gradient */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 500px; /* Match hero button shape */
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease; /* Smooth transition */
-}
+ .nav a:hover {
+   background-color: #54024b;
+ }
 
-.loginSignUp:hover {
-  background: linear-gradient(90deg, #d4007b 0%, #6d0072 100%); /* Darker shade on hover */
-  color: #fff; /* White color on hover */
-}
+ .nav.active {
+   right: 0;
+ }
 
-/* Dropdown Menu Styles */
-.dropdownMenu {
-  position: fixed;
-  top: 60px; /* Adjust based on header height */
-  right: 20px;
-  background: rgba(37, 37, 37, 0.95);
-  border-radius: 12px;
-  padding: 15px;
-  display: none; /* Hidden by default */
-  flex-direction: column;
-  gap: 10px;
-}
+ .desktopNavbar {
+   display: flex;
+   gap: 25px;
+   align-items: center;
+ }
 
-/* Show dropdown menu */
-.dropdownMenu.active {
-  display: flex; /* Show when the dropdown is active */
-}
+ .desktopNavbar a {
+   color: white;
+   font-size: 18px;
+   text-decoration: none;
+   padding: 10px 5px;
 
-/* Table element hover effect */
-.table-element:hover {
-  background-color: #d7a6e0; /* Pinkish violet color on hover */
-}
+   border-radius: 25px;
+   transition: color 0.3s ease;
+ }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .nav {
-    position: fixed;
-    top: 60px;
-    right: 0;
-    background: rgba(99, 0, 89, 0.9);
-    flex-direction: column;
-    width: 200px;
-    gap: 20px;
-    padding: 20px;
-    border: #673560 4px solid;
-    align-items: center;
-    border-radius: 15px;
-    display: none; /* Hidden by default on mobile */
-  }
+ .desktopNavbar a:hover {
+   background-color: #54024b;
+ }
 
-  .nav.active {
-    display: flex; /* Show when menuOpen is true */
-  }
-  .nav a{
-    padding: 10px 20px;
-    width:100% ;
-    border-radius: 5px;
-  }
-  .nav a:hover {
-   background-color: rgba(141, 2, 127, 0.9);
-   transition: 0.5s;
-  }
-  .menuToggle {
-    display: block; /* Show menu toggle button on mobile */
-  }
+ .overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   background: rgba(0, 0, 0, 0.6);
+   z-index: 250;
+ }
 
-  .loginSignUp {
-    display: none; /* Hide the login/signup button on mobile */
-  }
-}
+ .menuToggle {
+   display: none;
+   font-size: 24px;
+   color: white;
+   background: transparent;
+   border: none;
+   cursor: pointer;
+   z-index: 400;
+ }
 
-/* Dropdown Link Styles */
-.dropdownLink {
-  color: white; /* Original color */
-  text-decoration: none;
-  padding: 10px 0;
-  transition: color 0.3s ease; /* Smooth color change */
-}
+ @media (max-width: 768px) {
+   .menuToggle {
+     display: block;
+   }
 
-.dropdownLink:hover {
-  color: #FE00E6; /* Change this to match hover color */
-}
+   .nav a {
+     padding: 10px 20px;
+     width: 100%;
+     border-radius: 5px;
+     padding-left: 10.5rem;
+   }
 
-/* Mobile Sign In / Sign Up Button */
-.dropdownSignUp {
-  background: linear-gradient(90deg, #EF01DC 0%, #77048E 100%); /* Match hero button gradient */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 500px; /* Match hero button shape */
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease; /* Smooth transition */
-}
+   .nav a:hover {
+     background-color: rgba(141, 2, 127, 0.9);
+     transition: 0.5s;
+   }
 
-.dropdownSignUp:hover {
-  background: linear-gradient(90deg, #d4007b 0%, #6d0072 100%); /* Darker shade on hover */
-  color: #fff; /* White color on hover */
-}
+   .loginSignUp {
+     display: none;
+   }
 
-.poppins {
-  font-family: "Poppins", system-ui;
-  font-weight: 700;
-  
-}
+   .desktopNavbar {
+     display: none;
+   }
+
+   .search {
+     border-radius: 10px;
+     max-width: 145px;
+     height: 14px;
+   }
+
+   .container {
+     align-items: center;
+   }
+
+   .searchInput {
+     font-size: 1rem;
+   }
+ }
+
+ /* Dropdown Sign In/Sign Up */
+ .dropdownSignUp {
+   background: linear-gradient(90deg, #EF01DC 0%, #77048E 100%);
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   border-radius: 500px;
+   font-size: 16px;
+   cursor: pointer;
+   transition: background 0.3s ease, color 0.3s ease;
+ }
+
+ .dropdownSignUp:hover {
+   background: linear-gradient(90deg, #d4007b 0%, #6d0072 100%);
+   color: #fff;
+ }
