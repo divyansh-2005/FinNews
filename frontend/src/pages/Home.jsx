@@ -10,7 +10,6 @@ import Footer from '../components/Footer/Footer'
 function Home() {
   return (
     <>
-
       <Herosection />
       <Finiance />
       <GovSchemes />

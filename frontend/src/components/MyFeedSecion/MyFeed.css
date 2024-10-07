@@ -1,71 +1,82 @@
-/* src/components/MyFeedSecion/MyFeed.css */
-
 .feed-container {
-    padding: 40px;
-    background-color: #f5f5f5;
-    background: linear-gradient(135deg, #360a47, #301c4c);
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #2e1d44, #3c2856);
+}
 
-  }
-  
-  .feed-title {
-    font-size: 4rem;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #fbfbfb;
-    font-style:" Snell Roundhand, cursive";
-  }
-  
+.feed-title {
+  font-size: 3.5rem;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1.5px;
+  margin-bottom: 0;
+}
+
+.feed-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 3% 2%;
+}
+
+.feed-item {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.feed-item:hover {
+  transform: translateY(-10px);
+  /* Lifts the card on hover */
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.feed-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #3c2856;
+  margin-top: 7px;
+  /* Dark purple for a more sophisticated look */
+}
+
+.feed-item p {
+  font-size: 1rem;
+  color: #444444;
+  /* Neutral, clean text color */
+  line-height: 1.6;
+}
+
+.feed-date {
+  font-size: 0.9rem;
+  color: #777777;
+  margin-top: 20px;
+  display: block;
+  text-align: right;
+}
+
+/* Add subtle hover effect for titles */
+.feed-item h3:hover {
+  color: #2e1d44;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
   .feed-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-    gap: 30px; /* Space between cards */
-    padding: 5% 5%;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 cards per row on medium screens */
   }
-  
-  .feed-item {
-    background-color: rgb(251, 250, 250);
-    border-radius: 30px ;
-    /* padding: 20px; */
-    box-shadow: 7px 0px 5px #79f0ee, -7px 0px 7px #73f2fb;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    overflow: hidden;
-    padding: 2% 5%;
+}
+
+@media (max-width: 768px) {
+  .feed-list {
+    grid-template-columns: 1fr;
+    /* 1 card per row on small screens */
   }
-  
-  .feed-item:hover {
-    transform: scale(1.05); /* Slightly scale up the card */
-    box-shadow: 7px 0px 15px  #79f0ee, -7px 0px 7px #73f2fb;
+
+  .feed-container {
+    padding: 40px 20px;
   }
-  
-  .feed-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #050404;
-  }
-  
-  .feed-item p {
-    font-size: 1rem;
-    color: #080808;
-  }
-  
-  .feed-date {
-    font-size: 0.85rem;
-    color: #090909;
-    margin-top: 10px;
-    display: block;
-    text-align: right;
-  }
-  
-  /* Responsive Design: Adjust layout for smaller screens */
-  @media (max-width: 1200px) {
-    .feed-list {
-      grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .feed-list {
-      grid-template-columns: 1fr; /* 1 card per row on small screens */
-    }
-  }
-  
+}
