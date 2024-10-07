@@ -1,75 +1,96 @@
 .news {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 1.5rem;
     overflow-x: auto;
-    overflow-y: hidden;
-    padding: 1rem;
-    align-items: flex-start; 
-}
-
-.container * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    padding: 1.5rem;
+    align-items: flex-start;
+    background-color: #eaeaea;
+    scroll-behavior: smooth;
+    border-radius: 8px;
 }
 
 .container {
-    width: 306.6px;
-    height: 364px;
-    background: #F5F5F5;
-    box-shadow: 0px 2px 14px rgba(42, 42, 42, 0.24);
-    border-radius: 3px;
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: 0 4px 16px rgba(93, 90, 136, 0.15);
+    border-radius: 20px 20px 8px 8px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(93, 90, 136, 0.25);
 }
 
 .image {
-    width: 100%; /* Ensure full width */
-    height: 126px; /* Set the fixed height */
-    background: #D9D9D9;
-    border-radius: 3px 3px 0 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d9d9d9;
+    border-radius: 20px 20px 0 0;
     overflow: hidden;
 }
 
 .image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures image fills the container, cropping if necessary */
-    border-radius: inherit; /* Apply the border radius to the image */
+    object-fit: cover;
+    transition: transform 0.4s ease;
 }
 
+.container:hover .image img {
+    transform: scale(1.08);
+}
 
+.time {
+    color: #7c059d;
+}
+
+.author {
+    color: #140823;
+}
 
 .content {
-    flex-grow: 1;
-    padding: 10px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .heading {
     font-family: 'IBM Plex Serif', serif;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 1.4;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #5D5A88;
+    margin-bottom: 12px;
     transition: color 0.3s ease;
 }
 
 .heading:hover {
-    color: #007BFF;
+    color: #5D5A88;
 }
 
 .description {
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 400;
-    font-size: 14px;
-    text-decoration: none;
+    font-size: 1rem;
     line-height: 1.6;
-    color: #555;
-    margin-bottom: 10px;
+    color: #9795B5;
+    margin-bottom: 20px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin-bottom: 16px;
 }
 
 .footer {
@@ -78,13 +99,23 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 12px;
-    color: #777;
+    color: #888;
     opacity: 0.9;
 }
 
-.line {
-    width: 100%;
-    height: 1px;
-    background-color: #DDD;
-    margin-bottom: 10px;
+.news::-webkit-scrollbar {
+    height: 8px;
+}
+
+.news::-webkit-scrollbar-thumb {
+    background-color: #5d5a88;
+    border-radius: 8px;
+}
+
+.news::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.container:hover .content .heading {
+    color: #5d5a88;
 }

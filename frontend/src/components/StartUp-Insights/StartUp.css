@@ -1,127 +1,148 @@
-
 .startup-insights {
   display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  overflow-x: auto;  /* Enable horizontal scrolling */
-  overflow-y: hidden;  /* Hide vertical overflow */
-  padding: 1rem; /* Optional: add padding if needed */
+  gap: 1.5rem;
+  padding: 2rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  background-color: #eaeaea;
+  /* Prevents items from wrapping */
 }
 
 .startup-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  flex-shrink: 0;
+  /* Prevents the cards from shrinking */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  background: #77048E;
-  border-radius: 20px;
-  width: 380px;
-  min-width: 380px; /* Ensure each container has the same width */
-  margin: 10px;
-  padding: 20px;
-  box-sizing: border-box;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
-.top-box {
-  display: flex;
-  align-items: center;
-  background: #D9D9D9;
-  border-radius: 20px 20px 0 0;
-  padding: 20px;
-  position: relative;
+.startup-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .img {
-  width: 80px;
-  height: 80px;
-  background: #77048E;
-  border-radius: 10px;
-  margin-right: 20px;
+  height: 160px;
+  overflow: hidden;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
 .img img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures image fills the container, cropping if necessary */
-  border-radius: inherit; /* Apply the border radius to the image */
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transition: transform 0.3s ease;
 }
 
+.startup-container:hover .img img {
+  transform: scale(1.1);
+}
+
+.top-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 .organization-details {
   display: flex;
   align-items: center;
-  flex: 1;
-}
-
-.organization-img {
-  width: 20px;
-  height: 20px;
-  background: url('../../assets/organization.svg') no-repeat center;
-  margin-right: 8px;
+  padding: 1.1rem 1.4rem;
+  justify-content: space-between;
 }
 
 .organization {
-  font-family: 'Didact Gothic', sans-serif;
-  font-size: 12px;
-  color: #373737;
+  font-weight: 600;
+  font-size: 18px;
+  color: #77048E;
+}
+
+.organization-img {
+  width: 30px;
+  height: 30px;
+  background: url('../../assets/organization.svg') no-repeat center;
+  margin-right: 10px;
 }
 
 .startup-heading {
-  font-family: 'DM Sans', sans-serif;
   font-weight: 700;
-  font-size: 24px;
-  color: #000000;
-  margin-left: auto;
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 0.75rem;
+  padding: 0rem 1.4rem;
 }
 
 .summary-box {
-  background: #FFFFFF;
-  border-radius: 5px;
-  padding: 6px 12px;
-  position: absolute;
-  bottom: -16px;
-  left: 50%;
-  transform: translateX(-50%);
+  background: #f4f4f4;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  text-align: center;
 }
 
 .summary {
-  font-family: 'DM Sans', sans-serif;
   font-weight: 600;
-  font-size: 16px;
-  color: #000000;
-  text-align: center;
+  font-size: 1.4rem;
+  color: #666;
 }
 
 .description-container {
-  background: #FFFFFF;
-  border-radius: 0 0 20px 20px;
-  padding: 20px;
-  
+  padding: 1.5rem;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  white-space: wrap;
 }
 
 .about {
-  font-family: 'DM Sans', sans-serif;
   font-weight: 700;
-  font-size: 18px;
-  color: #000000;
+  font-size: 16px;
+  margin-bottom: 0.75rem;
+  color: #333;
 }
 
 .paragraph {
-  font-family: 'DM Sans', sans-serif;
   font-weight: 400;
   font-size: 14px;
-  color: #9795B5;
-  margin-top: 10px;
+  color: #666;
+  line-height: 1.6;
 }
 
 .link {
-  background: #77048E;
-  color: #FFFFFF;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 700;
-  font-size: 12px;
-  text-decoration: none;
-  border-radius: 12px;
-  padding: 8px 16px;
-  text-align: center;
-  margin-top: 20px;
   display: inline-block;
+  background-color: #77048E;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.link:hover {
+  background-color: #5a0269;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .startup-insights {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .startup-container {
+    width: 100%;
+    max-width: 350px;
+  }
 }

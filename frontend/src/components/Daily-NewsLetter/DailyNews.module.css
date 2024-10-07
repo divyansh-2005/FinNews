@@ -1,84 +1,107 @@
-/* .News1{
-    max-height: 464px;
-    overflow-y: auto;  Enable vertical scrolling
-    overflow-x: hidden;  Hide horizontal overflow
-    scroll-behavior: smooth;  Smooth scrolling
-} */
-
 .News1 {
-  max-height: 464px;
-  overflow-y: auto; /* Enable vertical scrolling */
-  overflow-x: hidden; /* Hide horizontal overflow */
-  scroll-behavior: smooth; /* Smooth scrolling */
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 1.5rem;
+  align-items: flex-start;
+  background-color: #eaeaea;
+  scroll-behavior: smooth;
+  border-radius: 8px;
 }
 
 .container {
-    display: flex;
-    flex-direction: row;   
-    width:97%;
-    height: 232px;
-    background: #FFFFFF;
-    border: 2px solid #8D8D8D;
-    border-radius: 15px;
-    margin: 20px;
-    padding: 20px;
-    box-sizing: border-box;
-    
-  }
-  
-  .text-content {
-    width: 75%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .company-time {
-    display: flex;
-    font-family: 'Arial', sans-serif;
-    font-weight: 200;
-    font-size: 13px;
-    color: #000000;
-  }
-  
-  .company-name {
-    padding-left: 10px;
-  }
-  
-  .time {
-    padding-left: 30px;
-  }
-  
-  .heading-news {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 22px;
-    color: #000000;
-    margin: 10px 0;
-    padding-left: 10px;
-  }
-  
-  .description {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 27px;
-    color: #9795B5;
-    padding-left: 10px;
-  }
-  
-  .image {
-    width: 234px;
-    height: 170px;
-    background: #E8E2E2;
-    border-radius: 15px;
-    margin-top: 17px;
-    margin-left: 35px;
-  }
-  
-  .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures image fills the container, cropping if necessary */
-    border-radius: inherit; /* Apply the border radius to the image */
+  width: 400px;
+  height: 450px;
+  background-color: #fff;
+  box-shadow: 0 4px 16px rgba(93, 90, 136, 0.15);
+  border-radius: 20px 20px 8px 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.container:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.image {
+  width: 100%;
+  height: 170px;
+  background: #E8E2E2;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.textContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.company-time {
+  display: flex;
+  font-family: 'Arial', sans-serif;
+  font-weight: 200;
+  font-size: 13px;
+  color: #000000;
+}
+
+.companyName {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin-bottom: 16px;
+}
+
+.company-name {
+  padding-left: 10px;
+  color: #5D5A88;
+}
+
+.time {
+  text-align: right;
+  color: #7c059d;
+}
+
+.headingNews {
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #5D5A88;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.description {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #9795B5;
+  margin-bottom: 1rem;
 }
