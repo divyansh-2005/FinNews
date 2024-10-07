@@ -1,0 +1,827 @@
+.bookmark-btn {
+    background-color: #ff69b4; /* Pinkish button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .bookmark-btn:hover {
+    background-color: #ff1493; /* Darker pink on hover */
+  }
+  
+  .read-more-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .read-more-button:hover {
+    background-color: #45a049;
+  }
+  
+  .bookmarked-news {
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  }
+  
+  .bookmarked-item {
+    margin-bottom: 10px;
+  }
+  .bookmark-btn {
+    background-color: #ff69b4; /* Pinkish button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .bookmark-btn:hover {
+    background-color: #ff1493; /* Darker pink on hover */
+  }
+  
+  .read-more-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .read-more-button:hover {
+    background-color: #45a049;
+  }
+  
+  .bookmarked-news {
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  }
+  
+  .bookmarked-item {
+    margin-bottom: 10px;
+  }
+  .bookmark-section {
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .bookmark-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .bookmark-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .bookmark-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .bookmark-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .bookmark-title {
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  .bookmark-content {
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  .read-more-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .bookmark-btn {
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .bookmarked-news {
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  }
+  
+  .bookmarked-item {
+    margin-bottom: 10px;
+  }
+  .bookmark-section {
+    padding: 20px;
+    background: linear-gradient(to right, #ff00ff, #800080, #000000); /* Pink, purple, black gradient */
+    color: white;
+  }
+  
+  .bookmark-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .bookmark-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .bookmark-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .bookmark-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .bookmark-title {
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .bookmark-content {
+    margin-top: 10px;
+    color: #ddd;
+  }
+  
+  .read-more-button {
+    background-color: #1e90ff; /* Blue */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .bookmark-btn {
+    background-color: #ffeb3b; /* Yellow */
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+  
+  .social-icons i {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  
+  .bookmarked-news {
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  }
+  
+  .bookmarked-item {
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .bookmark-container {
+      grid-template-columns: 1fr; /* Stack on small screens */
+    }
+  }
+  .bookmark-section {
+    padding: 20px;
+    background: linear-gradient(to right, #800080, #000000); /* Purple to black gradient */
+    color: white;
+  }
+  
+  .bookmark-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .bookmark-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+  }
+  
+  .bookmark-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+    padding: 20px; /* Increased padding for more content */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Ensures consistent card height */
+  }
+  
+  .bookmark-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .bookmark-title {
+    font-size: 20px; /* Increased font size */
+    margin-top: 15px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .bookmark-content {
+    margin-top: 10px;
+    color: #ddd;
+    flex-grow: 1; /* Ensures content uses available space */
+  }
+  
+  .read-more-button {
+    background-color: #1e90ff; /* Blue */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .bookmark-btn {
+    background-color: #ffeb3b; /* Yellow */
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+  
+  .social-icons i {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  
+  .bookmarked-news {
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  }
+  
+  .bookmarked-item {
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .bookmark-container {
+      grid-template-columns: 1fr; /* Stack on small screens */
+    }
+  }
+  .bookmark-section {
+    padding: 20px;
+    background: linear-gradient(to right, #800080, #000000); /* Purple to black gradient */
+    color: white;
+  }
+  
+  .bookmark-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .bookmark-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+  }
+  
+  .bookmark-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%; /* Adjust width */
+  }
+  
+  .bookmark-image {
+    width: 100%;
+    height: 150px; /* Make rectangular */
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .bookmark-title {
+    font-size: 20px; /* Increased font size */
+    margin-top: 15px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .bookmark-content {
+    margin-top: 10px;
+    color: #ddd;
+    flex-grow: 1; /* Ensures content uses available space */
+  }
+  
+  .read-more-button {
+    background-color: #1e90ff; /* Blue */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .bookmark-btn {
+    background-color: #ffeb3b; /* Yellow bookmark button */
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+  
+  .social-icons i {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  
+  .bookmarked-news {
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  }
+  
+  .bookmarked-item {
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .bookmark-container {
+      grid-template-columns: 1fr; /* Stack on small screens */
+    }
+  }
+  /* General page styling */
+.page-heading {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  /* Bookmark Section */
+  .bookmark-section {
+    padding: 20px;
+    background-color: #4b0076; /* Purple background */
+  }
+  
+  .bookmark-heading {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+  }
+  
+  /* Container and card styling */
+  .bookmark-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .bookmark-card {
+    background-color: #1c0133;
+    border: 2px solid #fff; /* Added border */
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s;
+  }
+  
+  .bookmark-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .bookmark-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .bookmark-title {
+    font-size: 22px;
+    margin: 10px 0;
+  }
+  
+  .bookmark-content {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  /* Read More button */
+  .read-more-button {
+    background-color: #007bff; /* Blue button */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .read-more-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Bookmark Button */
+  .bookmark-btn {
+    background-color: transparent;
+    color: #ffdb00;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 15px;
+  }
+  
+  /* Social Media Icons */
+  .social-icons i {
+    margin: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .social-icons i:hover {
+    color: #00aaff;
+  }
+  
+  /* Bookmarked Articles Section */
+  .bookmarked-news {
+    margin-top: 40px;
+  }
+  
+  .bookmarked-item {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: #333;
+  }
+  
+  .bookmarked-item h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .bookmarked-item a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .bookmarked-item a:hover {
+    text-decoration: underline;
+  }
+  /* General page styling */
+.page-heading {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold; /* Bold heading */
+    color: #000; /* Black color */
+  }
+  
+  /* Bookmark Section */
+  .bookmark-section {
+    padding: 20px;
+    background-color: #4b0076; /* Purple background */
+  }
+  
+  .bookmark-heading {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+  }
+  
+  /* Container and card styling */
+  .bookmark-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .bookmark-card {
+    background-color: #1c0133;
+    border: 2px solid #fff; /* Added border */
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s;
+  }
+  
+  .bookmark-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .bookmark-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .bookmark-title {
+    font-size: 22px;
+    margin: 10px 0;
+  }
+  
+  .bookmark-content {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  /* Read More button */
+  .read-more-button {
+    background-color: #007bff; /* Blue button */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .read-more-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Bookmark Button */
+  .bookmark-btn {
+    background-color: transparent;
+    color: #ffdb00;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 15px;
+  }
+  
+  .bookmark-btn[disabled] {
+    color: #00ff00; /* Change color to indicate already bookmarked */
+  }
+  
+  /* Social Media Icons */
+  .social-icons i {
+    margin: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .social-icons i:hover {
+    color: #00aaff;
+  }
+  
+  /* Bookmarked Articles Section */
+  .bookmarked-news {
+    margin-top: 40px;
+  }
+  
+  .bookmarked-item {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: #333;
+  }
+  
+  .bookmarked-item h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .bookmarked-item a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .bookmarked-item a:hover {
+    text-decoration: underline;
+  }
+/* General page styling */
+.page-heading {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold; /* Bold heading */
+  color: #000; /* Black color */
+}
+
+/* Bookmark Section */
+.bookmark-section {
+  padding: 20px;
+  background-color: #4b0076; /* Purple background */
+}
+
+.bookmark-heading {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* Container and card styling */
+.bookmark-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.bookmark-card {
+  background-color: #1c0133;
+  border: 2px solid #fff; /* Added border */
+  border-radius: 10px;
+  padding: 20px;
+  width: 30%;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s;
+}
+
+.bookmark-card:hover {
+  transform: scale(1.05);
+}
+
+.bookmark-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.bookmark-title {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.bookmark-content {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Read More button */
+.read-more-button {
+  background-color: #007bff; /* Blue button */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.read-more-button:hover {
+  background-color: #0056b3;
+}
+
+/* Bookmark Button */
+.bookmark-btn {
+  background-color: transparent;
+  color: #ffdb00;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.bookmark-btn[disabled] {
+  color: #00ff00; /* Change color to indicate already bookmarked */
+}
+
+/* Social Media Icons */
+.social-icons i {
+  margin: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.social-icons i:hover {
+  color: #00aaff;
+}
+
+/* Bookmarked Articles Section */
+.bookmarked-news {
+  margin-top: 40px;
+}
+
+.bookmarked-item {
+  background-color: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  color: #333;
+}
+
+.bookmarked-item h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.bookmarked-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.bookmarked-item a:hover {
+  text-decoration: underline;
+}
+  

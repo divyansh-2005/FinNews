@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 import BlogSection from "./components/Blogs/BlogSection";
 import BlogPageTemplate from "./components/Blogs/BlogPageTemplate";
 import News from "./components/News/News"; // Ensure this path is correct
+import Bookmark from "./components/Bookmark/Bookmark"; // Import Bookmark Component
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/blog/:key" element={<BlogPageTemplate />} />
           <Route path="/blogs" element={<BlogSection />} />
           <Route path="/news" element={<News />} /> {/* Link to News Section */}
+          <Route path="/bookmark" element={<Bookmark />} /> {/* Link to Bookmark Section */}
         </Routes>
         <Footer />
       </Router>
