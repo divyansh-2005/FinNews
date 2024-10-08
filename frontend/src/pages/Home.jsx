@@ -10,13 +10,12 @@ import Footer from '../components/Footer/Footer'
 function Home() {
   return (
     <>
-        <Header />
+       
         <Herosection />
         <Finiance />
         <GovSchemes/>
         <StartUp />
         <DailyNews/>
-        <Footer />
     </>
   )
 }
