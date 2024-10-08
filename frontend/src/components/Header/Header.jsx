@@ -36,20 +36,31 @@ function Header() {
           />
         </div>
 
-        <button className={styles.menuToggle} onClick={toggleMenu}>
+        <button
+          className={styles.menuToggle}
+          onClick={toggleMenu}
+          aria-expanded={menuOpen}
+          aria-label="Toggle Menu"
+        >
           {menuOpen ? '✖' : '☰'}
         </button>
 
         {/* Overlay */}
-        {menuOpen && <div className={`${styles.overlay} ${menuOpen ? styles.active : ''}`} onClick={handleLinkClick} />}
+        {menuOpen && (
+          <div
+            className={styles.overlay}
+            aria-hidden={!menuOpen}
+            onClick={handleLinkClick}
+          />
+        )}
 
         {/* Navigation Links */}
         <nav className={`${styles.desktopNavbar}`}>
           <Link to="/blogs" onClick={handleLinkClick}>Blogs</Link>
           <Link to="/myfeed" onClick={handleLinkClick}>My Feed</Link>
-          <Link to="" onClick={handleLinkClick}>News</Link>
-          <Link to="" onClick={handleLinkClick}>Schemes</Link>
-          <Link to="" onClick={handleLinkClick}>Newsletter</Link>
+          <Link to="#" onClick={handleLinkClick}>News</Link>
+          <Link to="#" onClick={handleLinkClick}>Schemes</Link>
+          <Link to="#" onClick={handleLinkClick}>Newsletter</Link>
 
           <button className={styles.dropdownSignUp}>Sign In / Sign Up</button>
         </nav>
@@ -57,9 +68,9 @@ function Header() {
         <nav className={`${styles.nav} ${menuOpen ? styles.active : ''}`}>
           <Link to="/blogs" onClick={handleLinkClick}>Blogs</Link>
           <Link to="/myfeed" onClick={handleLinkClick}>My Feed</Link>
-          <Link to="" onClick={handleLinkClick}>News</Link>
-          <Link to="" onClick={handleLinkClick}>Schemes</Link>
-          <Link to="" onClick={handleLinkClick}>Newsletter</Link>
+          <Link to="#" onClick={handleLinkClick}>News</Link>
+          <Link to="#" onClick={handleLinkClick}>Schemes</Link>
+          <Link to="#" onClick={handleLinkClick}>Newsletter</Link>
 
           <button className={styles.dropdownSignUp}>Sign In / Sign Up</button>
         </nav>
