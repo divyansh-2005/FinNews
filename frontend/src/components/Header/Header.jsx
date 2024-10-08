@@ -54,24 +54,23 @@ function Header() {
           />
         )}
 
-        {/* Navigation Links */}
+        {/* Desktop Navigation Links */}
         <nav className={`${styles.desktopNavbar}`}>
           <Link to="/blogs" onClick={handleLinkClick}>Blogs</Link>
           <Link to="/myfeed" onClick={handleLinkClick}>My Feed</Link>
-          <Link to="#" onClick={handleLinkClick}>News</Link>
-          <Link to="#" onClick={handleLinkClick}>Schemes</Link>
-          <Link to="#" onClick={handleLinkClick}>Newsletter</Link>
-
+          <Link to="" onClick={handleLinkClick}>News</Link>
+          <Link to="" onClick={handleLinkClick}>Schemes</Link>
+          <Link to="/newsletter" onClick={handleLinkClick}>Newsletter</Link>
           <button className={styles.dropdownSignUp}>Sign In / Sign Up</button>
         </nav>
 
+        {/* Mobile Navigation Links */}
         <nav className={`${styles.nav} ${menuOpen ? styles.active : ''}`}>
           <Link to="/blogs" onClick={handleLinkClick}>Blogs</Link>
           <Link to="/myfeed" onClick={handleLinkClick}>My Feed</Link>
-          <Link to="#" onClick={handleLinkClick}>News</Link>
-          <Link to="#" onClick={handleLinkClick}>Schemes</Link>
-          <Link to="#" onClick={handleLinkClick}>Newsletter</Link>
-
+          <Link to="" onClick={handleLinkClick}>News</Link>
+          <Link to="" onClick={handleLinkClick}>Schemes</Link>
+          <Link to="/newsletter" onClick={handleLinkClick}>Newsletter</Link>
           <button className={styles.dropdownSignUp}>Sign In / Sign Up</button>
         </nav>
       </div>
