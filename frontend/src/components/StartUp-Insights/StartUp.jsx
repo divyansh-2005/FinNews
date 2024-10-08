@@ -1,64 +1,39 @@
 import React from 'react'
 import SectionHeading from '../SectionHeading/SectionHeading'
 import './StartUp.css'
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import axios from "axios";
 function StartUp() {
-  const [startupsInsightsData, setStartupsInsightsData] = React.useState([]);
-
-  const fetchStartupsInsightsData = async (req, res) => {
-   try {
-    const response = await fetch('http://localhost:5000/api/startup-Insights');
-
-    if(!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    const data = await response.json();
-    setStartupsInsightsData(data);
-   } catch (error) {
-    console.log('error :', error)
-   }
-   
-  }
+  const [feed, setFeed] = useState([]);
   useEffect(() => {
-    fetchStartupsInsightsData();
-  },[])
+    async function fetchNews() {
+      const response = await axios.get(`/api/top-headlines/sources?category=business&language=en&apiKey=ec51baacd93a47659e54b9fe5019b0d3`);
+      //console.log(response, "News feed from NewsAPI");
+      setFeed(response.data.sources);
+    }
+    fetchNews();
+  }, [])
 
   return (
     <>
       <SectionHeading title="StartUp Insights" />
       <div className="startup-insights">
-      {startupsInsightsData.map((Insights, index) => (
-        <>
-      <div className="startup-container">
-        <div className="startup"></div>
+      {feed.map((item) => (
+      <div className="startup-container" key={item.name}>
         <div className="top-box">
-          <div className="img"><img src={Insights.image} alt='containt-img' /></div>
           <div className="organization-details">
-            <div className="organization-img"></div>
             <div className="organization">
-            {Insights.title.includes("OpenAI") ? "OpenAI" :
-                  Insights.title.includes("Swiggy") ? "Swiggy" :
-                  Insights.title.includes("SpiceJet") ? "SpiceJet" :
-                  Insights.title.includes("Apple") ? "Apple" :
-                  Insights.title.includes("Zerodha") ? "Zerodha" :
-                  Insights.title.includes("Zepto") ? "Zepto" :
-                  Insights.title.includes("Samsung") ? "Samsung" : "Unknown"}
+            {item.name}
             </div>
-          </div>
-          <div className="startup-heading">StartUp</div>
-          <div className="summary-box">
-            <div className="summary">Summary</div>
           </div>
         </div>
         <div className="description-container">
-          <div className="about">About</div>
           <div className="paragraph">
-            {Insights.description}
+            {item.description}
           </div>
-          <a href={Insights.url} className="link" target="_blank" rel="noopener noreferrer">Learn More</a>
+          <a href= {item.url} className="link" target="_blank" rel="noopener noreferrer">Learn More</a>
         </div>
       </div>
-      </>
       ))}
       </div>
     </>
