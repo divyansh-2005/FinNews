@@ -50,8 +50,10 @@ function Header() {
           <Link to="/news" onClick={handleLinkClick}>News</Link>
           <Link to="/bookmark" onClick={handleLinkClick}>Bookmark</Link> {/* New Bookmark Link */}
           <Link to="" onClick={handleLinkClick}>Schemes</Link>
+
           <Link to="" onClick={handleLinkClick}>Newsletter</Link>
         </nav>
+
 
         {/* Buttons container */}
         <div className={styles.buttonContainer}>
@@ -75,7 +77,7 @@ function Header() {
           <Link to="/news" onClick={handleLinkClick}>News</Link>
           <Link to="/bookmark" onClick={handleLinkClick}>Bookmark</Link> {/* New Bookmark Link */}
           <Link to="" onClick={handleLinkClick}>Schemes</Link>
-          <Link to="" onClick={handleLinkClick}>Newsletter</Link>
+          <Link to="/newsletter" onClick={handleLinkClick}>Newsletter</Link>
 
           <button className={styles.dropdownSignUp}>Sign In / Sign Up</button>
         </nav>
