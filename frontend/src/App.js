@@ -7,6 +7,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import BlogSection from "./components/Blogs/BlogSection";
 import BlogPageTemplate from "./components/Blogs/BlogPageTemplate";
+
 import News from "./components/News/News"; // Ensure this path is correct
 
 function App() {
@@ -26,5 +27,6 @@ function App() {
     </HelmetProvider>
   );
 }
+
 
 export default App;
