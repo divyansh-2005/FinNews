@@ -142,9 +142,10 @@
 
    .nav a {
      padding: 10px 20px;
-     width: 100%;
+     width: 55%;
+     text-align: left;
      border-radius: 5px;
-     padding-left: 10.5rem;
+     padding-left: 6.5rem;
    }
 
    .nav a:hover {

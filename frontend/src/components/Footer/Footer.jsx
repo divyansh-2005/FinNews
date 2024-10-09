@@ -9,35 +9,37 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       {/* Left Section: Logo and Copyright */}
-      <div className={styles.footerLeft}>
-        <div className={styles.footerLogo}></div>
-        <div className={styles.footerCopyright}>
-          &copy; 2024 | Prolega
+      <section className={styles.footerContainer}>
+        <div className={styles.footerLeft}>
+          <div className={styles.footerLogo}></div>
+          <div className={styles.footerCopyright}>
+            &copy; 2024 | Prolega
+          </div>
         </div>
-      </div>
-      
-      {/* Center Section: Policy Links */}
-      <div className={styles.footerPolicy}>
-        <div>Privacy Policy</div>
-        <div>Do not sell my personal info</div>
-        <div>Terms of Service</div>
-      </div>
-      
-      {/* Right Section: Links and Icons */}
-      <div className={styles.footerRight}>
-        <div className={styles.footerLinks}>
-          <div>About</div>
-          <div>Contact</div>
-          <div>Fin-Buddy</div>
-          <div>Investments</div>
+
+        {/* Center Section: Policy Links */}
+        <div className={styles.footerPolicy}>
+          <p>Privacy Policy</p>
+          <p>Do not sell my personal info</p>
+          <p>Terms of Service</p>
         </div>
-        <div className={styles.footerIcons}>
-          <img src={icon1} alt="RSS" />
-          <img src={icon2} alt="Twitter" />
-          <img src={icon3} alt="Reddit" />
-          <img src={icon4} alt="Facebook" />
+
+        {/* Right Section: Links and Icons */}
+        <div className={styles.footerRight}>
+          <div className={styles.footerLinks}>
+            <p>About</p>
+            <p>Contact</p>
+            <p>Fin-Buddy</p>
+            <p>Investments</p>
+          </div>
+          <div className={styles.footerIcons}>
+            <img src={icon1} alt="RSS" />
+            <img src={icon2} alt="Twitter" />
+            <img src={icon3} alt="Reddit" />
+            <img src={icon4} alt="Facebook" />
+          </div>
         </div>
-      </div>
+      </section>
     </footer>
   );
 }

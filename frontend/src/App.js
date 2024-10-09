@@ -7,6 +7,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import BlogSection from './components/Blogs/BlogSection';
 import BlogPageTemplate from "./components/Blogs/BlogPageTemplate";
+// import HeaderComp from './components/Header/HeaderComp';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <HelmetProvider>
           <Router>
             <Header />
+            {/* <HeaderComp /> */}
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/myfeed" element={<MyFeed />} />

@@ -28,7 +28,7 @@ app.get("/",(req,res)=>{
 
 
 app.use("/api", router);
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect('mongodb://127.0.0.1:27017/test')
 .then(()=>{
     
     console.log("connected to mongodb");

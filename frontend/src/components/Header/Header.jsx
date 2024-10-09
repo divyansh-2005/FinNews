@@ -47,7 +47,7 @@ function Header() {
         <nav className={`${styles.desktopNavbar}`}>
           <Link to="/blogs" onClick={handleLinkClick}>Blogs</Link>
           <Link to="/myfeed" onClick={handleLinkClick}>My Feed</Link>
-          <Link to="" onClick={handleLinkClick}>News</Link>
+          <Link to="/" onClick={handleLinkClick}>News</Link>
           <Link to="" onClick={handleLinkClick}>Schemes</Link>
           <Link to="" onClick={handleLinkClick}>Newsletter</Link>
 

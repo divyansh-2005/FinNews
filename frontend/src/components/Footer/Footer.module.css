@@ -1,14 +1,27 @@
+* {
+    font-size: 16px;
+}
+
 /* Footer Container */
 .footer {
     width: 100%;
-    background-color: #252525; /* Adjust background to match your desired color */
+    background-color: #252525;
+    /* Adjust background to match your desired color */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 100px; /* Adjust padding as necessary */
+    padding: 1%;
     flex-wrap: wrap;
     box-sizing: border-box;
-    
+
+}
+
+.footerContainer {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+
 }
 
 /* Left Section - Logo and Copyright */
@@ -37,11 +50,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     color: #FFFFFF;
     text-align: center;
-    gap: 10px;
+    /* gap: 10px; */
 }
 
 /* Right Section - Links and Icons */
@@ -49,6 +63,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -69,4 +84,38 @@
 .footerIcons img {
     width: 28px;
     height: 28px;
+}
+
+@media (max-width:768px) {
+    .footer {
+        background-color: #252525;
+        display: block;
+        width: 100%;
+        padding: 3%;
+        /* border: 2px solid red; */
+    }
+
+    .footerContainer {
+        display: block;
+    }
+
+    .footerLeft,
+    .footerPolicy {
+        width: 80%;
+        margin: 3% auto;
+        /* border: 3px solid red; */
+    }
+
+    .footerRight {
+        width: 60%;
+        margin: auto;
+    }
+
+    .footerPolicy>p,
+    .footerLinks>p {
+        font-size: 0.85rem;
+    }
+    .footerLinks{
+        display: block;
+    }
 }
