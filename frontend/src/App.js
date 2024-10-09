@@ -7,7 +7,6 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import BlogSection from './components/Blogs/BlogSection';
 import BlogPageTemplate from "./components/Blogs/BlogPageTemplate";
-// import HeaderComp from './components/Header/HeaderComp';
 import Newsletter from './components/Newsletter/Newsletter';
 
 function App() {
