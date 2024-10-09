@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 import BlogSection from './components/Blogs/BlogSection';
 import BlogPageTemplate from "./components/Blogs/BlogPageTemplate";
 // import HeaderComp from './components/Header/HeaderComp';
+import Newsletter from './components/Newsletter/Newsletter';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <Route path="/myfeed" element={<MyFeed />} />
               <Route path="/blog/:key" element={<BlogPageTemplate />} />
               <Route path="/blogs" element={<BlogSection />} />
+              <Route path="/newsletter" element={<Newsletter />} />
             </Routes>
             <Footer />
           </Router>
