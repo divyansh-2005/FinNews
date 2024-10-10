@@ -3,7 +3,10 @@ import icon1 from '../../assets/icon-1.png';
 import icon2 from '../../assets/icon-2.png';
 import icon3 from '../../assets/icon-3.png';
 import icon4 from '../../assets/icon-4.png';
-import styles from './Footer.module.css'; // Import as module
+import styles from './Footer.module.css';
+
+ // Import as module
+ import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -27,7 +30,9 @@ function Footer() {
       <div className={styles.footerRight}>
         <div className={styles.footerLinks}>
           <div>About</div>
+          <Link to="/contactUS">
           <div>Contact</div>
+          </Link>
           <div>Fin-Buddy</div>
           <div>Investments</div>
         </div>
