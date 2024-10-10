@@ -1,45 +1,62 @@
 import React from 'react';
-import icon1 from '../../assets/icon-1.png';
-import icon2 from '../../assets/icon-2.png';
-import icon3 from '../../assets/icon-3.png';
-import icon4 from '../../assets/icon-4.png';
-import styles from './Footer.module.css'; // Import as module
+import { Footer } from "flowbite-react";
+import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
+import logo from '../../assets/footer-logo.png';
 
-function Footer() {
+function Footers() {
   return (
-    <footer className={styles.footer}>
-      {/* Left Section: Logo and Copyright */}
-      <div className={styles.footerLeft}>
-        <div className={styles.footerLogo}></div>
-        <div className={styles.footerCopyright}>
-          &copy; 2024 | Prolega
+    <Footer bgDark>
+      <div className="w-full">
+        <div className="grid w-full grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4">
+          <div>
+            <Footer.LinkGroup col>
+              <Footer.Link href="#">
+                <img src={logo} alt="logo" />
+                Finnews
+              </Footer.Link>
+            </Footer.LinkGroup>
+          </div>
+
+          <div>
+            <Footer.Title title="Company" />
+            <Footer.LinkGroup col>
+              <Footer.Link href="#">About</Footer.Link>
+              <Footer.Link href="#">Careers</Footer.Link>
+              <Footer.Link href="#">Brand Center</Footer.Link>
+              <Footer.Link href="#">Blog</Footer.Link>
+            </Footer.LinkGroup>
+          </div>
+          <div>
+            <Footer.Title title="help center" />
+            <Footer.LinkGroup col>
+              <Footer.Link href="#">Instagram</Footer.Link>
+              <Footer.Link href="#">Twitter</Footer.Link>
+              <Footer.Link href="#">Facebook</Footer.Link>
+              <Footer.Link href="#">Contact Us</Footer.Link>
+            </Footer.LinkGroup>
+          </div>
+          <div>
+            <Footer.Title title="legal" />
+            <Footer.LinkGroup col>
+              <Footer.Link href="#">Privacy Policy</Footer.Link>
+              <Footer.Link href="#">Licensing</Footer.Link>
+              <Footer.Link href="#">Terms &amp; Conditions</Footer.Link>
+            </Footer.LinkGroup>
+          </div>
+
+        </div>
+        <div className="w-full bg-gray-700 px-4 py-6 sm:flex sm:items-center sm:justify-between">
+          <Footer.Copyright href="#" by="Finnews™" year={2024} />
+          <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
+            <Footer.Icon href="#" icon={BsFacebook} />
+            <Footer.Icon href="#" icon={BsInstagram} />
+            <Footer.Icon href="#" icon={BsTwitter} />
+            <Footer.Icon href="#" icon={BsGithub} />
+            <Footer.Icon href="#" icon={BsDribbble} />
+          </div>
         </div>
       </div>
-      
-      {/* Center Section: Policy Links */}
-      <div className={styles.footerPolicy}>
-        <div>Privacy Policy</div>
-        <div>Do not sell my personal info</div>
-        <div>Terms of Service</div>
-      </div>
-      
-      {/* Right Section: Links and Icons */}
-      <div className={styles.footerRight}>
-        <div className={styles.footerLinks}>
-          <div>About</div>
-          <div>Contact</div>
-          <div>Fin-Buddy</div>
-          <div>Investments</div>
-        </div>
-        <div className={styles.footerIcons}>
-          <img src={icon1} alt="RSS" />
-          <img src={icon2} alt="Twitter" />
-          <img src={icon3} alt="Reddit" />
-          <img src={icon4} alt="Facebook" />
-        </div>
-      </div>
-    </footer>
+    </Footer>
   );
 }
-
-export default Footer;
+export default Footers;

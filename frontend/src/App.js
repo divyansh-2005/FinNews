@@ -11,7 +11,7 @@ import BlogPageTemplate from "./components/Blogs/BlogPageTemplate";
 function App() {
   return (
   
-        <HelmetProvider>
+        <HelmetProvider >
           <Router>
             <Header />
             <Routes>
