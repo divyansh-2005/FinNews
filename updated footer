@@ -1,0 +1,145 @@
+<html>
+ <head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #ffffff;
+        }
+        .footer {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 20px;
+            background-color: #1c1c1c;
+            padding-left: 200px; /* Shift everything further to the right */
+        }
+        .footer .left, .footer .center, .footer .right, .footer .newsletter {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-right: 50px;
+        }
+        .footer .left {
+            text-align: left;
+        }
+        .footer .center {
+            text-align: left;
+        }
+        .footer .right {
+            text-align: left;
+        }
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+        .footer .social-icons {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .footer .social-icons a {
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+        }
+        .footer .social-icons i {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        .footer img {
+            height: 40px;
+        }
+        .newsletter {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 0;
+        }
+        .newsletter input[type="email"] {
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            width: 200px;
+        }
+        .newsletter button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ffffff;
+            color: #1c1c1c;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="footer">
+   <div class="left">
+    <img alt="Company Logo" height="40" src="https://storage.googleapis.com/a1aa/image/yD0sMJyXZ1YyJF5zrbZrqfxoQO2fqg5vupx8rHj6j4Ym4eKnA.jpg" width="40"/>
+    <span>
+     © 2024 | Prolega
+    </span>
+    <a href="#">
+     Privacy Policy
+    </a>
+    <a href="#">
+     Do not sell my personal info
+    </a>
+    <a href="#">
+     Terms of Service
+    </a>
+   </div>
+   <div class="center">
+    <a href="#">
+     About
+    </a>
+    <a href="#">
+     Contact
+    </a>
+    <a href="#">
+     Fin-Buddy
+    </a>
+    <a href="#">
+     Investments
+    </a>
+   </div>
+   <div class="right">
+    <div class="social-icons">
+     <a href="#">
+      <i class="fas fa-rss">
+      </i>
+      @rssfeed
+     </a>
+     <a href="#">
+      <i class="fab fa-twitter">
+      </i>
+      @twitterhandle
+     </a>
+     <a href="#">
+      <i class="fab fa-reddit">
+      </i>
+      @reddituser
+     </a>
+     <a href="#">
+      <i class="fab fa-facebook">
+      </i>
+      @facebookpage
+     </a>
+    </div>
+   </div>
+   <div class="newsletter">
+    <h2>
+     Subscribe to our Newsletter
+    </h2>
+    <input placeholder="Enter your email" type="email"/>
+    <button>
+     Subscribe
+    </button>
+   </div>
+  </div>
+ </body>
+</html>
