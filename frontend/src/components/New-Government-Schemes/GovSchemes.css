@@ -1,81 +1,67 @@
-
-.govt-news {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    overflow-x: auto;  /* Enable horizontal scrolling */
-    overflow-y: hidden;  /* Hide vertical overflow */
-    padding: 1rem; /* Optional: add padding if needed */
+/* Container styling */
+.gov-container {
+  margin: 5vh 10vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+  gap: 30px;
+  padding: 10px;
+  justify-content: center;
 }
 
-.govt-container {
-    width: 388px;
-    height: 371px;
-    background: #FFFFFF;
-    border: 1px solid #D4D2E3;
-    border-radius: 24px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0; /* Prevent shrinking */
+/* Swiper styling for mobile */
+.gov-carousel {
+  padding: 10px;
 }
 
-.govt-image {
-    width: 72px;
-    height: 66.06px;
-    background: #D4D2E3;
-    border-radius: 20px;
-    margin: 1rem;
+/* Card styling */
+.gover-card {
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: start;
+  transition: transform 0.3s ease;
 }
 
-.govt-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
+.gover-card:hover {
+  transform: translateY(-10px); /* Hover effect */
 }
 
-.govt-heading {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 38px;
-    color: #5D5A88;
-    margin-bottom: 1rem;
+/* Image styling */
+.scheme-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
 }
 
-.govt-description {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
-    color: #9795B5;
-    margin-bottom: 1rem;
+/* Title styling */
+.scheme-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.govt-line {
-    width: 100%;
-    height: 1px;
-    background-color: #8D8BA7;
-    margin-bottom: 1rem;
+/* Description styling */
+.scheme-description {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 20px;
 }
 
-.govt-learn-more {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #8D8BA7;
+/* Button styling */
+.explore-btn {
+  background-color: #fa8e4b;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
-.learn-more-text {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    color: #8D8BA7;
-    margin-right: 6px;
-}
-
-.arrow-icon {
-    width: 20px;
-    height: 20px;
+.explore-btn:hover {
+  background-color: #e55d00; /* Darker orange on hover */
 }
