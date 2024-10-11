@@ -1,107 +1,65 @@
-.News1 {
-  display: flex;
-  flex-direction: row;
-  gap: 1.5rem;
-  overflow-x: auto;
-  padding: 1.5rem;
-  align-items: flex-start;
-  background-color: #eaeaea;
-  scroll-behavior: smooth;
-  border-radius: 8px;
-}
+ /* Container for the newsletters */
+ .newsletterContainer {
+   display: grid;
+   grid-template-columns: repeat(3, minmax(250px, 1fr));
+   gap: 20px;
+   padding: 20px;
+   margin: 0 auto;
+   margin: 5vh 5vh;
+ }
 
-.container {
-  width: 400px;
-  height: 450px;
-  background-color: #fff;
-  box-shadow: 0 4px 16px rgba(93, 90, 136, 0.15);
-  border-radius: 20px 20px 8px 8px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
+ /* Individual newsletter card */
+ .newsletterItem {
+   background-color: #f9f9f9;
+   border-radius: 8px;
+   padding: 15px;
+   background-color: #ffeffe;
+ }
 
-.container:hover {
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-  transform: translateY(-5px);
-}
+ .newsletterItem:hover {
+   border: 0.5px solid black;
+ }
 
-.image {
-  width: 100%;
-  height: 170px;
-  background: #E8E2E2;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
+ .newsletterTitle {
+   font-size: 1.5rem;
+   font-weight: bold;
+   margin-bottom: 10px;
+   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+ }
 
-.image:hover {
-  transform: scale(1.05);
-}
+ .newsletterDescription {
+   font-size: 1rem;
+   color: #383636;
+   margin-bottom: 10px;
+ }
 
-.image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
+ .newsletterDate {
+   font-size: 0.9rem;
+   color: #502828;
+ }
 
-.textContent {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-}
+ /* Pagination styles */
+ .pagination {
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
+   margin-bottom: 20px;
+ }
 
-.company-time {
-  display: flex;
-  font-family: 'Arial', sans-serif;
-  font-weight: 200;
-  font-size: 13px;
-  color: #000000;
-}
+ .pageButton {
+   padding: 10px 15px;
+   margin: 0 5px;
+   background-color: #e0e0e0;
+   border: none;
+   cursor: pointer;
+   border-radius: 4px;
+ }
 
-.companyName {
-  font-weight: bold;
-  font-size: 1.3rem;
-}
+ .pageButton:hover {
+   background-color: #ccc;
+ }
 
-.line {
-  width: 100%;
-  height: 1px;
-  background-color: #e0e0e0;
-  margin-bottom: 16px;
-}
-
-.company-name {
-  padding-left: 10px;
-  color: #5D5A88;
-}
-
-.time {
-  text-align: right;
-  color: #7c059d;
-}
-
-.headingNews {
-  font-family: 'IBM Plex Serif', serif;
-  font-weight: 700;
-  font-size: 2rem;
-  color: #5D5A88;
-  margin-bottom: 12px;
-  transition: color 0.3s ease;
-}
-
-.description {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-  color: #9795B5;
-  margin-bottom: 1rem;
-}
+ .activePage {
+   background-color: #007bff;
+   color: white;
+ }
