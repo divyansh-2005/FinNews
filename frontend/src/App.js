@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 import BlogSection from './components/Blogs/BlogSection';
 import BlogPageTemplate from "./components/Blogs/BlogPageTemplate";
 import Newsletter from './components/Newsletter/Newsletter';
+import GovSchemes from './components/New-Government-Schemes/GovSchemes';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <Route path="/blog/:key" element={<BlogPageTemplate />} />
               <Route path="/blogs" element={<BlogSection />} />
               <Route path="/newsletter" element={<Newsletter />} />
+              <Route path='/schemes' element={<GovSchemes/>}></Route>
             </Routes>
             <Footer />
           </Router>

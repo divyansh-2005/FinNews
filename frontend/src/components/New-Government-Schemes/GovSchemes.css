@@ -65,3 +65,20 @@
 .explore-btn:hover {
   background-color: #e55d00; /* Darker orange on hover */
 }
+.govt-introduction {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .govt-introduction h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .govt-introduction p {
+    color: #666;
+    font-size: 1rem;
+  }
+  
