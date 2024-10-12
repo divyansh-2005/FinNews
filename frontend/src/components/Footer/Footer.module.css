@@ -1,14 +1,16 @@
 /* Footer Container */
 .footer {
     width: 100%;
-    background-color: #252525; /* Adjust background to match your desired color */
+    background-color: #252525;
+    /* Adjust background to match your desired color */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 100px; /* Adjust padding as necessary */
+    padding: 20px 100px;
+    /* Adjust padding as necessary */
     flex-wrap: wrap;
     box-sizing: border-box;
-    
+
 }
 
 /* Left Section - Logo and Copyright */
@@ -69,4 +71,21 @@
 .footerIcons img {
     width: 28px;
     height: 28px;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px 10px;
+    }
+
+    .footerPolicy {
+        font-size: 12px;
+        text-align: start;
+        align-items: normal;
+    }
+
+    .footerRight {
+        width: 100%;
+        padding: 33px 0px;
+    }
 }
