@@ -1,7 +1,7 @@
 // src/components/MyFeedSecion/MyFeed.js
 
 import React, { useState } from 'react';
-import './MyFeed.css'; // Import the CSS for styling
+import './MyFeed.css'; 
 
 const MyFeed = () => {
   
@@ -11,19 +11,19 @@ const MyFeed = () => {
       id: 1,
       title: "India achieves major breakthrough in lunar exploration",
       content: "ISRO's latest lunar mission has discovered traces of frozen water on the Moon's south pole.",
-      image: "https://via.placeholder.com/300x200", // Placeholder image
+      image: "#", 
     },
     {
       id: 2,
       title: "Global markets see a sudden rise in tech stocks",
       content: "Technology stocks surge as investors anticipate new breakthroughs in AI innovation.",
-      image: "https://via.placeholder.com/300x200", // Placeholder image
+      image: "#", 
     },
     {
       id: 3,
       title: "AI-generated art sparks debate in digital art communities",
       content: "Creators argue whether AI tools diminish the value of traditional artistry.",
-      image: "https://via.placeholder.com/300x200", // Placeholder image
+      image: "#", 
     },
   ]);
 
@@ -88,7 +88,7 @@ const MyFeed = () => {
         <div className="past-news-list">
           {pastWeekNews.map((item) => (
             <div className="past-news-item" key={item.id}>
-              <div className="past-news-image">FinNews</div> {/* Placeholder for image */}
+              <div className="past-news-image">FinNews</div> {/* Place for news image */}
               <p>{item.title}</p>
             </div>
           ))}

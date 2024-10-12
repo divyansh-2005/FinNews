@@ -1,17 +1,16 @@
 /* src/components/MyFeedSection/MyFeed.css */
 
-/* Overall Container */
 .feed-container {
   display: grid;
-  grid-template-columns: 1.5fr 0.5fr; /* 75% Main, 25% Sidebar */
+  grid-template-columns: 1.5fr 0.5fr; 
   gap: 20px;
-  padding: 80px 20px 20px; /* Extra space at top for navbar */
+  padding: 80px 20px 20px; 
   max-width: 1200px;
   margin: auto;
   background-color: #f0f0f5;
 }
 
-/* Main News Section */
+
 .main-news {
   background-color: #ffffff;
   padding: 20px;
@@ -44,7 +43,7 @@
   color: #666;
 }
 
-/* Sidebar Latest News Section */
+
 .sidebar-news {
   background-color: #f9f9f9;
   padding: 15px;
@@ -93,7 +92,6 @@
   margin-bottom: 1rem;
 }
 
-/* Scroll buttons for navigation */
 .scroll-buttons {
   position: absolute;
   top: 50%;
@@ -116,8 +114,6 @@
   pointer-events: all;
 }
 
-/* Scrollable list for past week news */
-/* Full Container for Past Week Section */
 .past-week-full-container {
   display: flex;
   flex-direction: column;
@@ -129,7 +125,6 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Title Section for Past Week News */
 .past-news-title {
   font-size: 2rem;
   font-weight: bold;
@@ -140,7 +135,6 @@
   color: #333;
 }
 
-/* Scrollable News List */
 .past-news-list {
   display: flex;
   gap: 15px;
@@ -149,7 +143,6 @@
   padding: 10px 0;
 }
 
-/* Styling for Individual News Items */
 .past-news-item {
   flex: 0 0 auto;
   width: 240px;
@@ -165,7 +158,6 @@
   transform: scale(1.05);
 }
 
-/* Placeholder Image Styling */
 .past-news-image {
   background-color: #e0e0e0;
   height: 120px;
@@ -179,21 +171,18 @@
   border-radius: 8px;
 }
 
-/* News Titles */
 .past-news-item h4 {
   font-size: 1.2rem;
   margin: 0.5rem 0;
   color: #444;
 }
 
-/* News Descriptions */
 .past-news-item p {
   font-size: 0.95rem;
   color: #666;
   line-height: 1.4;
 }
 
-/* Scroll Buttons for Navigation */
 .scroll-buttons {
   display: flex;
   justify-content: space-between;
