@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import MyFeed from './components/MyFeedSecion/MyFeed';
 import Header from './components/Header/Header';
+import Signup from './components/SignUp/Signup';
+import Login from './components/Login/Login';
 import Footer from './components/Footer/Footer';
 import BlogSection from './components/Blogs/BlogSection';
 import BlogPageTemplate from "./components/Blogs/BlogPageTemplate";
@@ -21,6 +23,8 @@ function App() {
               <Route path="/blog/:key" element={<BlogPageTemplate />} />
               <Route path="/blogs" element={<BlogSection />} />
               <Route path="/newsletter" element={<Newsletter />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/login" element={<Login />} />
             </Routes>
             <Footer />
           </Router>
