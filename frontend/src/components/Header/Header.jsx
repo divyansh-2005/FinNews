@@ -50,8 +50,8 @@ function Header() {
           <Link to="" onClick={handleLinkClick}>News</Link>
           <Link to="" onClick={handleLinkClick}>Schemes</Link>
           <Link to="/newsletter" onClick={handleLinkClick}>Newsletter</Link>
-
-          <button className={styles.dropdownSignUp}>Sign In / Sign Up</button>
+          <Link to="/login" >Login </Link>
+          <Link to="/signup">SignUp</Link>
         </nav>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.active : ''}`}>
@@ -60,8 +60,8 @@ function Header() {
           <Link to="" onClick={handleLinkClick}>News</Link>
           <Link to="" onClick={handleLinkClick}>Schemes</Link>
           <Link to="/newsletter" onClick={handleLinkClick}>Newsletter</Link>
-
-          <button className={styles.dropdownSignUp}>Sign In / Sign Up</button>
+          <Link to="/login">Login</Link>
+          <Link to="/signup">Sign Up</Link>
         </nav>
       </div>
     </header>
