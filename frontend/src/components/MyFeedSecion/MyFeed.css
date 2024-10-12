@@ -1,82 +1,297 @@
+/* src/components/MyFeedSection/MyFeed.css */
+
+/* Overall Container */
 .feed-container {
-  padding: 60px 40px;
-  background: linear-gradient(135deg, #2e1d44, #3c2856);
-}
-
-.feed-title {
-  font-size: 3.5rem;
-  text-align: center;
-  color: #ffffff;
-  font-family: 'Playfair Display', serif;
-  letter-spacing: 1.5px;
-  margin-bottom: 0;
-}
-
-.feed-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  padding: 3% 2%;
+  grid-template-columns: 1.5fr 0.5fr; /* 75% Main, 25% Sidebar */
+  gap: 20px;
+  padding: 80px 20px 20px; /* Extra space at top for navbar */
+  max-width: 1200px;
+  margin: auto;
+  background-color: #f0f0f5;
 }
 
-.feed-item {
+/* Main News Section */
+.main-news {
   background-color: #ffffff;
-  border-radius: 20px;
-  padding: 25px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
 }
 
-.feed-item:hover {
-  transform: translateY(-10px);
-  /* Lifts the card on hover */
-  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
+.main-news-item {
+  display: flex;
+  margin-bottom: 20px;
 }
 
-.feed-item h3 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: #3c2856;
-  margin-top: 7px;
-  /* Dark purple for a more sophisticated look */
+.main-news-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
 }
 
-.feed-item p {
+.main-news-content h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.main-news-content p {
   font-size: 1rem;
-  color: #444444;
-  /* Neutral, clean text color */
-  line-height: 1.6;
+  color: #666;
 }
 
-.feed-date {
-  font-size: 0.9rem;
-  color: #777777;
-  margin-top: 20px;
-  display: block;
-  text-align: right;
+/* Sidebar Latest News Section */
+.sidebar-news {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Add subtle hover effect for titles */
-.feed-item h3:hover {
-  color: #2e1d44;
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.latest-news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.latest-news-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.news-title {
+  font-size: 1rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.read-arrow {
+  color: #888;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.past-week-news-section {
+  margin-top: 2rem;
+  position: relative;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Scroll buttons for navigation */
+.scroll-buttons {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.scroll-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+/* Scrollable list for past week news */
+/* Full Container for Past Week Section */
+.past-week-full-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f0f0f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Section for Past Week News */
+.past-news-title {
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Scrollable News List */
+.past-news-list {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+/* Styling for Individual News Items */
+.past-news-item {
+  flex: 0 0 auto;
+  width: 240px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.past-news-item:hover {
+  transform: scale(1.05);
+}
+
+/* Placeholder Image Styling */
+.past-news-image {
+  background-color: #e0e0e0;
+  height: 120px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #aaa;
+  border-radius: 8px;
+}
+
+/* News Titles */
+.past-news-item h4 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #444;
+}
+
+/* News Descriptions */
+.past-news-item p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Scroll Buttons for Navigation */
+.scroll-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.scroll-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.scroll-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
-  .feed-list {
-    grid-template-columns: repeat(2, 1fr);
-    /* 2 cards per row on medium screens */
+@media (max-width: 768px) {
+  .past-week-full-container {
+    padding: 15px;
+  }
+
+  .past-news-item {
+    width: 180px;
+  }
+
+  .past-news-image {
+    height: 100px;
+  }
+
+  .past-news-title {
+    font-size: 1.6rem;
   }
 }
 
-@media (max-width: 768px) {
-  .feed-list {
-    grid-template-columns: 1fr;
-    /* 1 card per row on small screens */
+/* Responsive Design */
+@media (max-width: 525px) {
+  .past-week-full-container {
+    width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+
   }
 
+  .past-news-title {
+    font-size: 1.4rem; 
+    text-align: center; 
+    margin-bottom: 10px;
+  }
+
+  .past-news-list {
+    gap: 10px;
+    padding-bottom: 5px;
+  }
+
+  .past-news-item {
+    width: 150px; 
+    padding: 10px;
+  }
+
+  .past-news-image {
+    height: 80px; 
+    border-radius: 6px; 
+  }
+
+  .past-news-item h4 {
+    font-size: 1rem;
+    margin: 0.3rem 0;
+  }
+
+  .past-news-item p {
+    font-size: 0.85rem;
+    color: #777;
+  }
+
+  .scroll-buttons {
+    margin-top: 8px;
+  }
+
+  .scroll-button {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .feed-container {
-    padding: 40px 20px;
+    grid-template-columns: 1fr; 
+  }
+
+  .sidebar-news {
+    order: -1; 
   }
 }
