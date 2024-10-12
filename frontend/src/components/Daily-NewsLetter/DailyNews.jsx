@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import SectionHeading from "../SectionHeading/SectionHeading";
-import styles from "./DailyNews.module.css"; // Import the CSS Module
 
 const DailyNews = () => {
-  // Simulated newsletter data
   const dailyNewsLetter = [
     {
       title: "Market Insights for October",
@@ -66,37 +64,36 @@ const DailyNews = () => {
   ];
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [newsPerPage] = useState(3); // Number of newsletters per page
+  const [newsPerPage] = useState(3);
 
-  // Calculate index values for pagination
   const indexOfLastNews = currentPage * newsPerPage;
   const indexOfFirstNews = indexOfLastNews - newsPerPage;
   const currentNews = dailyNewsLetter.slice(indexOfFirstNews, indexOfLastNews);
 
-  // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  // Render pagination buttons dynamically based on the total number of newsletters
   const totalPages = Math.ceil(dailyNewsLetter.length / newsPerPage);
-  const pageNumbers = [];
-  for (let i = 1; i <= totalPages; i++) {
-    pageNumbers.push(i);
-  }
+  const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   return (
     <>
       <SectionHeading title="Daily Newsletter" />
-      <div className={styles.newsletterContainer}>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5">
         {currentNews.length === 0 ? (
           <p>No newsletters available.</p>
         ) : (
           currentNews.map((newsItem, index) => (
-            <div key={index} className={styles.newsletterItem}>
-              <h3 className={styles.newsletterTitle}>{newsItem.title}</h3>
-              <p className={styles.newsletterDescription}>
+            <div
+              key={index}
+              className="bg-[#ffeffe] rounded-lg p-4 hover:border hover:border-black"
+            >
+              <h3 className="text-xl font-bold mb-2 font-[Franklin Gothic Medium]">
+                {newsItem.title}
+              </h3>
+              <p className="text-base text-[#383636] mb-2">
                 {newsItem.description}
               </p>
-              <p className={styles.newsletterDate}>
+              <p className="text-sm text-[#502828]">
                 {new Date(newsItem.date).toDateString()}
               </p>
             </div>
@@ -104,13 +101,14 @@ const DailyNews = () => {
         )}
       </div>
 
-      {/* Pagination */}
-      <div className={styles.pagination}>
+      <div className="flex justify-center my-5">
         {pageNumbers.map((number) => (
           <button
             key={number}
-            className={`${styles.pageButton} ${
-              currentPage === number ? styles.activePage : ""
+            className={`px-4 py-2 mx-2 rounded-md ${
+              currentPage === number
+                ? "bg-[#007bff] text-white"
+                : "bg-[#e0e0e0] hover:bg-[#ccc]"
             }`}
             onClick={() => paginate(number)}
           >
