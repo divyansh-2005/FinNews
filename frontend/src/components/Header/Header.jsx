@@ -1,6 +1,7 @@
 import React from "react";
 import styles from './Header.module.css'; // Import the CSS Module
 import searchIcon from '../../assets/search-icon.png';
+import {Link} from 'react-router-dom'
 
 function Header() {
   return (
@@ -26,7 +27,9 @@ function Header() {
               <img src={searchIcon} alt="Search Icon" className={styles.searchIcon} />
             </div>
           </div>
+          <Link to="/auth/login" >
           <button className={styles.loginSignUp}>Login / Sign up</button>
+          </Link>
         </div>
       </div>
     </div>
