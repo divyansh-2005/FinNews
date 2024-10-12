@@ -45,6 +45,7 @@ function Header() {
         </button>
 
         {/* Navigation Links */}
+
         <nav className={`${styles.nav} ${menuOpen ? styles.active : ""}`}>
           <Link to="/blogs" onClick={handleLinkClick}>
             Blogs
@@ -64,6 +65,25 @@ function Header() {
 
           {/* Sign In/Sign Up Button within the Dropdown */}
           <button className={styles.dropdownSignUp}>Sign In / Sign Up</button>
+        <nav className={`${styles.desktopNavbar}`}>
+          <Link to="/blogs" onClick={handleLinkClick}>Blogs</Link>
+          <Link to="/myfeed" onClick={handleLinkClick}>My Feed</Link>
+          <Link to="" onClick={handleLinkClick}>News</Link>
+          <Link to="" onClick={handleLinkClick}>Schemes</Link>
+          <Link to="/newsletter" onClick={handleLinkClick}>Newsletter</Link>
+          <Link to="/login" >Login </Link>
+          <Link to="/signup">SignUp</Link>
+        </nav>
+
+        <nav className={`${styles.nav} ${menuOpen ? styles.active : ''}`}>
+          <Link to="/blogs" onClick={handleLinkClick}>Blogs</Link>
+          <Link to="/myfeed" onClick={handleLinkClick}>My Feed</Link>
+          <Link to="" onClick={handleLinkClick}>News</Link>
+          <Link to="" onClick={handleLinkClick}>Schemes</Link>
+          <Link to="/newsletter" onClick={handleLinkClick}>Newsletter</Link>
+          <Link to="/login">Login</Link>
+          <Link to="/signup">Sign Up</Link>
+
         </nav>
       </div>
     </header>
