@@ -10,13 +10,18 @@ import Footer from './components/Footer/Footer';
 import BlogSection from './components/Blogs/BlogSection';
 import BlogPageTemplate from "./components/Blogs/BlogPageTemplate";
 import Newsletter from './components/Newsletter/Newsletter';
-
+import useOnline from './components/Offline/useOnline';
+import Offline from './components/Offline/Offline';
 function App() {
+  const isOnline = useOnline();
   return (
   
         <HelmetProvider>
           <Router>
-            <Header />
+            {
+              isOnline?(
+                <>
+                <Header />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/myfeed" element={<MyFeed />} />
@@ -27,6 +32,9 @@ function App() {
               <Route path="/login" element={<Login />} />
             </Routes>
             <Footer />
+            </>
+              ):(<Offline/>)
+            }
           </Router>
         </HelmetProvider>  // Closing tag for HelmetProvider
       );
