@@ -1,8 +1,6 @@
 import React from 'react';
-import icon1 from '../../assets/icon-1.png';
-import icon2 from '../../assets/icon-2.png';
-import icon3 from '../../assets/icon-3.png';
-import icon4 from '../../assets/icon-4.png';
+import { FaRss, FaRedditAlien, FaFacebook } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import styles from './Footer.module.css'; // Import as module
 
 function Footer() {
@@ -32,10 +30,10 @@ function Footer() {
           <div>Investments</div>
         </div>
         <div className={styles.footerIcons}>
-          <img src={icon1} alt="RSS" />
-          <img src={icon2} alt="Twitter" />
-          <img src={icon3} alt="Reddit" />
-          <img src={icon4} alt="Facebook" />
+          <FaRss size="28px" color='#fff' />
+          <FaXTwitter size="28px" color='#fff' />
+          <FaRedditAlien size="28px" color='#fff' />
+          <FaFacebook size="28px" color='#fff' />
         </div>
       </div>
     </footer>
