@@ -58,7 +58,7 @@ function Header() {
           <Link to="" onClick={handleLinkClick}>
             Schemes
           </Link>
-          <Link to="" onClick={handleLinkClick}>
+          <Link to="/newsletter" onClick={handleLinkClick}>
             Newsletter
           </Link>
 
