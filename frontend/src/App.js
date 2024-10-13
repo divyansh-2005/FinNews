@@ -10,27 +10,29 @@ import Footer from './components/Footer/Footer';
 import BlogSection from './components/Blogs/BlogSection';
 import BlogPageTemplate from "./components/Blogs/BlogPageTemplate";
 import Newsletter from './components/Newsletter/Newsletter';
+import BackToTop from './components/Back-to-top/BackToTop';
 
 function App() {
   return (
-  
-        <HelmetProvider>
-          <Router>
-            <Header />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/myfeed" element={<MyFeed />} />
-              <Route path="/blog/:key" element={<BlogPageTemplate />} />
-              <Route path="/blogs" element={<BlogSection />} />
-              <Route path="/newsletter" element={<Newsletter />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/login" element={<Login />} />
-            </Routes>
-            <Footer />
-          </Router>
-        </HelmetProvider>  // Closing tag for HelmetProvider
-      );
-    }
-    
- 
+
+    <HelmetProvider>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/myfeed" element={<MyFeed />} />
+          <Route path="/blog/:key" element={<BlogPageTemplate />} />
+          <Route path="/blogs" element={<BlogSection />} />
+          <Route path="/newsletter" element={<Newsletter />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+        <Footer />
+        <BackToTop />
+      </Router>
+    </HelmetProvider>  // Closing tag for HelmetProvider
+  );
+}
+
+
 export default App;
