@@ -10,7 +10,6 @@
     /* Adjust padding as necessary */
     flex-wrap: wrap;
     box-sizing: border-box;
-
 }
 
 /* Left Section - Logo and Copyright */
@@ -63,11 +62,24 @@
     text-align: center;
 }
 
+/* Add hover effect for the "About" link */
+.footerLinks a {
+    color: white;  /* Default color is white */
+    text-decoration: none;  /* No underline */
+    transition: color 0.3s ease;  /* Smooth transition */
+}
+
+.footerLinks a:hover {
+    color: pink;  /* Change color to pink on hover */
+}
+
+/* Icons Section */
 .footerIcons {
     display: flex;
     gap: 15px;
 }
 
+/* Responsive styling for smaller screens */
 @media (max-width: 768px) {
     .footer {
         padding: 20px 10px;

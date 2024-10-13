@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaRss, FaRedditAlien, FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { Link } from 'react-router-dom';  // Import Link from react-router-dom
 import styles from './Footer.module.css'; // Import as module
 
 function Footer() {
@@ -24,8 +25,8 @@ function Footer() {
       {/* Right Section: Links and Icons */}
       <div className={styles.footerRight}>
         <div className={styles.footerLinks}>
-          <div>About</div>
-          <div>Contact</div>
+          <Link to="/about">About</Link> 
+          <Link to="/contact">Contact</Link>
           <div>Fin-Buddy</div>
           <div>Investments</div>
         </div>
