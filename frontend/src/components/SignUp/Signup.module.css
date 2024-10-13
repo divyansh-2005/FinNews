@@ -1,0 +1,57 @@
+.signupContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full height of the viewport */
+    background-color: #b454c3; /* Purple background for the entire page */
+  }
+  
+  .form {
+    background-color: white; /* White background for the form box */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box; /* Prevents width overflow */
+  }
+  
+  .heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333; /* Dark text color for contrast */
+  }
+  
+  .inputField {
+    margin-bottom: 20px; /* Increased margin for better spacing */
+    padding: 15px; /* More padding for a comfortable input size */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%; /* Ensures consistent width for all inputs */
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+  }
+  
+  .inputField:focus {
+    border-color: #6d3476;
+    outline: none;
+  }
+  
+  .submitButton {
+    padding: 15px; /* Increased padding for button size consistency */
+    background-color: #6d3476;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%; /* Consistent width for the button */
+    transition: background-color 0.3s ease;
+  }
+  
+  .submitButton:hover {
+    background-color: #a72090;
+  }
+  
