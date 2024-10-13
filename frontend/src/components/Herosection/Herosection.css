@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   height: 100vh;
   padding-top: 10vh;
@@ -20,14 +20,10 @@
   font-weight: 400;
   font-size: 56px;
   color: white;
-  margin-top: 12vw;
+  margin-top: 10vw;
+  text-align: center;
 }
-
-.white-text {
-  color: white;
-}
-
-.highlighted-text {
+.highlighted-heading span {
   color: #fe00e6;
   font-weight: 700;
 }
@@ -69,10 +65,7 @@
   align-items: center;
   margin-top: auto;
   color: white;
-  position: relative;
   font-size: 18px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .scroll-down p {
