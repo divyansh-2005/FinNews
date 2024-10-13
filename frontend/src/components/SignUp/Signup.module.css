@@ -4,7 +4,11 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh; /* Full height of the viewport */
-    background-color: #b454c3; /* Purple background for the entire page */
+    background: linear-gradient(
+      90deg,
+      #2c0727 0%,
+      #110823 100%
+    ); /* Purple background for the entire page */
   }
   
   .form {
@@ -21,7 +25,7 @@
     text-align: center;
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #333; /* Dark text color for contrast */
+    color: #ffffff; /* Dark text color for contrast */
   }
   
   .inputField {
@@ -44,14 +48,26 @@
     background-color: #6d3476;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
     width: 100%; /* Consistent width for the button */
     transition: background-color 0.3s ease;
   }
+  .AMember {
+    text-align: center; /* Centers the text horizontally */
+    margin-top: 10px; /* Adds some spacing above */
+  }
   
+  .loginLink {
+    text-decoration: none; /* Removes the underline from the link */
+    color: #007BFF; /* Change the color as per your design */
+  }
+  
+  .loginLink:hover {
+    text-decoration: underline; /* Optional: adds underline on hover */
+  }
   .submitButton:hover {
-    background-color: #a72090;
+    background-color: #69145b;
   }
   
