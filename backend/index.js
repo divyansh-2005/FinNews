@@ -40,6 +40,10 @@ mongoose.connect(process.env.MONGO_URL)
 .catch((error)=>{
     console.error("mongodb error:",error);
 })
+app.all('*',(req,res)=>{     // If anyone try to use any wrong routes then page not found will get appear
+    res.status(404).send('OOPS!! 404 ERROR , Pgae Not Found');
+});
+
 
 // Export the app for Vercel to handle requests
 /*comment line 46 to run on localhost*/
