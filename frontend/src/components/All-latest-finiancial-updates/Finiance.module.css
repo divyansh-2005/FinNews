@@ -25,10 +25,12 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-
   flex-shrink: 0;
+  transition: all .2s;
 }
-
+.container:hover {
+  scale: 1.05;
+}
 .image {
   width: 100%; /* Ensure full width */
   height: 30%;
@@ -43,6 +45,7 @@
   height: 100%;
   object-fit: cover; /* Ensures image fills the container, cropping if necessary */
   border-radius: inherit; /* Apply the border radius to the image */
+  cursor: pointer;
 }
 
 .content {
@@ -60,6 +63,7 @@
   color: #333;
   margin-bottom: 10px;
   transition: color 0.3s ease;
+  cursor: pointer;
 }
 
 .heading:hover {
