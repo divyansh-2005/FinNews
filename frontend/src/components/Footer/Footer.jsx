@@ -2,7 +2,7 @@ import React from 'react';
 import { FaRss, FaRedditAlien, FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import styles from './Footer.module.css'; // Import as module
-
+import GoogleTranslate from './GoogleTranslate';
 function Footer() {
   return (
     <footer className={styles.footer}>
@@ -24,6 +24,7 @@ function Footer() {
       {/* Right Section: Links and Icons */}
       <div className={styles.footerRight}>
         <div className={styles.footerLinks}>
+          <GoogleTranslate />
           <div>About</div>
           <div>Contact</div>
           <div>Fin-Buddy</div>
