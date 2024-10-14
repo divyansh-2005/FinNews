@@ -13,9 +13,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .time {
   text-wrap: balance;
 }
+
 .container {
   width: 306.6px;
   height: 364px;
@@ -30,7 +32,8 @@
 }
 
 .image {
-  width: 100%; /* Ensure full width */
+  width: 100%;
+  /* Ensure full width */
   height: 30%;
   background: #d9d9d9;
   border-radius: 3px 3px 0 0;
@@ -41,8 +44,10 @@
 .image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures image fills the container, cropping if necessary */
-  border-radius: inherit; /* Apply the border radius to the image */
+  object-fit: cover;
+  /* Ensures image fills the container, cropping if necessary */
+  border-radius: inherit;
+  /* Apply the border radius to the image */
 }
 
 .content {

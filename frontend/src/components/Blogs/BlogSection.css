@@ -6,9 +6,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
 }
-.our-home-heading{
+.our-home-heading {
   padding-left: 4%;
 }
 #blog-landingpage {
@@ -26,7 +25,6 @@
   font-size: 4em;
   font-weight: lighter;
   font-family: "Readex Pro", sans-serif;
-  
 }
 .fa-angles-down {
   bottom: 5%;
@@ -86,7 +84,7 @@
 }
 .oneblog {
   margin: 1em;
-  width: 25em;
+  width: 23em;
   border-radius: 18px;
   display: flex;
   flex-direction: column;
@@ -143,4 +141,38 @@
   border-radius: 8px;
   font-family: "Readex Pro", sans-serif;
   font-weight: bold;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffc7f9;
+  border-radius: 25px;
+  padding: 10px;
+  flex-grow: 1;
+  max-width: 200px;
+  height: 1vw;
+}
+
+.searchInput {
+  border-radius: 50px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  padding-left: 10px;
+  width: 100%;
+  font-size: larger;
+}
+
+.searchIcon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

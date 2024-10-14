@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import img from "./Images/landingpgimg.png";
 import "./BlogSection.css";
 // import data from "./BlogsData.json";
@@ -20,11 +20,35 @@ import BlogPageCards from "./BlogPageCards";
 //   ));
 // };
 
+
 function BlogSection() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
+  // const [filteredBlogs, setFilteredBlogs] = useState(data.data);
+  // const [query, setQuery] = useState("");
+  // // window.scrollTo({
+  // //   top: 0,
+  // //   behavior: "smooth",
+  // // });
+
+  // function handleSearch(e) {
+  //   const value = e.target.value;
+  //   setQuery(value);
+
+  //   if (value.length === 0) {
+  //     setFilteredBlogs(data.data);
+  //   } else {
+  //     const filteredData = data.data.filter((blog) =>
+  //       `${blog.title} ${blog.shortsummary}`
+  //         .toLowerCase()
+  //         .includes(value.toLowerCase())
+  //     );
+  //     setFilteredBlogs(filteredData);
+  //   }
+  // }
+
+  // function handleSubmit(e) {
+  //   e.preventDefault();
+  // }
+
   return (
     <>
       <Helmet>
@@ -56,7 +80,8 @@ function BlogSection() {
           <i class="fa-solid fa-angles-down"></i>
         </div>
         <BlogPageCards />
-      </div>
+
+      </div >
     </>
   );
 }
