@@ -1,0 +1,93 @@
+.offline-container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom,#d2a1f3, #e6c3f0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .offline-card {
+    max-width: 28rem;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    animation: fade-in 0.5s ease-out;
+  }
+  
+  .offline-icon {
+    width: 8rem;
+    height: 8rem;
+    margin: 0 auto;
+    color: #54024b;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .offline-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: #1c0019;
+  }
+  
+  .offline-message {
+    color: #750068;
+  }
+  
+  .try-again-button {
+    width: 100%;
+    background: linear-gradient(90deg, #2c0727 0%, #110823 100%);
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .try-again-button:hover {
+    background: linear-gradient(90deg,#110823 0%, #2c0727 100%);
+    transform: scale(1.05);
+  }
+  
+  .offline-help-text {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  @keyframes fade-in {
+    from { 
+      opacity: 0; 
+      transform: translateY(-20px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: .5;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .offline-card {
+      padding: 1.5rem;
+    }
+  
+    .offline-title {
+      font-size: 1.5rem;
+    }
+  }
