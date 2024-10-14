@@ -90,6 +90,10 @@
   animation: bounce 2s infinite;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 @keyframes bounce {
 
   0%,
@@ -107,6 +111,7 @@
   60% {
     transform: translateY(-5px);
   }
+
 }
 
 
@@ -132,4 +137,5 @@
   .hero-section {
     height: auto;
   }
+
 }
