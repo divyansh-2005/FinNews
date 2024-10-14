@@ -23,7 +23,8 @@
 }
 
 .gover-card:hover {
-  transform: translateY(-10px); /* Hover effect */
+  transform: translateY(-10px);
+  /* Hover effect */
 }
 
 /* Image styling */
@@ -63,5 +64,12 @@
 }
 
 .explore-btn:hover {
-  background-color: #e55d00; /* Darker orange on hover */
+  background-color: #e55d00;
+  /* Darker orange on hover */
+}
+
+@media only screen and (max-width: 600px) {
+  .gov-container {
+    margin: 5vh 10px;
+  }
 }
