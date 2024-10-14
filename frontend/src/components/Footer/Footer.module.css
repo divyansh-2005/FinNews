@@ -68,6 +68,15 @@
     gap: 15px;
 }
 
+.faqLink {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.faqLink:hover {
+    color: #007bff;
+}
+
 @media (max-width: 768px) {
     .footer {
         padding: 20px 10px;
