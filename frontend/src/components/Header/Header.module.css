@@ -68,7 +68,7 @@
 /* Navigation */
 .nav {
   display: flex;
-  gap: 25px;
+  gap: 15px;
   align-items: center;
 }
 
@@ -76,14 +76,13 @@
   color: white; /* Original link color */
   font-size: 18px;
   text-decoration: none;
-  padding: 0px 5px;
-
+  padding: 8px 13px;
   border-radius: 25px;
   transition: color 0.3s ease; /* Smooth color change */
 }
 
 .nav a:hover {
-  background-color: #54024b; /* Match hover color with hero section */
+  background-color: #960485; /* Match hover color with hero section */
 }
 
 /* Mobile Menu */
