@@ -17,6 +17,10 @@ const commonendpoint = {
     login: {
         url: `${backendDomain}/users/signin`,
         method: 'POST'
+    },
+    getUserInfo: {
+        url: `${backendDomain}/users/me`,
+        method: 'GET'
     }
 }
 

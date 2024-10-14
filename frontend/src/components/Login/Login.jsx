@@ -18,6 +18,7 @@ function Login() {
         email,
         password,
       });
+      localStorage.setItem('token', response.data.token);
 
       console.log("Login successful:", response.data);
       // Assuming response contains token or other auth info, handle storage here
@@ -25,7 +26,7 @@ function Login() {
 
       setMessage("Login successful!");
       // Redirect to home page after successful login
-      setTimeout(() => navigate('/'), 500); // Change this to your actual home route
+      navigate('/');
 
     } catch (error) {
       console.error("Error during login:", error.response ? error.response.data : error.message);

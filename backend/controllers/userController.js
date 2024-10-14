@@ -67,4 +67,19 @@ const signin = async(req,res)=>{
     }
 }
 
-module.exports = {signin,signup}
+
+const getUserInfo = async (req, res) => {
+    try {
+        const user = await userModel.findById(req.userId).select('-password');
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+        res.status(200).json(user);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: "Something went wrong" });
+    }
+}
+
+
+module.exports = {signin, signup, getUserInfo};
