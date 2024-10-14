@@ -15,6 +15,7 @@
     "react-responsive": "^10.0.0",
     "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
+    "react-simple-chatbot": "^0.6.1",
     "swiper": "^11.1.14",
     "web-vitals": "^2.1.4"
   },
