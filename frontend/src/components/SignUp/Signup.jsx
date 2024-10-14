@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Signup.module.css'; 
+import { Link } from "react-router-dom";
 
 function Signup() {
   const [email, setEmail] = useState('');
@@ -40,7 +41,9 @@ function Signup() {
           className={styles.inputField}
           required
         />
+         
         <button type="submit" className={styles.submitButton}>SignUp</button>
+        <Link to="/Login" className={styles.anchor} >Already have a Account?</Link>
       </form>
     </div>
   );
