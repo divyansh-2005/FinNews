@@ -63,3 +63,11 @@
   background-color: #007bff;
   color: white;
 }
+
+@media only screen and (max-width: 600px) {
+  .newsletterContainer {
+    padding: 2px;
+    overflow-x: hidden;
+    margin: 5vh 1vh;
+  }
+}
