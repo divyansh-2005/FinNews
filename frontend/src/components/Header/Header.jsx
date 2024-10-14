@@ -63,7 +63,9 @@ function Header() {
           </Link>
 
           {/* Sign In/Sign Up Button within the Dropdown */}
+          <Link to="/signup" onClick={handleLinkClick}>
           <button className={styles.dropdownSignUp}>Sign In / Sign Up</button>
+          </Link>
         </nav>
       </div>
     </header>

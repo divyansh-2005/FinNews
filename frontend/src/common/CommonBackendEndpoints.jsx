@@ -1,4 +1,5 @@
-const backendDomain = "https://fin-news-backend.vercel.app";
+// const backendDomain = "https://fin-news-backend.vercel.app"; // This is the deployed backend domain
+const backendDomain = "http://localhost:2071"; // This is the local backend domain
 
 const commonendpoint = {
     latestFinancialNews : {
@@ -8,6 +9,14 @@ const commonendpoint = {
     dailyNewsetter : {
         url: `${backendDomain}/api/fetch-dailyNews`,
         method: 'GET'
+    },
+    signup: {
+        url: `${backendDomain}/users/signup`,
+        method: 'POST'
+    },
+    login: {
+        url: `${backendDomain}/users/signin`,
+        method: 'POST'
     }
 }
 
