@@ -55,3 +55,8 @@
     background-color: #a72090;
   }
   
+  .errorMessage{
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+  }
