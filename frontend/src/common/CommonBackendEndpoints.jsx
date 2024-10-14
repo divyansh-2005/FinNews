@@ -21,7 +21,11 @@ const commonendpoint = {
     getUserInfo: {
         url: `${backendDomain}/users/me`,
         method: 'GET'
-    }
+    },
+    firebaseAuth: {
+        url: `${backendDomain}/users/firebase-auth`,
+        method: 'POST'
+    },
 }
 
 export default commonendpoint;

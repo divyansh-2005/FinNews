@@ -4,6 +4,9 @@ import styles from './Login.module.css';
 import axios from 'axios'; 
 import commonendpoint from '../../common/CommonBackendEndpoints';
 
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { auth } from '../../firebase';
+
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -34,9 +37,24 @@ function Login() {
     }
   };
 
-  const handleGoogleSignIn = (e) => {
-    e.preventDefault();
-    // Add your Google login logic here
+  const handleGoogleSignIn = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      const idToken = await user.getIdToken();
+      
+      // Send the token to your backend
+      const response = await axios.post(commonendpoint.firebaseAuth.url, { idToken });
+      localStorage.setItem('token', response.data.token);
+      // You can also store user info if needed
+      localStorage.setItem('user', JSON.stringify(response.data.user));
+      setMessage("Login successful!");
+      navigate('/');
+    } catch (error) {
+      console.error("Error during Google sign in:", error);
+      setMessage("Google sign in failed. Please try again.");
+    }
   };
 
   return (

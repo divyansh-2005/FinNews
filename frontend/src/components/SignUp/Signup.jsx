@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import styles from './Signup.module.css'; 
 import axios from 'axios'; 
 import commonendpoint from '../../common/CommonBackendEndpoints';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { auth } from '../../firebase';
 
 function Signup() {
   const [email, setEmail] = useState('');
@@ -10,7 +12,7 @@ function Signup() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
-
+  const navigate = useNavigate();
   const handleSignup = async (e) => {
     e.preventDefault();
     
@@ -34,9 +36,24 @@ function Signup() {
     }
   };
 
-  const handleGoogleSignup = () => {
-    // Add your Google signup logic here
-    console.log("Google signup clicked");
+  const handleGoogleSignIn = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      const idToken = await user.getIdToken();
+      
+      // Send the token to your backend
+      const response = await axios.post(commonendpoint.firebaseAuth.url, { idToken });
+      localStorage.setItem('token', response.data.token);
+      // You can also store user info if needed
+      localStorage.setItem('user', JSON.stringify(response.data.user));
+      setMessage("Login successful!");
+      navigate('/');
+    } catch (error) {
+      console.error("Error during Google sign in:", error);
+      setMessage("Google sign in failed. Please try again.");
+    }
   };
 
   return (
@@ -77,7 +94,7 @@ function Signup() {
         />
         <button type="submit" className={styles.submitButton}>SignUp</button>
       </form>
-      <button onClick={handleGoogleSignup} className={styles.googleButton}>Sign Up with Google</button>
+      <button onClick={handleGoogleSignIn} className={styles.googleButton}>Sign Up with Google</button>
       {message && <p className={styles.message}>{message}</p>}
       <p className={styles.loginLink}>
         Already have an account? <Link to="/login">Log in</Link>
