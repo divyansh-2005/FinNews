@@ -11,6 +11,7 @@ import BlogSection from './components/Blogs/BlogSection';
 import BlogPageTemplate from "./components/Blogs/BlogPageTemplate";
 import Newsletter from './components/Newsletter/Newsletter';
 import BackToTop from './components/Back-to-top/BackToTop';
+import CreateBlog from './components/Blogs/CreateBlog';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/newsletter" element={<Newsletter />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/create-blog" element={<CreateBlog />} />
         </Routes>
         <Footer />
         <BackToTop />

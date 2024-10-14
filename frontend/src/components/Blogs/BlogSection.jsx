@@ -1,23 +1,24 @@
 import React from "react";
 import img from "./Images/landingpgimg.png";
 import "./BlogSection.css";
-import data from "./BlogsData.json";
-import { Link } from "react-router-dom";
+// import data from "./BlogsData.json";
+// import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import BlogPageCards from "./BlogPageCards";
 
-const allBlog = () => {
-  return data.data.map((blog, index) => (
-    <div className="oneblog">
-      <img src={blog.thumbnailimg} alt="" />
-      <h2>{blog.title}</h2>
-      <p>{blog.shortsummary}</p>
-      <div>
-        <p>{blog.date}</p>
-        <Link to={`/blog/${blog.searchkey}`}>Read More</Link>
-      </div>
-    </div>
-  ));
-};
+// const allBlog = () => {
+//   return data.data.map((blog, index) => (
+//     <div className="oneblog">
+//       <img src={blog.thumbnailimg} alt="" />
+//       <h2>{blog.title}</h2>
+//       <p>{blog.shortsummary}</p>
+//       <div>
+//         <p>{blog.date}</p>
+//         <Link to={`/blog/${blog.searchkey}`}>Read More</Link>
+//       </div>
+//     </div>
+//   ));
+// };
 
 function BlogSection() {
   window.scrollTo({
@@ -54,8 +55,7 @@ function BlogSection() {
           <img src={img} alt="" />
           <i class="fa-solid fa-angles-down"></i>
         </div>
-        <h1 className="our-home-heading">OUR RECENTS BLOGS</h1>
-        <div id="blog-allblogs">{allBlog()}</div>
+        <BlogPageCards />
       </div>
     </>
   );
