@@ -8,7 +8,7 @@ const SECRET_KEY = process.env.SECRET_KEY
 
 const signup = async (req,res)=>{
 
-    const {username,email,password} = req.body;
+    const {name,email,password} = req.body;
     try{
 
         //Existing user check
@@ -25,7 +25,7 @@ const signup = async (req,res)=>{
         const result = await userModel.create({
             email:email,
             password:hashedPassword,
-            username:username,
+            name:name,
         })
 
         // Token Generate
