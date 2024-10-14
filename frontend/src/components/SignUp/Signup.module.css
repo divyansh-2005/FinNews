@@ -59,7 +59,18 @@
 .submitButton:hover { 
   background-color: #a72090; 
 } 
+.googleButton{
+  padding: 15px;
+  color: white; 
+  border: none; 
+  border-radius: 4px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  width: 20%;
+  transition: background-color 0.3s ease; 
+  margin-bottom: 10px;
 
+}
 .googleButton {
   background-color: #4285F4;
 }

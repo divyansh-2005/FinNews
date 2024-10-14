@@ -39,7 +39,7 @@
   outline: none; 
 } 
 
-.submitButton, .googleButton { 
+.submitButton { 
   padding: 15px;
   color: white; 
   border: none; 
@@ -50,7 +50,17 @@
   transition: background-color 0.3s ease; 
   margin-bottom: 10px;
 } 
-
+.googleButton{
+  padding: 15px;
+  color: white; 
+  border: none; 
+  border-radius: 4px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  width: 20%;
+  transition: background-color 0.3s ease; 
+  margin-bottom: 10px;
+}
 .submitButton {
   background-color: #6d3476; 
 }

@@ -76,8 +76,8 @@ function Signup() {
           required
         />
         <button type="submit" className={styles.submitButton}>SignUp</button>
-      <button onClick={handleGoogleSignup} className={styles.googleButton}>Sign Up with Google</button>
       </form>
+      <button onClick={handleGoogleSignup} className={styles.googleButton}>Sign Up with Google</button>
       {message && <p className={styles.message}>{message}</p>}
       <p className={styles.loginLink}>
         Already have an account? <Link to="/login">Log in</Link>

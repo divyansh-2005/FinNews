@@ -13,6 +13,12 @@ const userSchema = mongoose.Schema({
     password:{
         type:String,
         required:true,
+        required: function() { return !this.googleId; } // Password is required if googleId is not present
+    },
+    googleId: {
+      type: String,
+      unique: true,
+      sparse: true  // This allows the field to be unique but not required which is useful for Google sign-in
     }
 }, {timestamps:true} );
 
