@@ -4,7 +4,7 @@ const userRouter = require("./routes/userRoutes");
 const dotenv = require("dotenv");
 const axios = require("axios");
 const cors = require("cors")
-// const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 const mongoose = require("mongoose")
 
 const router = require('./routes/routes');
@@ -31,10 +31,10 @@ app.use("/api", router);
 mongoose.connect(process.env.MONGO_URL)
 .then(()=>{
     
-    console.log("connected to mongodb");
+    console.log("Connected to MongoDB");
     
-    /*remove comment from line 36 to run on localhost*/
-    // app.listen(PORT,()=>{console.log("Server started on port "+PORT);})
+    /*remove comment from line 37 and 7 to run on localhost*/
+   app.listen(PORT,()=>{console.log(`Server is up and running on port http://localhost:${PORT}`);})
     
 })
 .catch((error)=>{
@@ -43,5 +43,5 @@ mongoose.connect(process.env.MONGO_URL)
 
 // Export the app for Vercel to handle requests
 /*comment line 46 to run on localhost*/
-module.exports = app;
+//module.exports = app;
 
