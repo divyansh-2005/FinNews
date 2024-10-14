@@ -52,7 +52,7 @@ function BlogSection() {
         <div id="blog-landingpage">
           <h2>Simplify, Explore, and Connect with FIN NEWS Blog Wisdom</h2>
           <img src={img} alt="" />
-          <i class="fa-solid fa-angles-down"></i>
+          <i className="fa-solid fa-angles-down"></i>
         </div>
         <h1 className="our-home-heading">OUR RECENTS BLOGS</h1>
         <div id="blog-allblogs">{allBlog()}</div>
