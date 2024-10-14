@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import styles from './Signup.module.css'; 
 import axios from 'axios'; 
-import commonendpoint from '../../common/CommonBackendEndpoints'; // Import the common backend endpoint
+import commonendpoint from '../../common/CommonBackendEndpoints';
+import { Link } from 'react-router-dom';
 
 function Signup() {
   const [email, setEmail] = useState('');
@@ -31,6 +32,11 @@ function Signup() {
       console.error("Error during signup:", error.response ? error.response.data : error.message);
       setMessage("Signup failed. Please try again.");
     }
+  };
+
+  const handleGoogleSignup = () => {
+    // Add your Google signup logic here
+    console.log("Google signup clicked");
   };
 
   return (
@@ -70,8 +76,12 @@ function Signup() {
           required
         />
         <button type="submit" className={styles.submitButton}>SignUp</button>
+      <button onClick={handleGoogleSignup} className={styles.googleButton}>Sign Up with Google</button>
       </form>
       {message && <p className={styles.message}>{message}</p>}
+      <p className={styles.loginLink}>
+        Already have an account? <Link to="/login">Log in</Link>
+      </p>
     </div>
   );
 }

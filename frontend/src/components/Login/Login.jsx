@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './Login.module.css';
 import axios from 'axios'; 
 import commonendpoint from '../../common/CommonBackendEndpoints';
@@ -7,8 +7,9 @@ import commonendpoint from '../../common/CommonBackendEndpoints';
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState(''); 
+  const [message, setMessage] = useState('');
   const navigate = useNavigate();
+
   const handleLogin = async (e) => {
     e.preventDefault();
 
@@ -22,13 +23,19 @@ function Login() {
       // Assuming response contains token or other auth info, handle storage here
       // For example: localStorage.setItem('authToken', response.data.token);
 
+      setMessage("Login successful!");
       // Redirect to home page after successful login
-      navigate('/'); // Change this to your actual home route
+      setTimeout(() => navigate('/'), 500); // Change this to your actual home route
 
     } catch (error) {
       console.error("Error during login:", error.response ? error.response.data : error.message);
-      setErrorMessage("Login failed. Please check your credentials.");
+      setMessage("Login failed. Please check your credentials.");
     }
+  };
+
+  const handleGoogleSignIn = (e) => {
+    e.preventDefault();
+    // Add your Google login logic here
   };
 
   return (
@@ -52,10 +59,12 @@ function Login() {
           required
         />
         <button type="submit" className={styles.submitButton}>Login</button>
+      <button onClick={handleGoogleSignIn} className={styles.googleButton}>Sign In with Google</button>
       </form>
-
-      {/* Show error message */}
-      {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
+      {message && <p className={styles.message}>{message}</p>}
+      <p className={styles.signupLink}>
+        Don't have an account? <Link to="/signup">Sign up</Link>
+      </p>
     </div>
   );
 }
