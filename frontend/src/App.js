@@ -9,6 +9,7 @@ import Login from './components/Login/Login';
 import Footer from './components/Footer/Footer';
 import About from './components/Footer/About'; // Import the About component
 import Contact from './components/Footer/Contact'; // Import the Contact component
+import Help from './components/Footer/Help'; // Import the Help component
 import BlogSection from './components/Blogs/BlogSection';
 import BlogPageTemplate from "./components/Blogs/BlogPageTemplate";
 import Newsletter from './components/Newsletter/Newsletter';
@@ -35,6 +36,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/help" element={<Help/>} />
         </Routes>
         <Footer />
             </>

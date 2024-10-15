@@ -1,0 +1,80 @@
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  gap: 20px;
+}
+
+.inputBox {
+  width: 50%;
+  padding: 10px;
+  padding-left: 20px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  outline: none;
+}
+
+.searchIcon {
+  background-color: #ff00ff;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: x-large;
+}
+
+.faqItem {
+  overflow: hidden;
+}
+
+.faqContent {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f4d4f1;
+  overflow: hidden;
+}
+
+.faqQuestion {
+  margin-bottom: 2px;
+  color: #000000;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  font-size: 20pxrem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.faqQuestion:hover {
+  color: #ff00ff;
+}
+
+.faqAnswer {
+  margin-bottom: 2px;
+  display: none;
+  height: 0;
+}
+
+.faqAnswer.open {
+  display: block;
+  overflow: hidden;
+  height: auto;
+}
+
+.emailBox {
+  width: 50%;
+  padding: 20px;
+  border-radius: 50px;
+  font-family: "Poppins", sans-serif;
+  background-color: #f4d4f1;
+  margin: 20px auto;
+}
