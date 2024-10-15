@@ -13,6 +13,7 @@ import Newsletter from './components/Newsletter/Newsletter';
 import BackToTop from './components/Back-to-top/BackToTop';
 
 function App() {
+  const isOnline = useOnline();
   return (
 
     <HelmetProvider>

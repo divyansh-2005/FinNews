@@ -105,3 +105,49 @@
     transform: translateY(-5px);
   }
 }
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-10px);
+  }
+
+  60% {
+    transform: translateY(-5px);
+  }
+
+}
+
+
+@media only screen and (max-width: 600px) {
+  .highlighted-heading {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1.5rem;
+  }
+
+  .hero-button {
+    width: 230px;
+    height: 41px;
+    font-size: 1rem;
+  }
+
+  .scroll-down {
+    margin-top: 5rem;
+  }
+
+  .hero-section {
+    height: auto;
+  }
+
+}
