@@ -5,6 +5,12 @@ import "swiper/css";
 import "./GovSchemes.css";
 import { useMediaQuery } from "react-responsive";
 import scheme from "../../assets/nationalBefinifitScheme.png";
+import scheme2 from "../../assets/IndiraGandhi.jpeg";
+import scheme3 from "../../assets/pension.jpeg";
+import scheme4 from "../../assets/aamadmi.png";
+import scheme5 from "../../assets/snajaygandhi.jpeg";
+import scheme6 from "../../assets/shravan.png";
+
 
 const schemes = [
   {
@@ -16,35 +22,35 @@ const schemes = [
   },
   {
     id: 2,
-    image: scheme,
+    image: scheme2,
     title: "Indira Gandhi National Old Age Pension Scheme",
     description:
       "Old aged person of 65 years & above belonging to BPL Family are eligible under this Scheme. Beneficiaries under this scheme receive Rs.200/- from Govt. of India & Rs.400/- from Govt. of Maharashtra under Shravanbal Seva Rajya Nivrutti vetan Yojana. In all the beneficiary receives Rs. 600/- per month..",
   },
   {
     id: 3,
-    image: scheme,
+    image: scheme3,
     title: "Indira Gandhi National Disability Pension Scheme",
     description:
       "A Disable person in the age group of 18 to 65 years and having 80 percent disability is eligible under this Scheme. He / She is entitled to receive Rs. 200/- per month under this Scheme. He / She also receives Rs 400/- per month under State sponsored Sanjay Gandhi Niradhar Anudan Yojana.",
   },
   {
     id: 4,
-    image: scheme,
+    image: scheme4,
     title: "Aam Adami Bima Yojana",
     description:
       "This scheme is meant for land less labourers in rural areas in the age Group of 18-59 years. The premium charged under the scheme will be Rs. 200/- per annum per member out of which 50% is subsidized by the State Govt. and Central Govt.",
   },
   {
     id: 5,
-    image: scheme,
+    image: scheme5,
     title: "Sanjay Gandhi Niradhar Anudan Yojana",
     description:
       "This scheme is applicable to destitute persons of age below 65 years, orphan children, all types of handicapped, person suffering from critical illness like T. B. cancer, AIDS and leprosy, destitute widows including those of farmers who committed suicide,",
   },
   {
     id: 6,
-    image: scheme,
+    image: scheme6,
     title: "Shravanbal Seva Rajya Nivruttivetan Yojana",
     description:
       " this scheme, every destitute person of age 65 years and above and belonging to BPL family is eligible to get pension of Rs. 400/- per month from the state Govt. and the same beneficiary also receives pension of Rs.200/- per month from the Central Govt., under Indira Gandhi National Old Age pension Scheme.",
