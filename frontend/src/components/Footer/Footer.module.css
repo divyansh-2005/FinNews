@@ -63,6 +63,18 @@
     text-align: center;
 }
 
+/* Add hover effect for the "About" link */
+.footerLinks a {
+    color: white;  /* Default color is white */
+    text-decoration: none;  /* No underline */
+    transition: color 0.3s ease;  /* Smooth transition */
+}
+
+.footerLinks a:hover {
+    color: pink;  /* Change color to pink on hover */
+}
+
+/* Icons Section */
 .footerIcons {
     display: flex;
     gap: 15px;
