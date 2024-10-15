@@ -253,3 +253,55 @@
   font-family: "Poppins", system-ui;
   font-weight: 700;
 }
+/* Dark mode styles */
+
+.darkMode {
+  background-color: #111;
+  color: #fff;
+}
+
+/* Small Dark Mode Toggle Button */
+.toggleDarkMode {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 18px; /* Adjust size for icon */
+  margin-left: 10px; /* Spacing to the right of Sign In / Sign Up */
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.3s ease;
+}
+
+.toggleDarkMode:hover {
+  transform: scale(1.2); /* Slight hover effect */
+}
+
+/* Additional styles to align correctly */
+.nav {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 8px 13px;
+  border-radius: 25px;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  background-color: #54024b;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .toggleDarkMode {
+    margin-left: 0;
+    padding: 10px;
+  }
+}
+
+
