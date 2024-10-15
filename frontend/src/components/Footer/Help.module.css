@@ -1,3 +1,4 @@
+/* search bar styling */
 .searchContainer {
   display: flex;
   justify-content: center;
@@ -25,6 +26,8 @@
   cursor: pointer;
   font-size: x-large;
 }
+
+/* Faq styling */
 
 .faqItem {
   overflow: hidden;
@@ -69,6 +72,8 @@
   overflow: hidden;
   height: auto;
 }
+
+/* Email box styling */
 
 .emailBox {
   width: 50%;

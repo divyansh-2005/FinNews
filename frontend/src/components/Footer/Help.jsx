@@ -30,6 +30,7 @@ function Help() {
   const [open, setOpen] = useState(false);
 
   return (
+    // Add the following div to display the help page content 
     <div
       style={{
         padding: "60px",
@@ -58,7 +59,7 @@ function Help() {
         help page is regularly updated, so be sure to check back for the latest
         information.
       </p>
-
+        // Add the following div to display the search bar
       <div className={styles.searchContainer}>
         <input
           className={styles.inputBox}
@@ -67,7 +68,7 @@ function Help() {
         />
         <CiSearch className={styles.searchIcon} />
       </div>
-
+        // Add the following div to display the FAQ content
       <div className={styles.faqContent}>
         <h2>Frequently Asked Questions</h2>
         <div className={styles.faqList}>
@@ -96,6 +97,7 @@ function Help() {
             </div>
           ))}
         </div>
+        // Add the following div to display the email box
       </div>
           <div className={styles.emailBox}>
             <h2>Contact Us</h2>
