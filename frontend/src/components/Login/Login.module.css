@@ -7,7 +7,7 @@
     background: linear-gradient(
     90deg,
     #2c0727 0%,
-    #110823 100%
+    #110823 100% 
   ); /* Purple background for the entire page */
   }
   
@@ -57,6 +57,7 @@
   .notAMember {
     text-align: center; /* Centers the text horizontally */
     margin-top: 10px; /* Adds some spacing above */
+    color: black !important;
   }
   
   .signUpLink {
