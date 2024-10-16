@@ -10,10 +10,10 @@
 
 /* Individual newsletter card */
 .newsletterItem {
-  background-color: #f9f9f9;
+  background-color: #f9f9f9; /* Light mode background */
   border-radius: 8px;
   padding: 15px;
-  background-color: #ffeffe;
+  background-color: #ffeffe; /* Light mode background */
 }
 
 .newsletterItem:hover {
@@ -25,17 +25,18 @@
   font-weight: bold;
   margin-bottom: 10px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: black !important; /* Force black text color */
 }
 
 .newsletterDescription {
   font-size: 1rem;
-  color: #383636;
+  color: #383636 !important; /* Force description color */
   margin-bottom: 10px;
 }
 
 .newsletterDate {
   font-size: 0.9rem;
-  color: #502828;
+  color: #502828 !important; /* Force date text color */
 }
 
 /* Pagination styles */
@@ -49,7 +50,7 @@
 .pageButton {
   padding: 10px 15px;
   margin: 0 5px;
-  background-color: #e0e0e0;
+  background-color: #e0e0e0; /* Button background color */
   border: none;
   cursor: pointer;
   border-radius: 4px;
@@ -62,6 +63,30 @@
 .activePage {
   background-color: #007bff;
   color: white;
+}
+
+/* Dark mode support */
+body.dark-mode .newsletterItem {
+  background-color: #ffeffe !important; /* Preserve card background color */
+}
+
+body.dark-mode .newsletterTitle,
+body.dark-mode .newsletterDescription,
+body.dark-mode .newsletterDate {
+  color: black !important; /* Preserve text color in dark mode */
+}
+
+body.dark-mode .pagination .pageButton {
+  background-color: #e0e0e0 !important; /* Preserve pagination button background color */
+}
+
+body.dark-mode .pagination .pageButton:hover {
+  background-color: #ccc !important; /* Preserve hover effect */
+}
+
+body.dark-mode .activePage {
+  background-color: #007bff !important;
+  color: white !important;
 }
 
 @media only screen and (max-width: 600px) {
