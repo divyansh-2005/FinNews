@@ -13,6 +13,7 @@ import BlogSection from './components/Blogs/BlogSection';
 import BlogPageTemplate from "./components/Blogs/BlogPageTemplate";
 import Newsletter from './components/Newsletter/Newsletter';
 import BackToTop from './components/Back-to-top/BackToTop';
+import CreateBlog from './components/Blogs/CreateBlog';
 import useOnline from './components/Offline/useOnline';
 import Offline from './components/Offline/Offline';
 function App() {
@@ -21,25 +22,27 @@ function App() {
 
     <HelmetProvider>
       <Router>
-            {
-              isOnline?(
-                <>
-            <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/myfeed" element={<MyFeed />} />
-          <Route path="/blog/:key" element={<BlogPageTemplate />} />
-          <Route path="/blogs" element={<BlogSection />} />
-          <Route path="/newsletter" element={<Newsletter />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
+        {
+          isOnline ? (
+            <>
+              <Header />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/myfeed" element={<MyFeed />} />
+                <Route path="/blog/:key" element={<BlogPageTemplate />} />
+                <Route path="/blogs" element={<BlogSection />} />
+                <Route path="/newsletter" element={<Newsletter />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/create-blog" element={<CreateBlog />} />
+              </Routes>
+              <Footer />
+
             </>
-              ):(<Offline/>)
-            }
+          ) : (<Offline />)
+        }
         <BackToTop />
       </Router>
     </HelmetProvider>  // Closing tag for HelmetProvider
