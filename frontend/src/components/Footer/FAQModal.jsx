@@ -9,6 +9,9 @@ const FAQModal = ({ onClose }) => {
     { question: "How do I use Fin-Buddy?", answer: "Fin-Buddy is our AI-powered financial assistant. You can ask it questions about market trends, company performance, or general financial advice. Simply type your query in the chat interface to get started." },
     { question: "Is my personal information secure?", answer: "Yes, we take data security very seriously. All user data is encrypted and stored securely. We never share your personal information with third parties without your explicit consent." },
     { question: "How often is the news updated?", answer: "Our news feed is updated in real-time, ensuring you always have access to the latest financial information and market updates." },
+    { question: "Can Fin-Buddy provide stock recommendations? ", answer: "Yes, Fin-Buddy can analyze stock performance and provide recommendations based on market data. However, these are suggestions, and we always recommend consulting a financial advisor before making investment decisions." },
+    { question: "Can I access Prolega on multiple devices?", answer: "Yes, you can use your Prolega account on multiple devices by logging in with your credentials. Your data and preferences will sync automatically across all platforms." },
+    { question: "Can Prolega provide tax-efficient investment strategies?", answer: "Yes, Prolega offers tax-efficient strategies by analyzing your portfolio and suggesting adjustments such as tax-loss harvesting, optimal asset location (placing assets in tax-advantaged accounts), and capital gains deferral. Our AI also monitors changes in tax laws to offer personalized advice on how to maximize after-tax returns." },
   ];
 
   const toggleQuestion = (index) => {
