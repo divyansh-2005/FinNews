@@ -1,26 +1,30 @@
 import React from 'react';
 
-function Contact() {
+import styles from "./FAQModal.module.css";
+
+function Contact({onClose}) {
   return (
-    <div style={{ padding: '60px', textAlign: 'center', backgroundColor: '#ffeffe', minHeight: '100vh' }}>
-      <h1 style={{ fontSize: '36px', color: '#333' }}>Contact Us</h1>
-      <p style={{ fontSize: '18px', color: '#555', maxWidth: '800px', margin: '20px auto' }}>
-        We would love to hear from you! Whether you have questions about our platform, suggestions for improvement, or partnership opportunities, feel free to get in touch.
-      </p>
+    <div className={styles.modalOverlay} onClick={onClose}>
+      <div className={styles.modalContent} onClick={(e)=>e.stopPropagation()}>
+        <h2>Contact Us</h2>
+        <button className={styles.closeButton} onClick={onClose}>×</button>
+        <p>
+          We would love to hear from you! Whether you have questions about our platform, suggestions for improvement, or partnership opportunities, feel free to get in touch.
+        </p>
+        <h3>Email</h3>
+        <p>support@finnews.com</p>
 
-      <h3 style={{ fontSize: '24px', color: '#333' }}>Email</h3>
-      <p style={{ fontSize: '18px', color: '#555' }}>support@finnews.com</p>
+        <h3>Phone</h3>
+        <p>+91 123 456 7890</p>
 
-      <h3 style={{ fontSize: '24px', color: '#333' }}>Phone</h3>
-      <p style={{ fontSize: '18px', color: '#555' }}>+91 123 456 7890</p>
-
-      <h3 style={{ fontSize: '24px', color: '#333' }}>Address</h3>
-      <p style={{ fontSize: '18px', color: '#555' }}>
-        456 Finance Road,<br />
-        Bandra Kurla Complex,<br />
-        Mumbai, Maharashtra 400051<br />
-        India
-      </p>
+        <h3>Address</h3>
+        <p>
+          456 Finance Road,<br />
+          Bandra Kurla Complex,<br />
+          Mumbai, Maharashtra 400051<br />
+          India
+        </p>
+      </div>
     </div>
   );
 }

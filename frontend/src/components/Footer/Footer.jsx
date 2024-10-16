@@ -5,11 +5,15 @@ import { FaXTwitter } from "react-icons/fa6";
 import styles from './Footer.module.css'; // Import as module
 import GoogleTranslate from './GoogleTranslate'
 import FAQModal from './FAQModal';
+import Contact from './Contact';
 import footerLogo from '../../assets/footer-logo.png'
 
 function Footer() {
   const [isFAQOpen, setIsFAQOpen] = useState(false);
+  const [isContactUsOpen, setIsContactUsOpen] = useState(false);
+
   const toggleFAQ = () => setIsFAQOpen(!isFAQOpen);
+  const toggleContactUs= () => setIsContactUsOpen((isContactUsOpen) => !isContactUsOpen);
 
   return (
     <footer className={styles.footer}>
@@ -37,7 +41,7 @@ function Footer() {
         <div className={styles.footerLinks}>
           <div>Helpdesk</div>
           <div onClick={toggleFAQ} className={styles.faqLink}>FAQ</div>
-          <Link to="/contact">Contact Us</Link>
+          <div onClick={toggleContactUs} className={styles.faqLink}>Contact Us</div>
         </div>
       </div>
 
@@ -60,6 +64,8 @@ function Footer() {
       </div>
       {/* FAQ Modal */}
       {isFAQOpen && <FAQModal onClose={toggleFAQ} />}
+      {/* Contact Us Modal */}
+      {isContactUsOpen && <Contact onClose={toggleContactUs}/>}
     </footer>
   );
 }
