@@ -1,3 +1,4 @@
+// App.js
 import React, { useState, useMemo } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -13,14 +14,15 @@ import Newsletter from './components/Newsletter/Newsletter';
 import BackToTop from './components/Back-to-top/BackToTop';
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
+import ScrollProgressBar from './components/Scroll-progress/ScrollProgress'; // Import the ScrollProgressBar
+
 import styled from "styled-components";
 
-// Styled-components for the chatbot button and container
 // Styled-components for the chatbot button and container
 const ChatbotButton = styled.button`
   position: fixed;
   bottom: 20px;
-  left: 20px; /* Changed from 'right' to 'left' */
+  left: 20px;
   background-color: purple;
   color: white;
   border: none;
@@ -39,13 +41,11 @@ const ChatbotButton = styled.button`
 
 const ChatbotContainer = styled.div`
   position: fixed;
-  bottom: 80px; /* Adjust based on button size */
-  left: 20px; /* Changed from 'right' to 'left' */
+  bottom: 80px;
+  left: 20px;
   z-index: 1000;
 `;
 
-
-// Chatbot steps
 // Chatbot steps
 const steps = [
   {
@@ -53,114 +53,8 @@ const steps = [
     message: "Hi! How can I assist you today?",
     trigger: "2",
   },
-  {
-    id: "2",
-    user: true,
-    trigger: "3",
-  },
-  {
-    id: "3",
-    // Function to evaluate the user's input and determine the next step
-    message: ({ previousValue }) => {
-      const input = previousValue.toLowerCase();
-      if (input.includes("help")) {
-        return "I'm here to help! What specific help do you need?";
-      } else if (input.includes("hello") || input.includes("hii") || input.includes("hey")) {
-        return "Hello! How can I help you?";
-      } else if (input.includes("features")) {
-        return "Our platform has various features like Blogs, Schemes, and latest updates. You can explore our website";
-      } else if (input.includes("what is finnews")) {
-        return "FinNews is a platform that provides the latest financial news, insights, and updates on the market. Would you like to explore our news section?";
-      } else {
-        return "Thanks for your input! Is there anything else you'd like to ask?";
-      }
-    },
-    trigger: "repeat",
-  },
-  {
-    id: "repeat",
-    message: "Feel free to ask anything else!",
-    trigger: "4",
-  },
-  {
-    id: "4",
-    user: true,
-    trigger: "3", // Loop back to step 3 to keep evaluating the input
-  },
-  {
-    id: "5",
-    message: ({ previousValue }) => {
-      const input = previousValue.toLowerCase();
-      if (input.includes("yes")) {
-        return "Great! What else can I assist you with?";
-      } else {
-        return "No problem! Let me know if you have any other questions.";
-      }
-    },
-    trigger: "6",
-  },
-  {
-    id: "6",
-    user: true,
-    trigger: "7",
-  },
-  {
-    id: "7",
-    message: "Let us know if there's more you need!",
-    trigger: "8",
-  },
-  {
-    id: "8",
-    user: true,
-    trigger: "9",
-  },
-  {
-    id: "9",
-    message: "Thanks for staying with us! Any further questions?",
-    trigger: "10",
-  },
-  {
-    id: "10",
-    user: true,
-    trigger: "11",
-  },
-  {
-    id: "11",
-    message: "Feel free to ask anything else!",
-    trigger: "12",
-  },
-  {
-    id: "12",
-    user: true,
-    trigger: "13",
-  },
-  {
-    id: "13",
-    message: "We are happy to assist you. Do you have more questions?",
-    trigger: "14",
-  },
-  {
-    id: "14",
-    user: true,
-    trigger: "15",
-  },
-  {
-    id: "15",
-    message: "Thanks! We are always here to help. Anything else?",
-    trigger: "16",
-  },
-  {
-    id: "16",
-    user: true,
-    trigger: "17",
-  },
-  {
-    id: "17",
-    message: "Great! Let us know if you need more assistance.",
-    end: true,
-  },
+  // ... (rest of your steps)
 ];
-
 
 // Chatbot theme
 const theme = {
@@ -173,8 +67,10 @@ const theme = {
   userFontColor: "#4a4a4a",
 };
 
-// App Component
+// Other imports and styled components...
+
 function App() {
+
   const [isChatbotOpen, setIsChatbotOpen] = useState(false);
   const memoizedSteps = useMemo(() => steps, []);
 
@@ -182,10 +78,13 @@ function App() {
     setIsChatbotOpen((prev) => !prev);
   };
 
+  // ... existing code
+
   return (
     <HelmetProvider>
       <Router>
         <Header />
+        <ScrollProgressBar /> {/* Add the ScrollProgressBar here */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/myfeed" element={<MyFeed />} />
@@ -196,6 +95,8 @@ function App() {
           <Route path="/login" element={<Login />} />
         </Routes>
 
+        {/* Chatbot button and other components... */}
+
         {/* Chatbot button */}
         <ChatbotButton onClick={toggleChatbot}>
           {isChatbotOpen ? "×" : "🎧"}
@@ -205,24 +106,24 @@ function App() {
         {isChatbotOpen && (
           <ChatbotContainer>
             <ThemeProvider theme={theme}>
-            <ChatBot
-              steps={steps}
-              floating={false}
-              headerTitle="Get help"
-              style={{
-                width: "300px",  // Adjusted width
-                height: "400px", // Adjusted height
-                overflowY: "auto", // Allow scrolling for overflow content
-              }}
-              inputStyle={{
-                padding: "5px 10px 0px 10px", // Decrease padding for smaller input
-                height: "50px", // Decrease input height
-              }}
-              contentStyle={{
-                height: "calc(100% - 60px)", // Adjust content height to fit header and input
-                overflowY: "auto",
-              }}
-            />
+              <ChatBot
+                steps={memoizedSteps}
+                floating={false}
+                headerTitle="Get help"
+                style={{
+                  width: "300px",
+                  height: "400px",
+                  overflowY: "auto",
+                }}
+                inputStyle={{
+                  padding: "5px 10px 0px 10px",
+                  height: "50px",
+                }}
+                contentStyle={{
+                  height: "calc(100% - 60px)",
+                  overflowY: "auto",
+                }}
+              />
             </ThemeProvider>
           </ChatbotContainer>
         )}
