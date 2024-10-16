@@ -29,23 +29,23 @@ app.get("/",(req,res)=>{
 
 app.use("/api", router);
 mongoose.connect(process.env.MONGO_URL)
-.then(()=>{
-    
-    console.log("connected to mongodb");
-    
-    /*remove comment from line 36 to run on localhost*/
-    // app.listen(PORT,()=>{console.log("Server started on port "+PORT);})
-    
-})
-.catch((error)=>{
-    console.error("mongodb error:",error);
-})
-app.all('*',(req,res)=>{     // If anyone try to use any wrong routes then page not found will get appear
-    res.status(404).send('OOPS!! 404 ERROR , Pgae Not Found');
+    .then(() => {
+        console.log("connected to mongodb");
+
+        /* Uncomment this line to run the server on localhost */
+        // app.listen(PORT, () => {
+        //     console.log("Server started on port " + PORT);
+        // });
+    })
+    .catch((error) => {
+        console.error("mongodb error:", error);
+    });
+
+app.all('*', (req, res) => {
+    res.status(404).send('OOPS!! 404 ERROR, Page Not Found');
 });
 
-
 // Export the app for Vercel to handle requests
-/*comment line 46 to run on localhost*/
+/* Comment the below line if running on localhost */
 module.exports = app;
 
