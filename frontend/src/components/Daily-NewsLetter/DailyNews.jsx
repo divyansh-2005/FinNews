@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import styles from "./DailyNews.module.css"; // Import the CSS Module
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const DailyNews = () => {
   // Simulated newsletter data
@@ -30,7 +33,7 @@ const DailyNews = () => {
       date: "2024-09-27",
     },
     {
-      title: "Investment Strategies for 2024",
+      title: "Investment Strategies tips",
       description:
         "Strategic approaches to investing in 2024 to maximize returns.",
       date: "2024-09-26",
@@ -63,60 +66,72 @@ const DailyNews = () => {
       description: "What's ahead for the global economy in the coming months.",
       date: "2024-09-21",
     },
+    {
+      title: "Investment Strategies",
+      description:
+        "Strategic approaches to investing in 2024 to maximize returns.",
+      date: "2024-09-26",
+    },
   ];
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const [newsPerPage] = useState(3); // Number of newsletters per page
-
-  // Calculate index values for pagination
-  const indexOfLastNews = currentPage * newsPerPage;
-  const indexOfFirstNews = indexOfLastNews - newsPerPage;
-  const currentNews = dailyNewsLetter.slice(indexOfFirstNews, indexOfLastNews);
-
-  // Change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
-  // Render pagination buttons dynamically based on the total number of newsletters
-  const totalPages = Math.ceil(dailyNewsLetter.length / newsPerPage);
-  const pageNumbers = [];
-  for (let i = 1; i <= totalPages; i++) {
-    pageNumbers.push(i);
-  }
-
+  const responsive = [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 5,
+      },
+    },
+    {
+      breakpoint: 900,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ];
+  // Slider settings for the multi-item carousel
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+    arrows: false,
+    responsive,
+  };
   return (
     <>
       <SectionHeading title="Daily Newsletter" />
       <div className={styles.newsletterContainer}>
-        {currentNews.length === 0 ? (
-          <p>No newsletters available.</p>
-        ) : (
-          currentNews.map((newsItem, index) => (
-            <div key={index} className={styles.newsletterItem}>
-              <h3 className={styles.newsletterTitle}>{newsItem.title}</h3>
-              <p className={styles.newsletterDescription}>
-                {newsItem.description}
-              </p>
-              <p className={styles.newsletterDate}>
-                {new Date(newsItem.date).toDateString()}
-              </p>
+        <Slider {...settings}>
+          {dailyNewsLetter.map((newsItem, index) => (
+            <div className="item">
+              <div key={index} className={styles.newsletterItem}>
+                <h3 className={styles.newsletterTitle}>{newsItem.title}</h3>
+                <p className={styles.newsletterDescription}>
+                  {newsItem.description}
+                </p>
+                <p className={styles.newsletterDate}>
+                  {new Date(newsItem.date).toDateString()}
+                </p>
+              </div>
             </div>
-          ))
-        )}
-      </div>
-
-      {/* Pagination */}
-      <div className={styles.pagination}>
-        {pageNumbers.map((number) => (
-          <button
-            key={number}
-            className={`${styles.pageButton} ${
-              currentPage === number ? styles.activePage : ""
-            }`}
-            onClick={() => paginate(number)}
-          >
-            {number}
-          </button>
-        ))}
+          ))}
+        </Slider>
       </div>
     </>
   );
