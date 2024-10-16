@@ -50,26 +50,6 @@
     justify-content: flex-start; /* Align icons to the left */
 }
 
-/* Add hover effect for the "About" link */
-.footerLinks a {
-    color: white;  /* Default color is white */
-    text-decoration: none;  /* No underline */
-    transition: color 0.3s ease;  /* Smooth transition */
-}
-
-.footerLinks a:hover {
-    color: pink;  /* Change color to pink on hover */
-}
-
-.faqLink {
-    cursor: pointer;
-}
-
-.faqLink:hover {
-    color: pink;
-}
-
-
 /* Copyright Statement */
 .footerCopyright {
     margin-top: 20px;
