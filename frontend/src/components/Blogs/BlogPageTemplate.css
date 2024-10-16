@@ -61,6 +61,7 @@
   #BlogTemplate h1 {
     font-size: 2.2em;
     text-wrap: balance;
+    margin-top: 80px;
   }
   #BlogTemplate > * {
     width: 85%;
