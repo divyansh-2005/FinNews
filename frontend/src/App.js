@@ -8,10 +8,13 @@ import Header from './components/Header/Header';
 import Signup from './components/SignUp/Signup';
 import Login from './components/Login/Login';
 import Footer from './components/Footer/Footer';
+import About from './components/Footer/About'; // Import the About component
+import Contact from './components/Footer/Contact'; // Import the Contact component
 import BlogSection from './components/Blogs/BlogSection';
 import BlogPageTemplate from "./components/Blogs/BlogPageTemplate";
 import Newsletter from './components/Newsletter/Newsletter';
 import BackToTop from './components/Back-to-top/BackToTop';
+
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
 import ScrollProgressBar from './components/Scroll-progress/ScrollProgress'; // Import the ScrollProgressBar
@@ -83,6 +86,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
+
         <Header />
         <ScrollProgressBar /> {/* Add the ScrollProgressBar here */}
         <Routes>
@@ -93,6 +97,8 @@ function App() {
           <Route path="/newsletter" element={<Newsletter />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
 
         {/* Chatbot button and other components... */}
@@ -129,6 +135,9 @@ function App() {
         )}
 
         <Footer />
+            </>
+              ):(<Offline/>)
+            }
         <BackToTop />
       </Router>
     </HelmetProvider>
