@@ -15,6 +15,7 @@ import BlogPageTemplate from "./components/Blogs/BlogPageTemplate";
 import Newsletter from './components/Newsletter/Newsletter';
 import BackToTop from './components/Back-to-top/BackToTop';
 
+
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
 import ScrollProgressBar from './components/Scroll-progress/ScrollProgress'; // Import the ScrollProgressBar
@@ -71,6 +72,7 @@ const theme = {
 };
 
 // Other imports and styled components...
+
 
 function App() {
 
@@ -135,9 +137,10 @@ function App() {
         )}
 
         <Footer />
+
             </>
-              ):(<Offline/>)
-            }
+          ) : (<Offline />)
+        }
         <BackToTop />
       </Router>
     </HelmetProvider>
