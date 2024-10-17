@@ -1,0 +1,49 @@
+/* css for help page */
+
+.helpForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.helpInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid rgb(255, 175, 227);
+}
+
+.helpTextarea {
+  height: 100px;
+  outline: none;
+  border: 2px solid rgb(235, 139, 201);
+}
+
+.helpSubmitBtn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.helpSubmitBtn:hover {
+  background-color: #444;
+}
+
+.faqLink {
+    cursor: pointer;
+    color: rgb(235, 139, 201);
+}
+
+.faqLink:hover {
+    color: rgb(230, 32, 160);
+}

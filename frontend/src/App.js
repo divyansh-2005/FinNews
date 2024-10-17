@@ -16,6 +16,7 @@ import BackToTop from './components/Back-to-top/BackToTop';
 import CreateBlog from './components/Blogs/CreateBlog';
 import useOnline from './components/Offline/useOnline';
 import Offline from './components/Offline/Offline';
+import Help from './components/Help/Help'
 function App() {
   const isOnline = useOnline();
   return (
@@ -37,6 +38,7 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/create-blog" element={<CreateBlog />} />
+                <Route path="/help" element={<Help />} />
               </Routes>
               <Footer />
 

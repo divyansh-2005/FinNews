@@ -38,6 +38,7 @@ function Footer() {
           <div>Helpdesk</div>
           <div onClick={toggleFAQ} className={styles.faqLink}>FAQ</div>
           <Link to="/contact">Contact Us</Link>
+          <Link to="/help">Help</Link>
         </div>
       </div>
 
