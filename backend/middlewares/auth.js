@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+const AppError = require("../utils/error.util.js");
 const dotenv = require("dotenv");
 dotenv.config();
 const SECRET_KEY = process.env.SECRET_KEY
@@ -23,4 +24,20 @@ const auth = (req,res,next)=>{
     }
 }
 
-module.exports = auth;
+const isLoggedIn = async (req, res, next) => {
+    try {
+        const { token } = req.cookies.token;
+        console.log('token:',token);
+        if (!token) {
+            return next(new AppError('Unauthenticated, please login again', 401));
+        }
+
+        const userDetails = await jwt.verify(token, process.env.JWT_SECRET);
+        req.user = userDetails;
+        next();
+    } catch (err) {
+        return next(new AppError('Invalid or expired token, please login again', 401));
+    }
+}
+
+module.exports = {auth,isLoggedIn};
