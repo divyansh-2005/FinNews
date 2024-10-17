@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
     res.send("FinNews Backend");
 });
 
-app.use("/api", router);
+app.use('/api', router);
 
 const PORT = process.env.PORT || 5000;
 
@@ -29,18 +29,18 @@ mongoose.connect(process.env.MONGO_URL)
     .then(() => {
         console.log("connected to mongodb");
 
-        // Uncomment this line to run the server on localhost
         app.listen(PORT, () => {
-            console.log("Server started on port " + PORT);
+            console.log(`Server started on port ${PORT}`);
         });
     })
     .catch((error) => {
         console.error("mongodb error:", error);
     });
 
-app.all('*', (req, res) => {
-    res.status(404).send('OOPS!! 404 ERROR, Page Not Found');
+app.all("*", (req, res) => {
+    res.status(404).send("OOPS!! 404 ERROR, Page Not Found");
 });
 
 // Export the app for Vercel to handle requests
 module.exports = app;
+
