@@ -1,45 +1,70 @@
-import React from 'react';
-import icon1 from '../../assets/icon-1.png';
-import icon2 from '../../assets/icon-2.png';
-import icon3 from '../../assets/icon-3.png';
-import icon4 from '../../assets/icon-4.png';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FaRss, FaRedditAlien, FaFacebook } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import styles from './Footer.module.css'; // Import as module
+import GoogleTranslate from './GoogleTranslate'
+import FAQModal from './FAQModal';
+import footerLogo from '../../assets/footer-logo.png'
 
 function Footer() {
+  const [isFAQOpen, setIsFAQOpen] = useState(false);
+  const toggleFAQ = () => setIsFAQOpen(!isFAQOpen);
+
   return (
     <footer className={styles.footer}>
-      {/* Left Section: Logo and Copyright */}
-      <div className={styles.footerLeft}>
-        <div className={styles.footerLogo}></div>
-        <div className={styles.footerCopyright}>
-          &copy; 2024 | Prolega
-        </div>
+      {/* First Section: Website Description */}
+      <div className={styles.footerSection}>
+        <img src={footerLogo} alt="footerLogo" />
+        <h4>FinNews</h4>
+        <p>Your trusted companion for financial guidance and investment strategies.</p>
       </div>
-      
-      {/* Center Section: Policy Links */}
-      <div className={styles.footerPolicy}>
-        <div>Privacy Policy</div>
-        <div>Do not sell my personal info</div>
-        <div>Terms of Service</div>
-      </div>
-      
-      {/* Right Section: Links and Icons */}
-      <div className={styles.footerRight}>
+
+      {/* Second Section: About and Other Pages */}
+      <div className={styles.footerSection}>
+        <h4>Explore</h4>
         <div className={styles.footerLinks}>
-          <div>About</div>
-          <div>Contact</div>
+          <Link to="/about">About</Link>
           <div>Fin-Buddy</div>
           <div>Investments</div>
-        </div>
-        <div className={styles.footerIcons}>
-          <img src={icon1} alt="RSS" />
-          <img src={icon2} alt="Twitter" />
-          <img src={icon3} alt="Reddit" />
-          <img src={icon4} alt="Facebook" />
+          <div>Blog</div>
         </div>
       </div>
+
+      {/* Third Section: Helpdesk and Contact */}
+      <div className={styles.footerSection}>
+        <h4>Help & Support</h4>
+        <div className={styles.footerLinks}>
+          <div>Helpdesk</div>
+          <div onClick={toggleFAQ} className={styles.faqLink}>FAQ</div>
+          <Link to="/contact">Contact Us</Link>
+        </div>
+      </div>
+
+      {/* Fourth Section: Social Icons */}
+      <div className={styles.footerSection}>
+        <h4>Follow Us</h4>
+        <div className={styles.footerIcons}>
+          <FaRss size="28px" color='#fff' />
+          <FaXTwitter size="28px" color='#fff' />
+          <FaRedditAlien size="28px" color='#fff' />
+          <FaFacebook size="28px" color='#fff' />
+        </div>
+        <br />
+        <GoogleTranslate />
+      </div>
+
+      {/* Copyright Statement */}
+      <div className={styles.footerCopyright}>
+        &copy; 2024 | FinNews. All Rights Reserved.
+      </div>
+      {/* FAQ Modal */}
+      {isFAQOpen && <FAQModal onClose={toggleFAQ} />}
     </footer>
   );
 }
 
 export default Footer;
+
+
+

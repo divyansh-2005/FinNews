@@ -1,0 +1,66 @@
+/* BackToTopButton styles */
+.back-to-top-button {
+    z-index: 50;
+    position: fixed;
+    bottom: 3rem;
+    right: 2rem;
+    background-color: #9b00ff;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.back-to-top-button:hover {
+    background-color: #d600ff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+/* Animation classes */
+.animate-fadeInBounce {
+    animation: fadeInBounce 0.5s forwards;
+}
+
+.animate-fadeOutBounce {
+    animation: fadeOutBounce 0.5s forwards;
+}
+
+/* Keyframes for fadeInBounce */
+@keyframes fadeInBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes for fadeOutBounce */
+@keyframes fadeOutBounce {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}

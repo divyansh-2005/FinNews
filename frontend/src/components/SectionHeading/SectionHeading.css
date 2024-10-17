@@ -34,5 +34,16 @@
   background: #c31815;
   opacity: 0.9;
   border-radius: 1px;
-  margin-top: 5px; /* Adjust margin for spacing */
+  margin-top: 5px;
+  /* Adjust margin for spacing */
+}
+
+@media only screen and (max-width: 600px) {
+  .section-heading {
+    padding: 15px 5px;
+  }
+
+  .heading h1 {
+    font-size: 1rem;
+  }
 }

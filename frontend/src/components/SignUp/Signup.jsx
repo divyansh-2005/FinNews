@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
 import styles from './Signup.module.css'; 
-
+import { Link } from 'react-router-dom';
 function Signup() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [menuOpen, setMenuOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+  };
+
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
   const handleSignup = (e) => {
     e.preventDefault();
     // Add your signup logic here (e.g., Firebase or API call)
@@ -41,6 +49,8 @@ function Signup() {
           required
         />
         <button type="submit" className={styles.submitButton}>SignUp</button>
+        <p className={styles.AMember}>Already a member ? <Link to="/login" className={styles.loginLink} onClick={handleLinkClick}>Login</Link></p>
+        
       </form>
     </div>
   );
