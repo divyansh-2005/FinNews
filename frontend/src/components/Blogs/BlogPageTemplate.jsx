@@ -1,6 +1,6 @@
 import React from "react";
 import jsondata from "./BlogsData.json";
-import { useParams , useNavigate} from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import bg from "./Images/brc-bordered-logo.png";
 import "./BlogPageTemplate.css";
 import { Helmet } from "react-helmet-async";
@@ -14,8 +14,9 @@ function BlogPageTemplate() {
   }
   window.scrollTo({
     top: 0,
-    behavior: "smooth",
+    behavior: "instant",
   });
+
   return (
     <>
       <Helmet>
@@ -54,24 +55,23 @@ function BlogPageTemplate() {
             return null;
           }
         })}
-         <button
-        className="btn d-inline-block"
-        onClick={() => navigate(-1)} // Navigate back
-        style={{
-          backgroundColor: "#a759bb",
-          color: "black",
-          borderRadius: "8px",
-          fontFamily: '"Readex Pro", sans-serif',
-          fontWeight: "bold",
-          width: "200px",
-          padding: "10px",
-          border: "none" // Optional: remove border if you want a clean look
-        }}
-      >
-        &larr; Go back
-      </button>
+        <button
+          className="btn d-inline-block"
+          onClick={() => navigate(-1)} // Navigate back
+          style={{
+            backgroundColor: "#a759bb",
+            color: "black",
+            borderRadius: "8px",
+            fontFamily: '"Readex Pro", sans-serif',
+            fontWeight: "bold",
+            width: "200px",
+            padding: "10px",
+            border: "none", // Optional: remove border if you want a clean look
+          }}
+        >
+          &larr; Go back
+        </button>
       </div>
-     
     </>
   );
 }
