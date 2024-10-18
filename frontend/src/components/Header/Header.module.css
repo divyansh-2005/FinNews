@@ -51,8 +51,7 @@
 }
 
 .searchInput {
-  border-radius: 50px;
-  border: none;
+  border: none !important;
   background-color: transparent;
   outline: none;
   padding-left: 10px;
