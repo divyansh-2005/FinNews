@@ -34,6 +34,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
+    min-height: 50px;
     width: 100%; /* Ensures consistent width for all inputs */
     box-sizing: border-box; /* Ensures padding doesn't affect the width */
   }
@@ -41,6 +42,27 @@
   .inputField:focus {
     border-color: #6d3476;
     outline: none;
+  }
+
+  .passwordField {
+    position: relative; /* To position the eye button */
+  }
+
+  .eyeButton {
+    position: absolute;
+    right: 10px;
+    top: 38%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #666;
+    font-size: 16px;
+  }
+  
+  .eyeButton:hover {
+    color: #040303; /* Change color on hover */
   }
   
   .submitButton {
