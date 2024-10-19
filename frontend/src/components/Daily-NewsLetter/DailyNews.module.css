@@ -64,8 +64,11 @@
   color: white;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .newsletterContainer {
+    grid-auto-flow: column;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(3,1fr);
     padding: 2px;
     overflow-x: hidden;
     margin: 5vh 1vh;

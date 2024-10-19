@@ -80,4 +80,7 @@
   .feed-list {
     grid-template-columns: 1fr; /* 1 card per row on small screens */
   }
+  .feed-item{
+    padding: 50px;
+  }
 }
