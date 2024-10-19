@@ -59,4 +59,15 @@
     font-size: 14px;
     color: green;
   }
-  
+/* made the newletter suitable for mobile devices */
+@media screen and (max-width:600px) {
+  .newsletter-container{
+    width: 70%;
+    padding: 40px;
+  }
+  .newsletter-form{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -63,9 +63,12 @@
   background-color: #007bff;
   color: white;
 }
-
-@media only screen and (max-width: 600px) {
+/* made the newletterContainer suitable for mobile devices */
+@media only screen and (max-width: 800px) {
   .newsletterContainer {
+    grid-auto-flow: column;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(3,1fr);
     padding: 2px;
     overflow-x: hidden;
     margin: 5vh 1vh;
