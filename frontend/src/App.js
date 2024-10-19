@@ -16,6 +16,7 @@ import BackToTop from './components/Back-to-top/BackToTop';
 import CreateBlog from './components/Blogs/CreateBlog';
 import useOnline from './components/Offline/useOnline';
 import Offline from './components/Offline/Offline';
+import Subscribe from './components/Subscribe/Subscribe';
 function App() {
   const isOnline = useOnline();
   return (
@@ -27,6 +28,7 @@ function App() {
             <>
               <Header />
               <Routes>
+              <Route path="/subscribe" element={<Subscribe/>}/>
                 <Route path="/" element={<Home />} />
                 <Route path="/myfeed" element={<MyFeed />} />
                 <Route path="/blog/:key" element={<BlogPageTemplate />} />
@@ -37,6 +39,7 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/create-blog" element={<CreateBlog />} />
+                
               </Routes>
               <Footer />
 
