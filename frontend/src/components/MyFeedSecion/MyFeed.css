@@ -4,6 +4,8 @@
   padding: 7vw 4vw;
   background-color: #f5f5f5;
   background: linear-gradient(90deg, #2c0727 0%, #110823 100%);
+  border: none;
+  outline: none;
 }
 
 .feed-title {
