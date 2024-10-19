@@ -63,7 +63,7 @@
   background-color: #007bff;
   color: white;
 }
-
+/* made the newletterContainer suitable for mobile devices */
 @media only screen and (max-width: 800px) {
   .newsletterContainer {
     grid-auto-flow: column;
