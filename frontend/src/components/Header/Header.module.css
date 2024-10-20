@@ -1,14 +1,10 @@
 /* Container styles */
 .header {
-  background: linear-gradient(90deg,
-      #2c0727 0%,
-      #110823 100%);
-  /* Match hero section gradient */
+  background: linear-gradient(90deg, #2c0727 0%, #110823 100%);
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 100;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); Subtle shadow for depth */
   padding: 15px 0;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -25,7 +21,6 @@
 /* Logo */
 .finNews {
   color: white;
-  /* Highlight color to match hero */
   font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
@@ -35,7 +30,6 @@
 
 .finNews:hover {
   color: #ffc7f9;
-  /* Change to a different color on hover if desired */
 }
 
 /* Search Bar */
@@ -52,9 +46,9 @@
 
 .searchInput {
   border-radius: 50px;
-  border: none;
+  border: none !important;
+  outline: none !important;
   background-color: transparent;
-  outline: none;
   padding-left: 10px;
   width: 100%;
   font-size: larger;
@@ -73,23 +67,23 @@
   align-items: center;
 }
 
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
+}
+
 .nav a {
   color: white;
-  /* Original link color */
   font-size: 18px;
   text-decoration: none;
   padding: 8px 13px;
   border-radius: 25px;
   transition: color 0.3s ease;
-  /* Smooth color change */
 }
 
 .nav a:hover {
-
-
   background-color: #54024b;
-  /* Match hover color with hero section */
-
 }
 
 /* Mobile Menu */
@@ -108,55 +102,19 @@
 
 /* Login/Sign Up Button */
 .loginSignUp {
-  background: linear-gradient(90deg,
-      #ef01dc 0%,
-      #77048e 100%);
-  /* Match hero button gradient */
+  background: linear-gradient(90deg, #ef01dc 0%, #77048e 100%);
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 500px;
-  /* Match hero button shape */
   font-size: 16px;
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
-  /* Smooth transition */
 }
 
 .loginSignUp:hover {
-  background: linear-gradient(90deg,
-      #d4007b 0%,
-      #6d0072 100%);
-  /* Darker shade on hover */
+  background: linear-gradient(90deg, #d4007b 0%, #6d0072 100%);
   color: #fff;
-  /* White color on hover */
-}
-
-/* Dropdown Menu Styles */
-.dropdownMenu {
-  position: fixed;
-  top: 60px;
-  /* Adjust based on header height */
-  right: 20px;
-  background: rgba(37, 37, 37, 0.95);
-  border-radius: 12px;
-  padding: 15px;
-  display: none;
-  /* Hidden by default */
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* Show dropdown menu */
-.dropdownMenu.active {
-  display: flex;
-  /* Show when the dropdown is active */
-}
-
-/* Table element hover effect */
-.table-element:hover {
-  background-color: #d7a6e0;
-  /* Pinkish violet color on hover */
 }
 
 /* Responsive styles */
@@ -174,12 +132,10 @@
     align-items: center;
     border-radius: 15px;
     display: none;
-    /* Hidden by default on mobile */
   }
 
   .nav.active {
     display: flex;
-    /* Show when menuOpen is true */
   }
 
   .nav a {
@@ -195,58 +151,15 @@
 
   .menuToggle {
     display: block;
-    /* Show menu toggle button on mobile */
   }
 
   .loginSignUp {
     display: none;
-    /* Hide the login/signup button on mobile */
   }
 
   .search {
-    display: none
+    display: none;
   }
-}
-
-/* Dropdown Link Styles */
-.dropdownLink {
-  color: white;
-  /* Original color */
-  text-decoration: none;
-  padding: 10px 0;
-  transition: color 0.3s ease;
-  /* Smooth color change */
-}
-
-.dropdownLink:hover {
-  color: #fe00e6;
-  /* Change this to match hover color */
-}
-
-/* Mobile Sign In / Sign Up Button */
-.dropdownSignUp {
-  background: linear-gradient(90deg,
-      #ef01dc 0%,
-      #77048e 100%);
-  /* Match hero button gradient */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 500px;
-  /* Match hero button shape */
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
-  /* Smooth transition */
-}
-
-.dropdownSignUp:hover {
-  background: linear-gradient(90deg,
-      #d4007b 0%,
-      #6d0072 100%);
-  /* Darker shade on hover */
-  color: #fff;
-  /* White color on hover */
 }
 
 .poppins {

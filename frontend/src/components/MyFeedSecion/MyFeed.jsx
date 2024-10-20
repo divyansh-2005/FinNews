@@ -119,13 +119,14 @@ const MyFeed = () => {
       <h2 className="feed-title">Explore Our Feed</h2>
       <form className="search-form" onSubmit={handleSubmit}>
         <div className="search conatainer">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="searchInput"
-            value={query}
-            onChange={handleSearch}
-          />
+        <input
+          type="text"
+          placeholder="Search..."
+          className="searchInput"
+          value={query}
+          onChange={handleSearch}
+         style={{ border: 'none' }} // Inline style to remove border
+         />
 
           <img src={"/search.png"} alt="Search Icon" className="searchIcon" />
         </div>
