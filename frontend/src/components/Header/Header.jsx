@@ -81,7 +81,7 @@ function Header() {
               My Feed
             </span>
           </Link>
-          <Link to="/news" onClick={handleLinkClick}>
+          <Link to="" onClick={handleLinkClick}>
             <span className={styles.navItem}>
               <lord-icon
                 src="https://cdn.lordicon.com/fjvfsqea.json"
@@ -92,7 +92,7 @@ function Header() {
               News
             </span>
           </Link>
-          <Link to="/schemes" onClick={handleLinkClick}>
+         <Link to="" onClick={handleLinkClick}>
             <span className={styles.navItem}>
               <lord-icon
                 src="https://cdn.lordicon.com/sjoccsdj.json"
