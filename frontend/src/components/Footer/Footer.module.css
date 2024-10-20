@@ -106,3 +106,77 @@
 }
 
 
+/* Footer section styling */
+.footerSection {
+    margin: 10px 20px;
+  }
+  
+  /* Footer links (hover effect for links in 'Explore', 'Help & Support') */
+  .footerLinks a, .footerLinks div {
+    font-size: 1rem;
+    color: #fff; /* Default link color */
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform-origin: center; /* Ensure zoom happens from the center */
+  }
+  
+  .footerLinks a:hover, .footerLinks div:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    color: #FE00E6; /* Change the color on hover */
+  }
+  
+  /* Footer icons styling */
+  .footerIcons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footerIcons svg {
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform-origin: center; /* Ensure zoom happens from the center */
+  }
+  
+  /* Footer icons hover effect */
+  .footerIcons svg:hover {
+    transform: scale(1.2); /* Slight zoom effect */
+    color: #FE00E6; /* Change the color on hover */
+  }
+  
+  /* Footer section headings hover effect */
+  .footerSection h4 {
+    font-size: 1.2rem;
+    color: #fff; /* Default heading color */
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform-origin: center; /* Ensure zoom happens from the center */
+  }
+  
+  .footerSection h4:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    color: #FE00E6; /* Change the color on hover */
+  }
+  
+  /* Optional: Footer logo hover effect */
+  .footerSection img {
+    transition: transform 0.3s ease;
+    transform-origin: center; /* Ensure zoom happens from the center */
+  }
+  
+  .footerSection img:hover {
+    transform: scale(1.1); /* Slight zoom effect for logo */
+  }
+  
+  /* Footer copyright hover effect */
+  .footerCopyright {
+    text-align: center;
+    margin-top: 20px;
+    color: #fff; /* Default color */
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform-origin: center; /* Ensure zoom happens from the center */
+  }
+  
+  .footerCopyright:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    color: #FE00E6; /* Change the color on hover */
+  }
+  
