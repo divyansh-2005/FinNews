@@ -5,19 +5,34 @@ import { Link } from 'react-router-dom';
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen((prev) => !prev);
-  };
+  const [rememberMe, setRememberMe] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleLinkClick = () => {
-    setMenuOpen(false);
+    // Reset menu state or perform any action upon link click, if needed
   };
-  const handleLogin = (e) => {
+
+  const handleLogin = async (e) => {
     e.preventDefault();
-    // Add your login logic here (e.g., Firebase or API call)
-    console.log("Login details:", email, password);
+    setIsLoading(true);
+    setError('');
+    
+    try {
+      // Simulated API call here
+      console.log("Login details:", email, password, rememberMe);
+      
+      // Placeholder for success handling
+      setIsLoading(false);
+    } catch (error) {
+      setError("Failed to login. Please check your credentials.");
+      setIsLoading(false);
+    }
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword((prevShowPassword) => !prevShowPassword);
   };
 
   return (
@@ -32,15 +47,36 @@ function Login() {
           className={styles.inputField}
           required
         />
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-          className={styles.inputField}
-          required
-        />
-        <button type="submit" className={styles.submitButton}>Login</button>
+        <div className={styles.passwordContainer}>
+          <input
+            type={showPassword ? "text" : "password"}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+            className={styles.inputField}
+            required
+          />
+          <button
+            type="button"
+            onClick={togglePasswordVisibility}
+            className={styles.showPasswordButton}
+          >
+            {showPassword ? "Hide" : "Show"}
+          </button>
+        </div>
+        <div className={styles.rememberMeContainer}>
+          <input
+            type="checkbox"
+            checked={rememberMe}
+            onChange={() => setRememberMe(!rememberMe)}
+            id="rememberMe"
+          />
+          <label htmlFor="rememberMe">Remember Me</label>
+        </div>
+        {error && <p className={styles.errorMessage}>{error}</p>}
+        <button type="submit" className={styles.submitButton}>
+          {isLoading ? "Logging in..." : "Login"}
+        </button>
         <p className={styles.notAMember}>
           Not a member? <Link to="/signup" onClick={handleLinkClick} className={styles.signUpLink}>Sign Up</Link>
         </p>

@@ -1,56 +1,76 @@
 .main {
-    background: url("./Images/blog-tempate-bg.png");
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.create-blog-container {
-
-    margin: 2rem auto;
-    padding: 2rem;
+    background: url("./Images/blog-tempate-bg.png") no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+  }
+  
+  .create-blog-container {
+    margin: 6rem auto 2rem;
+    padding: 2.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
-    margin-top: 6rem;
+    background: linear-gradient(to bottom right, #f9f9f9, #e8e8e8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     width: 55%;
-}
-
-h1 {
+  }
+  
+  h1 {
     text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-.blog-form {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .blog-form {
     display: flex;
     flex-direction: column;
-}
-
-.form-group {
-    margin-bottom: 1rem;
-}
-
-label {
-    margin-bottom: 0.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    margin-bottom: 0.7rem;
     font-weight: bold;
-}
-
-input[type="text"],
-input[type="date"],
-input[type="url"],
-textarea {
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="url"],
+  textarea {
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.75rem;
     border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-textarea {
-    resize: vertical;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="date"]:focus,
+  input[type="url"]:focus,
+  textarea:focus {
+    border-color: #b000ad;
+    outline: none;
+    box-shadow: 0 0 5px rgba(176, 0, 173, 0.5);
+  }
+  
+  textarea {
+    resize: horizontal;
     min-height: 100px;
-}
-
-.submit-button {
+  }
+  
+  .submit-button {
     padding: 0.7rem;
     background-color: #b000ad;
     color: white;
@@ -59,23 +79,22 @@ textarea {
     cursor: pointer;
     font-size: 16px;
     margin: 0;
-}
-
-.submit-button:hover {
+    transition: background-color 0.3s ease, transform 0.2s;
+  }
+  
+  .submit-button:hover {
     background-color: #7b0179;
-}
-
-@media (max-width: 768px) {
-    .blog-card {
-        flex: 0 1 calc(100% - 20px);
-        max-width: 100%;
-    }
-
-    .blog-page {
-        max-width: 96%;
-    }
-
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
     .create-blog-container {
-        width: 100%;
+      width: 90%;
+      padding: 1.5rem;
     }
-}
+  
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  
