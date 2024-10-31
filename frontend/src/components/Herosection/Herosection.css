@@ -11,16 +11,20 @@
   box-sizing: border-box;
   position: relative;
   z-index: 1;
-  padding-top: 10vh;
+  transition: background 0.3s ease;
+}
+
+.hero-section:hover {
+  background: linear-gradient(90deg, #110823 0%, #2c0727 100%);
 }
 
 .highlighted-heading {
-  font-family: "Readex Pro";
-  font-style: normal;
+  font-family: "Readex Pro", sans-serif;
   font-weight: 400;
   font-size: 56px;
   color: white;
   margin-top: 12vw;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .white-text {
@@ -33,27 +37,34 @@
 }
 
 .hero-description {
-  font-family: "Readex Pro";
-  font-style: normal;
+  font-family: "Readex Pro", sans-serif;
   font-size: 30px;
   color: #ffffff;
   margin-top: -2vw;
+  line-height: 1.4; /* Improve readability */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .hero-button {
   width: 320px;
   height: 46px;
   padding: 6px;
-  background: linear-gradient(90deg, #ef01dc 0%, #77048e 100%);
+  background: linear-gradient(90deg, #ef01dc, #77048e);
   border-radius: 500px;
   border: none;
   text-align: center;
-  font-family: "Readex Pro";
-  font-style: normal;
+  font-family: "Readex Pro", sans-serif;
   font-weight: 400;
   font-size: 20px;
   color: white;
   cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+  margin-top: 20px; /* Space between the button and text above */
+}
+
+.hero-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #d4007b, #6d0072);
 }
 
 .heroimg {
@@ -61,6 +72,8 @@
   width: 456px;
   margin-top: -70vh;
   margin-left: 55vw;
+  border-radius: 20px; /* Soften image edges */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
 }
 
 .scroll-down {
@@ -90,12 +103,13 @@
   animation: bounce 2s infinite;
 }
 
+/* Cursor pointer for clickable elements */
 .cursor-pointer {
   cursor: pointer;
 }
 
+/* Bounce animation for the scroll down arrow */
 @keyframes bounce {
-
   0%,
   20%,
   50%,
@@ -111,10 +125,9 @@
   60% {
     transform: translateY(-5px);
   }
-
 }
 
-
+/* Responsive styles */
 @media only screen and (max-width: 600px) {
   .highlighted-heading {
     font-size: 2rem;
@@ -136,6 +149,13 @@
 
   .hero-section {
     height: auto;
+    padding: 3vh 4vw; /* Adjust padding for smaller screens */
   }
 
+  .heroimg {
+    width: 90%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 0; /* Center image */
+    margin-top: 20px; /* Adjust top margin */
+  }
 }
