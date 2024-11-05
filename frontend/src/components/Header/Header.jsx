@@ -26,14 +26,14 @@ function Header() {
         </div>
 
         {/* Search Bar */}
-        <div>
+        <div className={styles.search}>
           <input
             type="text"
             placeholder="Search..."
             className={styles.searchInput}
           />
           <img
-            src={"/search.png"}
+            src="/search.png"
             alt="Search Icon"
             className={styles.searchIcon}
           />
