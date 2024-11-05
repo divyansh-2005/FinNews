@@ -26,7 +26,7 @@ function Header() {
         </div>
 
         {/* Search Bar */}
-        <div className={styles.search}>
+        <div>
           <input
             type="text"
             placeholder="Search..."
@@ -62,7 +62,7 @@ function Header() {
             Newsletter
           </Link>
           <Link to="/login" onClick={handleLinkClick}>
-          Sign In / Sign Up
+            Sign In / Sign Up
           </Link>
         </nav>
       </div>

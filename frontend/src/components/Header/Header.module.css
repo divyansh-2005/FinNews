@@ -1,8 +1,6 @@
 /* Container styles */
 .header {
-  background: linear-gradient(90deg,
-      #2c0727 0%,
-      #110823 100%);
+  background: linear-gradient(90deg, #2c0727 0%, #110823 100%);
   /* Match hero section gradient */
   width: 100%;
   position: fixed;
@@ -39,7 +37,7 @@
 }
 
 /* Search Bar */
-.search {
+/* .search {
   display: flex;
   align-items: center;
   background-color: #ffc7f9;
@@ -48,15 +46,17 @@
   flex-grow: 1;
   max-width: 200px;
   height: 1vw;
-}
+} */
 
 .searchInput {
-  border-radius: 50px;
-  border: none;
-  background-color: transparent;
-  outline: none;
-  padding-left: 10px;
-  width: 100%;
+  /* display: flex; */
+  align-items: center;
+  background-color: #ffc7f9;
+  padding: 10px;
+  flex-grow: 1;
+  margin: 0 10px;
+  max-width: 190px;
+  height: 1.39vw;
   font-size: larger;
 }
 
@@ -85,11 +85,8 @@
 }
 
 .nav a:hover {
-
-
   background-color: #54024b;
   /* Match hover color with hero section */
-
 }
 
 /* Mobile Menu */
@@ -108,9 +105,7 @@
 
 /* Login/Sign Up Button */
 .loginSignUp {
-  background: linear-gradient(90deg,
-      #ef01dc 0%,
-      #77048e 100%);
+  background: linear-gradient(90deg, #ef01dc 0%, #77048e 100%);
   /* Match hero button gradient */
   color: white;
   border: none;
@@ -124,9 +119,7 @@
 }
 
 .loginSignUp:hover {
-  background: linear-gradient(90deg,
-      #d4007b 0%,
-      #6d0072 100%);
+  background: linear-gradient(90deg, #d4007b 0%, #6d0072 100%);
   /* Darker shade on hover */
   color: #fff;
   /* White color on hover */
@@ -204,7 +197,7 @@
   }
 
   .search {
-    display: none
+    display: none;
   }
 }
 
@@ -225,9 +218,7 @@
 
 /* Mobile Sign In / Sign Up Button */
 .dropdownSignUp {
-  background: linear-gradient(90deg,
-      #ef01dc 0%,
-      #77048e 100%);
+  background: linear-gradient(90deg, #ef01dc 0%, #77048e 100%);
   /* Match hero button gradient */
   color: white;
   border: none;
@@ -241,9 +232,7 @@
 }
 
 .dropdownSignUp:hover {
-  background: linear-gradient(90deg,
-      #d4007b 0%,
-      #6d0072 100%);
+  background: linear-gradient(90deg, #d4007b 0%, #6d0072 100%);
   /* Darker shade on hover */
   color: #fff;
   /* White color on hover */
