@@ -1,20 +1,19 @@
-import React from 'react';
-import { HelmetProvider } from 'react-helmet-async';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import MyFeed from './components/MyFeedSecion/MyFeed';
-import Header from './components/Header/Header';
-import Signup from './components/SignUp/Signup';
-import Login from './components/Login/Login';
-import Footer from './components/Footer/Footer';
-import BlogSection from './components/Blogs/BlogSection';
+import React from "react";
+import { HelmetProvider } from "react-helmet-async";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import MyFeed from "./components/MyFeedSecion/MyFeed";
+import Header from "./components/Header/Header";
+import Signup from "./components/SignUp/Signup";
+import Login from "./components/Login/Login";
+import Footer from "./components/Footer/Footer";
+import BlogSection from "./components/Blogs/BlogSection";
 import BlogPageTemplate from "./components/Blogs/BlogPageTemplate";
-import Newsletter from './components/Newsletter/Newsletter';
-import BackToTop from './components/Back-to-top/BackToTop';
+import Newsletter from "./components/Newsletter/Newsletter";
+import BackToTop from "./components/Back-to-top/BackToTop";
 
 function App() {
   return (
-
     <HelmetProvider>
       <Router>
         <Header />
@@ -30,9 +29,8 @@ function App() {
         <Footer />
         <BackToTop />
       </Router>
-    </HelmetProvider>  // Closing tag for HelmetProvider
+    </HelmetProvider> // Closing tag for HelmetProvider
   );
 }
-
 
 export default App;

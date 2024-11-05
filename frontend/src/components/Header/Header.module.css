@@ -1,8 +1,6 @@
 /* Container styles */
 .header {
-  background: linear-gradient(90deg,
-      #2c0727 0%,
-      #110823 100%);
+  background: linear-gradient(90deg, #2c0727 0%, #110823 100%);
   /* Match hero section gradient */
   width: 100%;
   position: fixed;
@@ -38,26 +36,27 @@
   /* Change to a different color on hover if desired */
 }
 
-/* Search Bar */
+/* CSS for the Search Bar */
 .search {
   display: flex;
   align-items: center;
-  background-color: #ffc7f9;
   border-radius: 25px;
-  padding: 10px;
-  flex-grow: 1;
-  max-width: 200px;
-  height: 1vw;
+  max-width: 300px;
+  background-color: #ffc7f9;
+  padding: 5px 10px;
 }
 
 .searchInput {
-  border-radius: 50px;
-  border: none;
-  background-color: transparent;
   outline: none;
-  padding-left: 10px;
-  width: 100%;
+  background-color: transparent;
+  padding: 10px;
+  flex-grow: 1;
   font-size: larger;
+  margin-right: 10px;
+}
+.searchInput:focus {
+  border: solid #e426d1 2px;
+  outline: none;
 }
 
 .searchIcon {
@@ -85,11 +84,8 @@
 }
 
 .nav a:hover {
-
-
   background-color: #54024b;
   /* Match hover color with hero section */
-
 }
 
 /* Mobile Menu */
@@ -108,9 +104,7 @@
 
 /* Login/Sign Up Button */
 .loginSignUp {
-  background: linear-gradient(90deg,
-      #ef01dc 0%,
-      #77048e 100%);
+  background: linear-gradient(90deg, #ef01dc 0%, #77048e 100%);
   /* Match hero button gradient */
   color: white;
   border: none;
@@ -124,9 +118,7 @@
 }
 
 .loginSignUp:hover {
-  background: linear-gradient(90deg,
-      #d4007b 0%,
-      #6d0072 100%);
+  background: linear-gradient(90deg, #d4007b 0%, #6d0072 100%);
   /* Darker shade on hover */
   color: #fff;
   /* White color on hover */
@@ -204,7 +196,7 @@
   }
 
   .search {
-    display: none
+    display: none;
   }
 }
 
@@ -225,9 +217,7 @@
 
 /* Mobile Sign In / Sign Up Button */
 .dropdownSignUp {
-  background: linear-gradient(90deg,
-      #ef01dc 0%,
-      #77048e 100%);
+  background: linear-gradient(90deg, #ef01dc 0%, #77048e 100%);
   /* Match hero button gradient */
   color: white;
   border: none;
@@ -241,9 +231,7 @@
 }
 
 .dropdownSignUp:hover {
-  background: linear-gradient(90deg,
-      #d4007b 0%,
-      #6d0072 100%);
+  background: linear-gradient(90deg, #d4007b 0%, #6d0072 100%);
   /* Darker shade on hover */
   color: #fff;
   /* White color on hover */

@@ -11,7 +11,7 @@ function Herosection() {
         <span className="white-text">SMART </span>
         <span className="highlighted-text">News FIN-APP</span>
       </h1>
- 
+
       <p className="hero-description">“Where Intelligence Meets Finance”</p>
       <button className="hero-button">WWW.FinNews.IN</button>
       {/* <img className="heroimg" src={heroimg} alt="" /> */}
@@ -19,7 +19,6 @@ function Herosection() {
         <p>Scroll down for more</p>
         <div className="arrow"></div>
       </div>
-
     </div>
   );
 }

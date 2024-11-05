@@ -33,7 +33,7 @@ function Header() {
             className={styles.searchInput}
           />
           <img
-            src={"/search.png"}
+            src="/search.png"
             alt="Search Icon"
             className={styles.searchIcon}
           />
@@ -62,7 +62,7 @@ function Header() {
             Newsletter
           </Link>
           <Link to="/login" onClick={handleLinkClick}>
-          Sign In / Sign Up
+            Sign In / Sign Up
           </Link>
         </nav>
       </div>
