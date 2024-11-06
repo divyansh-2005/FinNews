@@ -44,20 +44,19 @@
   align-items: center;
   background-color: #ffc7f9;
   border-radius: 25px;
-  padding: 10px;
-  flex-grow: 1;
+  padding: 5px 10px;
   max-width: 200px;
-  height: 1vw;
+  height: 30px;
 }
 
 .searchInput {
-  border-radius: 50px;
   border: none;
   background-color: transparent;
   outline: none;
   padding-left: 10px;
-  width: 100%;
   font-size: larger;
+  flex: 1;
+  height: 20px;
 }
 
 .searchIcon {
