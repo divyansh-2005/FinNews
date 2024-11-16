@@ -9,10 +9,22 @@ function Contact() {
       </p>
 
       <h3 style={{ fontSize: '24px', color: '#333' }}>Email</h3>
-      <p style={{ fontSize: '18px', color: '#555' }}>support@finnews.com</p>
+      <p style={{ fontSize: '18px', color: '#555' }}>
+        <a 
+          href="mailto:support@finnews.com" 
+          style={{ color: 'inherit', textDecoration: 'none' }}>
+          support@finnews.com
+        </a>
+      </p>
 
       <h3 style={{ fontSize: '24px', color: '#333' }}>Phone</h3>
-      <p style={{ fontSize: '18px', color: '#555' }}>+91 123 456 7890</p>
+      <p style={{ fontSize: '18px', color: '#555' }}>
+        <a 
+          href="tel:+911234567890" 
+          style={{ color: 'inherit', textDecoration: 'none' }}>
+          +91 123 456 7890
+        </a>
+      </p>
 
       <h3 style={{ fontSize: '24px', color: '#333' }}>Address</h3>
       <p style={{ fontSize: '18px', color: '#555' }}>
