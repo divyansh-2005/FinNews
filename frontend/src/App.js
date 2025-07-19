@@ -7,7 +7,8 @@ import Header from './components/Header/Header';
 import Signup from './components/SignUp/Signup';
 import Login from './components/Login/Login';
 import Footer from './components/Footer/Footer';
-import About from './components/Footer/About'; // Import the About component
+import About from './components/Footer/About';
+import Contact from './components/Footer/Contact'; 
 import BlogSection from './components/Blogs/BlogSection';
 import BlogPageTemplate from "./components/Blogs/BlogPageTemplate";
 import Newsletter from './components/Newsletter/Newsletter';
