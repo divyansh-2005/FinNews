@@ -1,62 +1,53 @@
-import React from "react";
-import jsondata from "./BlogsData.json";
-import { useParams , useNavigate} from "react-router-dom";
-import bg from "./Images/brc-bordered-logo.png";
+
+import React, { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import "./BlogPageTemplate.css";
-import { Helmet } from "react-helmet-async";
 
 function BlogPageTemplate() {
-  const { key } = useParams();
-  const filteredData = jsondata.data.find((item) => item.searchkey === key);
+  const { id } = useParams();
   const navigate = useNavigate();
-  if (!filteredData) {
-    return "NO BLOG FOUND";
-  }
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
+  const [blog, setBlog] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setLoading(true);
+    setError(null);
+    fetch(`http://localhost:5000/api/get-blog/${id}`)
+      .then((res) => {
+        if (!res.ok) throw new Error("Blog not found");
+        return res.json();
+      })
+      .then((data) => {
+        setBlog(data.blog);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError(err.message);
+        setLoading(false);
+      });
+  }, [id]);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>{error}</div>;
+  if (!blog) return <div>No blog found.</div>;
+
   return (
-    <>
-      <Helmet>
-        <title>{filteredData.title}</title>
-        <meta name="description" content={filteredData.shortsummary} />
-        <meta property="og:title" content={filteredData.title} />
-        <meta property="og:site_name" content={filteredData.title} />
-        <meta property="og:description" content={filteredData.shortsummary} />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content={`https://blockchainrcoemchapter.co.in/blog/${filteredData.searchkey}`}
-        />
-        <link
-          rel="cononical"
-          href={`https://blockchainrcoemchapter.co.in/blog/${filteredData.searchkey}`}
-        />
-      </Helmet>
-      <div id="BlogTemplate">
-        <h1>{filteredData.title}</h1>
-        <div id="blog-introduction">
-          <img src={bg} alt="" />
-          <span>
-            <p>-Finnews Team</p>
-            <p>{`Published on ${filteredData.date} · ${filteredData.readtime} read`}</p>
-          </span>
-        </div>
-        {filteredData.material.map((item, index) => {
-          if (item.tag === "img") {
-            return <img key={index} src={item.src} alt="" />;
-          } else if (item.tag === "h2") {
-            return <h2 key={index}>{item.content}</h2>;
-          } else if (item.tag === "p") {
-            return <p key={index}>{item.content}</p>;
-          } else {
-            return null;
-          }
-        })}
-         <button
+    <div id="BlogTemplate">
+      <h1>{blog.title}</h1>
+      <div id="blog-introduction">
+        <span>
+          <p>-{blog.author}</p>
+          <p>{`Published on ${new Date(blog.date).toLocaleDateString()}`}</p>
+        </span>
+      </div>
+      <div className="blog-content">
+        <p>{blog.content}</p>
+      </div>
+      <button
         className="btn d-inline-block"
-        onClick={() => navigate(-1)} // Navigate back
+        onClick={() => navigate(-1)}
         style={{
           backgroundColor: "#a759bb",
           color: "black",
@@ -64,15 +55,15 @@ function BlogPageTemplate() {
           fontFamily: '"Readex Pro", sans-serif',
           fontWeight: "bold",
           width: "200px",
+          marginTop: "20px",
           padding: "10px",
-          border: "none" // Optional: remove border if you want a clean look
+          border: "none",
+          cursor: "pointer",
         }}
       >
         &larr; Go back
       </button>
-      </div>
-     
-    </>
+    </div>
   );
 }
 
