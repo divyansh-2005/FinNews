@@ -17,14 +17,17 @@ import BackToTop from './components/Back-to-top/BackToTop';
 
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
+import ScrollProgressBar from './components/Scroll-progress/ScrollProgress'; // Import the ScrollProgressBar
+import useOnline from './components/Offline/useOnline';
+import Offline from './components/Offline/Offline';
 import styled from "styled-components";
 
-// Styled-components for the chatbot button and container
 // Styled-components for the chatbot button and container
 const ChatbotButton = styled.button`
   position: fixed;
   bottom: 20px;
-  left: 20px; /* Changed from 'right' to 'left' */
+  left: 20px;
+
   background-color: purple;
   color: white;
   border: none;
@@ -43,13 +46,12 @@ const ChatbotButton = styled.button`
 
 const ChatbotContainer = styled.div`
   position: fixed;
-  bottom: 80px; /* Adjust based on button size */
-  left: 20px; /* Changed from 'right' to 'left' */
+  bottom: 80px;
+  left: 20px;
   z-index: 1000;
 `;
 
 
-// Chatbot steps
 // Chatbot steps
 const steps = [
   {
@@ -57,6 +59,7 @@ const steps = [
     message: "Hi! How can I assist you today?",
     trigger: "2",
   },
+
   {
     id: "2",
     user: true,
@@ -166,6 +169,7 @@ const steps = [
 ];
 
 
+
 // Chatbot theme
 const theme = {
   background: "#f5f8fb",
@@ -177,8 +181,12 @@ const theme = {
   userFontColor: "#4a4a4a",
 };
 
+
 // App Component
+
+
 function App() {
+
   const [isChatbotOpen, setIsChatbotOpen] = useState(false);
   const memoizedSteps = useMemo(() => steps, []);
 
@@ -186,16 +194,15 @@ function App() {
     setIsChatbotOpen((prev) => !prev);
   };
 
-import useOnline from './components/Offline/useOnline';
-import Offline from './components/Offline/Offline';
-function App() {
-  const isOnline = useOnline();
-  return (
+   const isOnline = useOnline();
 
 
   return (
     <HelmetProvider>
       <Router>
+
+        <ScrollProgressBar /> 
+
             {
               isOnline?(
                 <>
@@ -212,10 +219,12 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
 
+
         {/* Chatbot button */}
         <ChatbotButton onClick={toggleChatbot}>
           {isChatbotOpen ? "×" : "🎧"}
         </ChatbotButton>
+
 
         {/* Conditionally render ChatBot component */}
         {isChatbotOpen && (
