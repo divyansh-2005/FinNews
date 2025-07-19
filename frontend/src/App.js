@@ -20,6 +20,9 @@ import { ThemeProvider } from "styled-components";
 import ScrollProgressBar from './components/Scroll-progress/ScrollProgress'; // Import the ScrollProgressBar
 import useOnline from './components/Offline/useOnline';
 import Offline from './components/Offline/Offline';
+
+import Subscribe from './components/Subscribe/Subscribe';
+
 import styled from "styled-components";
 import CreateBlog from './components/Blogs/CreateBlog';
 
@@ -184,8 +187,6 @@ const theme = {
 
 
 // App Component
-
-
 function App() {
 
   const [isChatbotOpen, setIsChatbotOpen] = useState(false);
@@ -219,7 +220,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="create-blog" element={<CreateBlog />} />
+          <Route path="/create-blog" element={<CreateBlog />} />
         </Routes>
 
 

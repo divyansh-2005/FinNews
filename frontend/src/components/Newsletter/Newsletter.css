@@ -1,62 +1,244 @@
+
 .newsletter-background {
-    background: linear-gradient(135deg, #2e1d44, #3c2856);
-    padding: 60px 0;
-    display: flex;
-    justify-content: center;
-  }
+  background: linear-gradient(90deg, #4B0082 0%, #8A2BE2 100%);
+  
+  padding: 170px 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1; /* Ensures visibility */
+  position: relative;
+}
+
+/* Newsletter Container */
 .newsletter-container {
-    max-width: 600px;
-    margin: 200px auto;
-    padding: 80px;
-    text-align: center;
-    background-color: #edf1f1;
-    border-radius: 10px;
-    box-shadow: 7px 0px 15px #f3f3f4, -7px 0px 15px #4ad1e3;
-  }
-  
-  .newsletter-title {
-    font-size: 34px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .newsletter-description {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
-  .newsletter-form {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .newsletter-input {
-    padding: 10px;
-    width: 250px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .newsletter-button {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .newsletter-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .newsletter-message {
-    margin-top: 20px;
-    font-size: 14px;
-    color: green;
-  }
-  
+  max-width: 600px;
+  margin-top: 120px; 
+  margin: 200px auto;
+  padding: 80px;
+  text-align: center;
+  background-color: #edf1f1;
+  border-radius: 10px;
+  box-shadow: 7px 0px 15px #f3f3f4, -7px 0px 15px #4ad1e3;
+}
+
+/* Newsletter Title */
+.newsletter-title {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Newsletter Description */
+.newsletter-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Newsletter Form */
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Newsletter Input */
+.newsletter-input {
+  padding: 10px;
+  width: 250px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Newsletter Button */
+.newsletter-button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Newsletter Button Hover */
+.newsletter-button:hover {
+  background-color: #0056b3;
+}
+
+/* Newsletter Message */
+.newsletter-message {
+  margin-top: 20px;
+  font-size: 14px;
+  color: green;
+}
+
+/* Pricing Background with Violet Gradient */
+.pricing-background {
+  background: linear-gradient(90deg, #2c0727 0%, #110823 100%);
+  padding: 90px 60px;
+  display: flex;
+  margin-top: 90px;
+  justify-content: center;
+  z-index: 1; /* Ensures visibility */
+  position: relative; 
+}
+
+
+/* Pricing Container */
+.pricing-container {
+  max-width: 900px;
+  z-index: 1; /* Ensures visibility */
+  margin: 50px auto;
+  padding: 40px;
+  text-align: center;
+  background-color: #edf1f1;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Toggle Billing Section */
+.toggle-billing {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; 
+  z-index: 10;
+}
+
+/* Billing Buttons */
+.billing-btn {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+  z-index: 20;
+  margin: 0 10px;
+}
+
+/* Active Billing Button */
+.billing-btn.active {
+  background-color: #4CAF50;
+  color: rgb(0, 0, 0);
+}
+
+/* Hover effect with Violet */
+.billing-btn:hover {
+  background-color: #697a83; /* Violet */
+  color: white;
+}
+
+/* Plans Section */
+.plans {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Individual Plan */
+.plan {
+  background-color: #fff;
+  padding: 20px;
+  width: 240px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Plan Title */
+.plan h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Plan Price */
+.plan h1 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+/* Plan Description */
+.plan p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Plan Features */
+.plan ul {
+  list-style: none;
+  padding: 0;
+}
+
+.plan ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+/* Feature Availability Icons */
+
+
+
+/* Get Started Button */
+.get-started-btn {
+  background-color: black;
+  color: white;
+  padding: 10px 0;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Pro Plan Specific Styles */
+.pro-plan {
+  background-color: #000;
+  color: #fff;
+}
+
+.pro-plan .get-started-btn {
+  background-color: white;
+  color: black;
+}
+
+
+/* Billing Buttons */
+.billing-btn {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+}
+
+/* Active Billing Button (now black instead of green) */
+.billing-btn.active {
+  background-color: black;
+  color: white;
+}
+
+/* Offer Text (Reduce font size) */
+.plan h1 span {
+  font-size: 12px;
+  color: black; 
+}
+.tick {
+  color: green;
+  margin-right: 10px; 
+}
+
+.cross {
+  color: rgb(139, 18, 18);
+  margin-right: 10px; 
+
+}
