@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import styles from "./Header.module.css"; // Import the CSS Module
+import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(false); // Dark mode state
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
@@ -11,6 +12,11 @@ function Header() {
 
   const handleLinkClick = () => {
     setMenuOpen(false);
+  };
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    document.body.classList.toggle(styles.darkMode, !darkMode); // Toggle dark mode class on body
   };
 
   return (
@@ -62,8 +68,13 @@ function Header() {
             Newsletter
           </Link>
           <Link to="/login" onClick={handleLinkClick}>
-          Sign In / Sign Up
+            Sign In / Sign Up
           </Link>
+
+          {/* Small Sun/Moon Toggle Button */}
+          <button className={styles.toggleDarkMode} onClick={toggleDarkMode}>
+            {darkMode ? "🌞" : "🌜"}
+          </button>
         </nav>
       </div>
     </header>
