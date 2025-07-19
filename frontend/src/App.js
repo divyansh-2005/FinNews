@@ -8,7 +8,6 @@ import Signup from './components/SignUp/Signup';
 import Login from './components/Login/Login';
 import Footer from './components/Footer/Footer';
 import About from './components/Footer/About'; // Import the About component
-import Contact from './components/Footer/Contact'; // Import the Contact component
 import BlogSection from './components/Blogs/BlogSection';
 import BlogPageTemplate from "./components/Blogs/BlogPageTemplate";
 import Newsletter from './components/Newsletter/Newsletter';
@@ -200,6 +199,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
+
 
         <ScrollProgressBar /> 
 
