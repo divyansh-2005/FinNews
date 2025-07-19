@@ -4,13 +4,14 @@ const router = express.Router(); // Create a new router object
 const fetchLatestFinanceNews = require('../controllers/allLatestFinancialUpdates.js');
 const fetchStartUpInsights = require('../controllers/startupInsites.js');
 const fetchDailyNews = require('../controllers/DailyNewsLetter.js')
-const { postBlog, getBlog, deleteAllBlogs } = require('../controllers/blogController.js');
+const { postBlog, getBlog, deleteAllBlogs, getBlogById } = require('../controllers/blogController.js');
 
 router.get('/latest-financial-news', fetchLatestFinanceNews); // Route to fetch top financial news in India
 router.get('/startup-insights', fetchStartUpInsights); // Route to fetch top startup insights
 router.get('/fetch-dailyNews', fetchDailyNews); // Route to fetch daily news
 router.post('/post-blog', postBlog); // Route to fetch daily news
-router.get('/get-blog', getBlog); // Route to fetch daily news
+router.get('/get-blog', getBlog); // Route to fetch all blogs
+router.get('/get-blog/:id', getBlogById); // Route to fetch a single blog by ID
 router.delete('/delete-all-blog', deleteAllBlogs); // Route to fetch daily news
 
 

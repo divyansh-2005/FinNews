@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 #BlogTemplate {
   width: 100%;
-  /* margin-top: 10vh; */
+  margin-top: 10vh;
   display: flex;
   padding-bottom: 3em;
   align-items: center;

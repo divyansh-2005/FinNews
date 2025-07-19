@@ -21,6 +21,7 @@ import ScrollProgressBar from './components/Scroll-progress/ScrollProgress'; // 
 import useOnline from './components/Offline/useOnline';
 import Offline from './components/Offline/Offline';
 import styled from "styled-components";
+import CreateBlog from './components/Blogs/CreateBlog';
 
 // Styled-components for the chatbot button and container
 const ChatbotButton = styled.button`
@@ -211,13 +212,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/myfeed" element={<MyFeed />} />
-          <Route path="/blog/:key" element={<BlogPageTemplate />} />
+          <Route path="/blog/:id" element={<BlogPageTemplate />} />
           <Route path="/blogs" element={<BlogSection />} />
           <Route path="/newsletter" element={<Newsletter />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="create-blog" element={<CreateBlog />} />
         </Routes>
 
 

@@ -1,3 +1,17 @@
+// Function to handle fetching a single blog post by ID
+exports.getBlogById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const blog = await Blog.findById(id);
+        if (!blog) {
+            return res.status(404).json({ message: "Blog post not found" });
+        }
+        res.status(200).json({ message: "Blog post retrieved successfully", blog });
+    } catch (error) {
+        console.error("Error retrieving blog post by ID:", error);
+        res.status(500).json({ message: "Error retrieving blog post by ID", error });
+    }
+};
 const Blog = require('../models/blog');  // Import the Blog model
 
 // Function to handle creating a new blog post
