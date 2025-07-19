@@ -79,7 +79,6 @@
   background: linear-gradient(90deg, #2c0727 0%, #110823 100%);
   padding: 90px 60px;
   display: flex;
-  margin-top: 90px;
   justify-content: center;
   z-index: 1; /* Ensures visibility */
   position: relative; 

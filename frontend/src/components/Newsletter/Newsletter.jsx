@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Newsletter.css';
 
 const Newsletter = () => {
-  const [billingType, setBillingType] = useState('annually');
+  const [billingType, setBillingType] = useState('monthly');
 
   const monthlyPrices = {
     basic: 5,
